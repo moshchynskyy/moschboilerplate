@@ -1,0 +1,88 @@
+section.cart
+    .container
+        .row
+            include ./../user-panel.pug
+            form.cart__flex.flex-container.flex-wrap#cartForm(method="post" action="#")
+                .flex-container.cart__flex-row
+                    .cart__flex-item
+                        p.cart-text Товаров в корзине: 46
+                    .cart__flex-item
+                        p.cart-text КОЛ-ВО
+                    .cart__flex-item.text-right
+                        p.cart-text СТОИМОСТЬ
+                .flex-container.cart__flex-row.cart-item.cart__flex-row-1
+                    .cart__flex-item.flex-container
+                        img.cart-img(src="./images/cart-item.png" alt="cart-item" title="cart-item")
+                        .cart-text-wrapper
+                            p.cart-text.cart-text-big Платье с кокеткой и длинным рукавом
+                            p.cart-text Размер: S
+                            p.cart-text Цвет: черный
+                    .cart__flex-item
+                        .cart-counter
+                            span.cart-minus -
+                            input#itemQuantity1(name="itemQuantity" step="1" value="1" min="1")
+                            span.cart-plus +
+                    .cart__flex-item
+                        p.cart-price.cart-price-total 45000 руб.
+                        p.cart-price.cart-price-one.old-price 20000 руб. х 3 шт.
+                        p.cart-price.cart-price-sale 15000 руб. х 3 шт.
+                    .cart-item-icon-wrapper
+                        img.cart-item-icon(src='./images/cart-item-icon.png' alt="x" title="")
+                .flex-container.cart__flex-row.cart-item.cart__flex-row-2
+                    .cart__flex-item.flex-container
+                        img.cart-img(src="./images/cart-item.png" alt="cart-item" title="cart-item")
+                        .cart-text-wrapper
+                            p.cart-text.cart-text-big Платье с кокеткой и длинным рукавом
+                            p.cart-text Размер: S
+                            p.cart-text Цвет: черный
+                    .cart__flex-item
+                        .cart-counter
+                            span.cart-minus -
+                            input#itemQuantity2(name="itemQuantity" step="1" value="1" min="1")
+                            span.cart-plus +
+                    .cart__flex-item
+                        p.cart-price.cart-price-total 45000 руб.
+                        p.cart-price.cart-price-one 20000 руб. х 3 шт.
+                    .cart-item-icon-wrapper
+                        img.cart-item-icon(src='./images/cart-item-icon.png' alt="x" title="")
+                .flex-container.cart__flex-row.cart-item.cart__flex-row-3
+                    .cart__flex-item.flex-container
+                        img.cart-img(src="./images/cart-item.png" alt="cart-item" title="cart-item")
+                        .cart-text-wrapper
+                            p.cart-text.cart-text-big Платье с кокеткой и длинным рукавом
+                            p.cart-text Размер: S
+                            p.cart-text Цвет: черный
+                    .cart__flex-item
+                        .cart-counter
+                            span.cart-minus -
+                            input#itemQuantity3(name="itemQuantity" step="1" value="1" min="1")
+                            span.cart-plus +
+                    .cart__flex-item
+                        p.cart-price.cart-price-total 45000 руб.
+                        p.cart-price.cart-price-one.old-price 20000 руб. х 3 шт.
+                        p.cart-price.cart-price-sale 15000 руб. х 3 шт.
+                    .cart-item-icon-wrapper
+                        img.cart-item-icon(src='./images/cart-item-icon.png' alt="x" title="")
+                .flex-container.cart__flex-row.cart-item.cart__flex-row-4
+                    .cart__flex-item.flex-container
+                        img.cart-img(src="./images/cart-item.png" alt="cart-item" title="cart-item")
+                        .cart-text-wrapper
+                            p.cart-text.cart-text-big Платье с кокеткой и длинным рукавом
+                            p.cart-text Размер: S
+                            p.cart-text Цвет: черный
+                    .cart__flex-item
+                        .cart-counter
+                            span.cart-minus -
+                            input#itemQuantity4(name="itemQuantity" step="1" value="1" min="1")
+                            span.cart-plus +
+                    .cart__flex-item
+                        p.cart-price.cart-price-total 45000 руб.
+                        p.cart-price.cart-price-one.old-price 20000 руб. х 3 шт.
+                        p.cart-price.cart-price-sale 15000 руб. х 3 шт.
+                    .cart-item-icon-wrapper
+                        img.cart-item-icon(src='./images/cart-item-icon.png' alt="x" title="")
+                .flex-container.cart__flex-submit.flex-wrap
+                    .cart__flex-item
+                        p Всего 46 товаров на сумму 12 руб.
+                    .cart__flex-item
+                        input(type="submit" value="Оформить заказ").btn.mybtn.cart-btn

@@ -1,0 +1,27 @@
+.paggination{
+  margin: 10px 0;
+  display: flex;
+}
+
+.paggination__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  transition: background-color .25s ease;
+  @include dlinx(currentColor);
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+}
+
+.paggination__item:first-of-type,
+.paggination__item:last-of-type,
+.paggination__item--active {
+  background-color: $main;
+  font-weight: bold;
+  @include dlinx(white);
+  &:hover {
+    background-color: lighten($main, 5%);
+  }
+}

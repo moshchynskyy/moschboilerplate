@@ -1,0 +1,198 @@
+html {
+  min-height: 100vh;
+  height: 100%;
+  font-size: 18px;
+}
+
+body {
+  background: $main-bg;
+  overflow-x: hidden;
+  min-width: 320px;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: $main-font;
+  color: $main-color;
+  line-height: $line-height;
+  font-size: responsive 14px 18px;
+}
+
+a {
+  transition: color 50ms ease-out;
+  cursor: pointer;
+  color: $link-color;
+  &:hover {
+    color: $hover-color;
+    text-decoration: none;
+  }
+  &:active {
+    color: #ddd;
+    text-decoration: none;
+  }
+  &:focus {
+    color: #ccc;
+    text-decoration: none;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+button, input:focus, textarea:focus {
+  outline: none
+}
+
+input[type="tel"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  transition: border-color 100ms ease;
+}
+
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: $main-color;
+}
+
+select:focus {
+  outline: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  min-height: 5px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $title-font;
+  color: $title-color;
+}
+
+h1, .h1 {
+  font-size: responsive 24px 40px;
+}
+
+h2, .h2 {
+  font-size: responsive 22px 36px;
+}
+
+h3, .h3 {
+  font-size: responsive 16px 20px;
+}
+
+h4, .h4 {
+  font-size: responsive 14px 16px;
+}
+
+h6, .h6 {
+  font-size: responsive 10px 12px;
+}
+
+// fast transition
+.transition {
+  transition: .25s;
+}
+
+// transition for default js-events
+.transition2 {
+  transition: .4s;
+}
+
+// for simple text
+.basic-text {
+  font-weight: 400;
+  font-family: $main-font;
+  font-size: responsive 12px 14px;
+  color: $main-color;
+  &.undreline {
+    text-transform: uppercase;
+  }
+  &.thin {
+    font-weight: 300;
+  }
+  &.medium {
+    font-weight: 500;
+  }
+  &.bold {
+    font-weight: 700;
+  }
+  &.extrabold {
+    font-weight: 700;
+  }
+}
+
+// for out container blocks
+.full-wide-width {
+  width: calc(100vw - 135px);
+  position: relative;
+  left: calc(50% - 53px);
+  right: 50%;
+  margin-left: calc(-50vw + 120px);
+  margin-right: -50vw;
+}
+
+// preloader
+#p_prldr {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 30000000;
+}
+
+.contpre small {
+  font-size: 25px;
+}
+
+.contpre {
+  width: 250px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  margin-left: -125px;
+  margin-top: -75px;
+  color: $red;
+  font-size: 40px;
+  letter-spacing: -2px;
+  text-align: center;
+  line-height: 35px;
+}
+
+#p_prldr .svg_anm {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  background: /*url(images/oval.svg) */
+          center center no-repeat;
+  background-size: 41px;
+  margin: -16px 0 0 -16px;
+}
+
+// eof preloader

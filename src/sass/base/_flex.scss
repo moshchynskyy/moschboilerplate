@@ -1,0 +1,52 @@
+// properties for flex elements
+
+.flex-container {
+  display: flex;
+}
+.flex-container-w100 {
+  display: flex;
+  width: 100%;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-baseline {
+  justify-content: center;
+  align-items: baseline;
+}
+.flex-side {
+  justify-content: space-between;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-end {
+  align-items: flex-end;
+}
+.flex-start {
+  align-items: flex-start;
+}
+.flex-item-stretch {
+  flex: 1 1 auto;
+}
+
+// col
+.flex-1 {
+  flex-basis: 100% !important;
+}
+.flex-2 {
+  flex-basis: 50%;
+}
+.flex-3 {
+  flex-basis: 33.3%;
+}
+.flex-4 {
+  flex-basis: 25%;
+}
+.flex-5 {
+  flex-basis: 20%;
+}

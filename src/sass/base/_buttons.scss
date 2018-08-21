@@ -1,0 +1,25 @@
+.mybtn {
+	appearance: none;
+	font-size: responsive 12px 14px;
+	border-radius: 0;
+	border: 1px solid transparent;
+	cursor: pointer;
+	font-family: $main-font;
+	font-weight: 600;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 30px;
+	background: $red;
+	//border-color: $main;
+	color: #fff;
+	text-transform: uppercase;
+	outline: none !important;
+	transition: .25s;
+	&:hover {
+		background: #fff;
+		color: $red;
+		border: 1px solid $red;
+		text-decoration: none;
+	}
+}

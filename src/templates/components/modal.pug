@@ -1,0 +1,10 @@
+.mybtn(data-target="#confirmChoose" data-toggle="modal") Confirm choose
+.modal.fade#confirmChoose
+    .flex-container.flex-center
+        .modal-block
+            .modal-close-wrapper.flex-container.flex-center
+                button.close(data-dismiss="modal") &times;
+            h3.title.modal-title.confirm-title Confirm your choose
+            .modal-footer.flex-container.flex-center
+                a.mybtn() Delete
+                a.mybtn.cancel(data-dismiss="modal") Cancel
