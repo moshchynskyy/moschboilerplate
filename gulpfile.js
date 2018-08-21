@@ -6,10 +6,12 @@ const gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     rucksack = require('rucksack-css'),
     imagemin = require('gulp-imagemin'),
+    babel = require('gulp-babel'),
     uglify = require('gulp-uglify'),
     // pump = require('pump'), // uglify
     svgmin = require('gulp-svgmin'),
     sourcemaps = require('gulp-sourcemaps'),
+    rimraf = require('rimraf'),
     notify = require("gulp-notify"),
     watch = require('gulp-watch'),
     browserSync = require("browser-sync"),
@@ -29,7 +31,7 @@ const path = {
     css: 'build/css/',
     js: 'build/js/',
     img: 'build/img/',
-    svg: 'build/img/svg/',
+    svg: 'build/svg/',
     fonts: 'build/fonts/',
     assets: 'build/external/'
   },
@@ -37,8 +39,8 @@ const path = {
     pug: 'src/templates/*.pug',
     sass: 'src/sass/**/*.scss',
     js: 'src/js/**/*.js',
-    img: 'src/img/*.*',
-    svg: 'src/img/svg/*.svg',
+    img: 'src/img/**/*',
+    svg: 'src/svg/**/*',
     fonts: 'src/fonts/**/*',
     assets: 'src/external/**/*',
   },
@@ -46,24 +48,13 @@ const path = {
     pug: 'src/templates/*.pug',
     sass: 'src/sass/**/*.scss',
     js: 'src/js/**/*.js',
-    img: 'src/img/*.*',
-    svg: 'src/img/svg/*.svg',
+    img: 'src/img/**/*',
+    svg: 'src/svg/**/*g',
     fonts: 'src/fonts/**/*',
     assets: 'src/external/**/*'
   },
   clean: './build'
 };
-
-// webserver
-// gulp.task('webserver', function() {
-//     gulp.src('build')
-//         .pipe(webserver({
-//             livereload: true,
-//             port: 7900,
-//             // directoryListing: true,
-//             open: true
-//         }));
-// });
 
 // browser-sync
 gulp.task('browser-sync', function() {
@@ -83,7 +74,7 @@ gulp.task('browser-sync', function() {
 gulp.task('html:build', function() {
   return gulp
     .src(path.watch.pug)
-    .pipe(pug({ pretty: true }))
+    .pipe(pug())
     .on("error", notify.onError())
     .pipe(gulp.dest(path.build.html))
     .pipe(reload({stream: true}));
@@ -109,7 +100,6 @@ gulp.task('style:prod', function() {
     .pipe(postcss(processors))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(path.build.css))
-    // .pipe(browserSync.reload({stream: true}));
 });
 
 // JS
@@ -154,9 +144,9 @@ gulp.task('image:prod', function() {
 // FONTS
 gulp.task('font:build', function() {
   return gulp
-    .src(path.src.fonts)
-    .pipe(gulp.dest(path.build.fonts))
-    .pipe(reload({stream: true}));
+        .src(path.src.fonts)
+        .pipe(gulp.dest(path.build.fonts))
+        .pipe(reload({stream: true}));
 });
 
 // SVG
@@ -189,17 +179,18 @@ gulp.task('clean', function (cb) {
 
 
 // PROD
-gulp.task('prod', ['html:build', 'style:prod', 'js:prod', 'image:prod', 'font:build', 'asset:build', 'browser-sync'], function() {
+gulp.task('prod', ['html:build', 'style:prod', 'js:prod', 'image:prod', 'svg:build', 'font:build', 'asset:build', 'browser-sync'], function() {
     gulp.watch(path.watch.pug, ['html:build']);
     gulp.watch(path.watch.sass, ['style:prod']);
     gulp.watch(path.watch.js, ['js:prod']);
     gulp.watch(path.watch.img, ['image:prod']);
+    gulp.watch(path.watch.svg, ['svg:build']);
     gulp.watch(path.watch.fonts, ['font:build']);
     gulp.watch(path.watch.assets, ['asset:build'])
 });
 
 // watch
-gulp.task('watch', ['html:build', 'style:build', 'js:build', 'image:build', 'font:build', 'asset:build', 'browser-sync'], function() {
+gulp.task('watch', ['html:build', 'style:build', 'js:build', 'image:build', 'svg:build', 'font:build', 'asset:build', 'browser-sync'], function() {
   gulp.watch(path.watch.pug, ['html:build']);
   gulp.watch(path.watch.sass, ['style:build']);
   gulp.watch(path.watch.js, ['js:build']);
