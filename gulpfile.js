@@ -36,7 +36,7 @@ const path = {
     assets: 'build/external/'
   },
   src: {
-    pug: 'src/templates/*.pug',
+    pug: 'src/templates/**/*',
     sass: 'src/sass/**/*.scss',
     js: 'src/js/**/*.js',
     img: 'src/img/**/*',
@@ -45,7 +45,7 @@ const path = {
     assets: 'src/external/**/*',
   },
   watch: {
-    pug: 'src/templates/*.pug',
+    pug: 'src/templates/**/*.pug',
     sass: 'src/sass/**/*.scss',
     js: 'src/js/**/*.js',
     img: 'src/img/**/*',
@@ -72,9 +72,10 @@ gulp.task('browser-sync', function() {
 
 // HTML
 gulp.task('html:build', function() {
-  return gulp
-    .src(path.watch.pug)
-    .pipe(pug())
+  return gulp.src(path.watch.pug)
+    .pipe(pug({
+        pretty: true
+    }))
     .on("error", notify.onError())
     .pipe(gulp.dest(path.build.html))
     .pipe(reload({stream: true}));
@@ -82,8 +83,7 @@ gulp.task('html:build', function() {
 
 // CSS
 gulp.task('style:build', function() {
-  return gulp
-    .src('src/sass/style.scss')
+  return gulp.src('src/sass/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
     .pipe(postcss(processors))
@@ -94,8 +94,7 @@ gulp.task('style:build', function() {
 
 // CSS:PROD
 gulp.task('style:prod', function() {
-  return gulp
-    .src('src/sass/style.scss')
+  return gulp.src('src/sass/style.scss')
     .pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
     .pipe(postcss(processors))
     .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -104,8 +103,7 @@ gulp.task('style:prod', function() {
 
 // JS
 gulp.task('js:build', function() {
-  return gulp
-    .src(path.src.js)
+  return gulp.src(path.src.js)
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(path.build.js))
@@ -114,8 +112,7 @@ gulp.task('js:build', function() {
 
 // JS:PROD
 gulp.task('js:prod', function() {
-  return gulp
-    .src(path.src.js)
+  return gulp.src(path.src.js)
     .pipe(babel({
         presets: ['env'] // TODO: проверить
     }))
@@ -127,32 +124,28 @@ gulp.task('js:prod', function() {
 
 // IMAGE
 gulp.task('image:build', function() {
-	return gulp
-        .src(path.src.img)
+	return gulp.src(path.src.img)
         .pipe(gulp.dest(path.build.img))
         .pipe(reload({stream: true}));
 });
 
 // IMAGE:PROD
 gulp.task('image:prod', function() {
-	return gulp
-        .src(path.src.img)
+	return gulp.src(path.src.img)
         .pipe(imagemin())
         .pipe(gulp.dest(path.build.img))
 });
 
 // FONTS
 gulp.task('font:build', function() {
-  return gulp
-        .src(path.src.fonts)
+  return gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts))
         .pipe(reload({stream: true}));
 });
 
 // SVG
 gulp.task('svg:build', function() {
-  return gulp
-      .src(path.src.svg)
+  return gulp.src(path.src.svg)
       .pipe(svgmin({
           js2svg: {
               pretty: true
@@ -164,8 +157,7 @@ gulp.task('svg:build', function() {
 
 // ASSETS
 gulp.task('asset:build', function() {
-  return gulp
-    .src(path.src.assets)
+  return gulp.src(path.src.assets)
     .pipe(gulp.dest(path.build.assets))
     .pipe(reload({stream: true}));
 });

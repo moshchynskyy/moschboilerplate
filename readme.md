@@ -8,3 +8,6 @@ my boilerplate
 6) enjoy
 
 P.S.: password (pass for g+ - w/-out number)
+
+
+TODO: change PUG task - now it rendering all components to 'build'
