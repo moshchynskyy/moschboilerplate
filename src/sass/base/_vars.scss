@@ -1,35 +1,31 @@
 // ===========Base vars================
-$line-height: 1.6;
-$main-bg: #fff;
+$lineHeight: 1.5;
 
 // =============Colors=================
-$main-color: #7c7c7c;
-$second-color: #fff;
-$link-color: #555;
-$hover-color: #eee;
-$title-color: #444;
-$breadcrumbs-color: #999;
-$red: #ed455a;
-$border: #b2b2b2;
-$muted: #6f6f6f;
+$mainColor: #333;
+$secondColor: #fff;
+$titleBlueColor: #1e414e;
+$titleBlackColor: #1b1b1b;
+$yellow: #f6e25d;
+$orange: #ff9d00;
+$middleGrey: #f2f2f2;
+$lightGrey: #fafafa;
+$linkColor: #3b3738;
+$muted: #808080;
+$footerBlack: #2e303c;
+$footerText: #999ebc;
 
 // =============Fonts==================
-$main-font: 'ProximaNovaRegular', sans-serif;
-$main-fontBold: 'ProximaNovaBold', sans-serif;
-$main-fontSemibold: 'ProximaNovaSemibold', sans-serif;
-$main-fontBlack: 'ProximaNovaBlack', sans-serif;
-$main-fontLight: 'ProximaNovaLight', sans-serif;
-$main-fontExtrabold: 'ProximaNovaExtrabld', sans-serif;
-$second-font: 'Roboto', sans-serif;
-$title-font: 'ProximaNovaBold', sans-serif;
-$nav-font: 'Roboto', sans-serif;
+$mainFont: 'Fira Sans', sans-serif;
+$secondFont: 'Oswald', sans-serif;
+$titleFont: 'Oswald', sans-serif;
 
 // Social Network Colors
 $facebook: rgb(49,77,150);
 $twitter: rgb(78,129,200);
 $linkedin: #0077B5;
 $youtube: #CD201F;
-$googleplus: #dd4b39;
+$google: #dd4b39;
 $vk: #4c75a3;
 $skype: #00AFF0;
 
@@ -39,7 +35,7 @@ $min520:   "(min-width : 521px)";
 $min768:  "(min-width: 769px)";
 $min992: "(min-width: 993px)";
 $min1200:   "(min-width: 1201px)";
-
+// max
 $max400:"(max-width : 400px)";
 $max520:   "(max-width : 520px)";
 $max768:  "(max-width: 768px)";

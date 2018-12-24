@@ -2,7 +2,7 @@
 .breadcrumbs {
   &-link {
     font-size: 12px;
-    font-family: $second-font;
+    font-family: $secondFont;
     font-weight: 300;
     color: rgb(107, 117, 127);
     text-transform: uppercase;
@@ -34,7 +34,7 @@
   }
   &-link {
     color: rgb(139, 152, 166);
-    font-family: $main-fontBold;
+    font-family: $mainFont;
     span {
       margin-right: 12px;
     }
@@ -54,3 +54,39 @@
   height: 400px;
 }
 // eof map
+
+// preloader
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 30000000;
+  &__wrap {
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    margin-left: -125px;
+    margin-top: -75px;
+    color: $yellow;
+    font-size: 40px;
+    letter-spacing: -2px;
+    text-align: center;
+    line-height: 35px;
+  }
+  &__svg {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    background: /*url(images/oval.svg) */
+            center center no-repeat;
+    background-size: 41px;
+    margin: -16px 0 0 -16px;
+
+  }
+}
+// eof preloader

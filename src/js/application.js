@@ -13,7 +13,7 @@ $(window).on('load', function () {
 $(function () {
 
 // header
-    $('#toggle-menu').on('click', function(e) {
+    $('#toggleMenu').on('click', function(e) {
         e.preventDefault();
         $(this).toggleClass("on");
         $('.menu').addClass('menu-open').slideToggle();

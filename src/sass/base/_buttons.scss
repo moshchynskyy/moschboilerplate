@@ -1,25 +1,32 @@
 .mybtn {
-	appearance: none;
-	font-size: responsive 12px 14px;
-	border-radius: 0;
-	border: 1px solid transparent;
-	cursor: pointer;
-	//font-family: $main-font;
+	font-family: $mainFont;
+	background: #fff;
+	color: $titleBlackColor;
+	border: 2px solid $orange;
+	font-size: responsive 14px 16px;
 	font-weight: 600;
+	padding: 6px 12px;
+	text-transform: uppercase;
+	border-radius: 0;
+	cursor: pointer;
 	position: relative;
 	text-align: center;
 	text-decoration: none;
-	padding: 10px 30px;
-	background: $red;
-	//border-color: $main;
-	color: #fff;
-	text-transform: uppercase;
+	appearance: none;
+	display: inline-block;
 	outline: none !important;
 	transition: .25s;
 	&:hover {
-		background: #fff;
-		color: $red;
-		border: 1px solid $red;
-		text-decoration: none;
+		background: $orange;
+		color: #fff;
+	}
+	&-yellow {
+		border-radius: 3px;
+		background-color: $yellow;
+		color: #333;
+		border-color: $yellow;
+		&:hover {
+			background-color: #fff;
+		}
 	}
 }
