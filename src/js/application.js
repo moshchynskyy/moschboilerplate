@@ -19,6 +19,10 @@ $(function () {
         $('.menu').addClass('menu-open').slideToggle();
         // $("body").children().not('header').toggleClass('blur'); // add blur filter to all elements
     });
+    $(window).on('scroll', function() {
+        $(this).scrollTop() >= 300 ? $('#header').addClass('scroll-menu')
+                                    : $('#header').removeClass('scroll-menu');
+    });
 // eof header
 
 // sliders

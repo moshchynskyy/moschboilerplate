@@ -1,14 +1,29 @@
 header#header.header
     .container
-        .row
-            .header__flex-container.flex-container
-                .header__logo-wrap.logo-wrap
-                    a(href="/")
-                        img.logo.header__logo(src="./img/logo.png", title="logo", alt="logo")
-                a#toggleMenu.toggleMenu(href="#")
-                    span
-                ul.menu
+        .header__wrap.flex-container
+            .header__logo-wrap.header__item
+                a(href="/")
+                    img.logo.header__logo(src="./img/logo.png", title="logo", alt="logo")
+            .header__menu-wrap.header__item
+                .header__contact.right.flex-container
+                    a(href="tel:0504725684").text-thin +3 050 472 56 84
+                    a(href="mailto:ad.moshchynskyy@gmail.com").text-thin ad.moshchynskyy@gmail.com
+                ul.menu.header__menu.flex-container
+                    li.header__menu-item.menu-item
+                        a(href="./").header__menu-link.menu-link.transition.custom-line.active Home
+                    li.header__menu-item.menu-item
+                        a(href="./search.html").header__menu-link.menu-link.transition.custom-line Search
+                    li.header__menu-item.menu-item
+                        a(href="./card.html").header__menu-link.menu-link.transition.custom-line Card
+                    li.header__menu-item.menu-item
+                        a(href="./ui.html").header__menu-link.menu-link.transition.custom-line UI-kit
+                    li.header__menu-item.menu-item
+                        a(href="./search.html").header__menu-link.menu-link.transition.custom-line Search
+                    li.header__menu-item.menu-item
+                        a(href="./card.html").header__menu-link.menu-link.transition.custom-line Card
                 #langToggle.langToggle
                     ul.langToggle__list
                         li.langToggle__item EN
                         li.langToggle__item UA
+            a#toggleMenu.toggleMenu(href="#")
+                span
