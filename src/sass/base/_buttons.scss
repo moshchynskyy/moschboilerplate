@@ -3,9 +3,10 @@
 	background: #fff;
 	color: $titleBlackColor;
 	border: 2px solid $orange;
-	font-size: responsive 14px 16px;
+	font-size: responsive 12px 14px;
 	font-weight: 600;
 	padding: 6px 12px;
+	margin: 12px 0;
 	text-transform: uppercase;
 	border-radius: 0;
 	cursor: pointer;
@@ -27,6 +28,12 @@
 		border-color: $yellow;
 		&:hover {
 			background-color: #fff;
+			color: #333;
 		}
+	}
+	&-disabled {
+		//background-color: $muted;
+	}
+	&__wrap {
 	}
 }

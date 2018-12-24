@@ -1,7 +1,6 @@
 .header {
-  background-color: yellowgreen;
+  background-color: $middleGrey;
   padding: 20px 0;
-  border-bottom: 1px solid #ccc;
   &__logo-wrap {
     img {
       max-width: 60px;

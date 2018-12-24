@@ -158,9 +158,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $titleFont;
   color: $titleBlackColor;
   font-weight: 700;
+  line-height: 1;
   margin-top: 0;
-  margin-bottom: 0;
-  &.blue {
+  margin-bottom: 10px;
+  &.title-blue {
     color: $titleBlueColor;
   }
 }
@@ -388,6 +389,51 @@ select::-ms-expand {
 
 
 /* CUSTOM CLASSES */
+
+// palette
+.color-main { background: $mainColor; }
+.color-second { background: $secondColor; }
+.color-blue { background: $titleBlackColor; }
+.color-black { background: $titleBlueColor; }
+.color-yellow { background: $yellow; }
+.color-orange { background: $orange; }
+.color-middleGrey { background: $middleGrey; }
+.color-lightGrey { background: $lightGrey; }
+.color-link { background: $linkColor; }
+.color-muted { background: $muted; }
+.color-footerBlack { background: $footerBlack; }
+.color-footerText { background: $footerText; }
+// eof palette
+
+section {
+  &.section-padding {
+    padding: 120px 0 75px;
+  }
+}
+
+.custom-line {
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: $yellow;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+  }
+}
+
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
 .no-padding {
   padding: 0;
 }
@@ -414,15 +460,20 @@ select::-ms-expand {
 
 // for simple text
 .text {
-  //font-family: $main-font;
   &-undreline {
     text-transform: uppercase;
   }
   &-thin {
     font-weight: 300;
   }
+  &-regular {
+    font-weight: 400;
+  }
   &-medium {
     font-weight: 500;
+  }
+  &-semibold {
+    font-weight: 600;
   }
   &-bold {
     font-weight: 700;
@@ -430,8 +481,13 @@ select::-ms-expand {
   &-extrabold {
     font-weight: 800;
   }
-  &-black {
-    font-weight: 900;
+  &-font {
+    &-main {
+      font-family: $mainFont;
+    }
+    &-second {
+      font-family: $secondFont;
+    }
   }
 }
 
@@ -460,5 +516,4 @@ select::-ms-expand {
 .contain-pic {
   object-fit: contain;
 }
-// eof for img
 /* EOF CUSTOM CLASSES */
