@@ -1,45 +1,9 @@
-@media screen and (max-width: 768px) { // instead 767px
-  .header {
-    &__logo {
-      &-wrapper {
-        padding-left: 15px;
-      }
-    }
-    #toggle-menu {
-      display: block;
-    }
-    .menu {
-      display: none;
-      &.menu-open {
-        position: absolute;
-        background-color: #c39;
-        top: 54px;
-        li {
-          a {
-            line-height: 40px;
-          }
-        }
-      }
-    }
-    .lang-toggle {
-      //display: block;
-    }
-  }
-  .footer {
-    &__flex {
-      &-container {
-        flex-wrap: wrap;
-      }
-      &-item {
-        flex-basis: 100%;
-        text-align: center;
-        margin-bottom: 15px;
-      }
-    }
-  }
+@media screen and (max-width: 768px) {
+
 }
 
 @media screen and (min-width: 521px) and (max-width: 740px) {
+
 }
 
 

@@ -2,25 +2,13 @@ header#header.header
     .container
         .row
             .header__flex-container.flex-container
-                .logo-wrapper.header__logo-wrapper
+                .header__logo-wrap.logo-wrap
                     a(href="/")
-                        img.logo.header-logo(src="./img/logo.png", title="logo", alt="logo")
-                a#toggle-menu(href="#")
+                        img.logo.header__logo(src="./img/logo.png", title="logo", alt="logo")
+                a#toggleMenu.toggleMenu(href="#")
                     span
-                ul.header__flex-menu.flex-container-w100.menu.header-menu
-                    li.header__flex-item.flex-container.flex-center
-                        a.header__flex-link(href="#") Главная
-                    li.header__flex-item.flex-container.flex-center
-                        a.header__flex-link(href="#") Каталог
-                    li.header__flex-item.flex-container.flex-center
-                        a.header__flex-link(href="#") О нас
-                    li.header__flex-item.flex-container.flex-center
-                        a.header__flex-link(href="#") Профиль
-                    li.header__flex-item.flex-container.flex-center
-                        a.header__flex-link(href="#") Вопросы
-                    li.header__flex-item.flex-container.flex-center
-                        a.header__flex-link(href="#") Контакты
-                .lang-toggle
-                    ul.lang-toggle-list
-                        li.lang-toggle-item RU
-                        li.lang-toggle-item UA
+                ul.menu
+                #langToggle.langToggle
+                    ul.langToggle__list
+                        li.langToggle__item EN
+                        li.langToggle__item UA

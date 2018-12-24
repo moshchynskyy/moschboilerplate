@@ -2,51 +2,8 @@
   padding: 48px 0;
   border-top: 2px solid #f5f5f5;
   margin-top: auto;
-  &__flex {
-    &-item {
-      flex: 1 1 auto;
-      text-align: left;
-      &-info {
-        text-align: right;
-      }
-    }
-  }
-  &__column {
-    &-item {
-     color: #444;
-     font-size: responsive 14px 16px;
-      line-height: 1.8;
-      &.footer-address, &.footer-email {
-        font-size: 12px;
-        color: #808080;
-        letter-spacing: 0;
-        margin-top: 5px;
-        line-height: 20px;
-        a {
-          color: #808080;
-        }
-      }
-      &.footer-phone {
-        font-size: 18px;
-        color: #808080;
-        letter-spacing: 0;
-        margin-top: 24px;
-        line-height: 20px;
-      }
-      &.socicon-wrapper {
-        .socicon {
-          margin-left: 16px;
-          cursor: pointer;
-        }
-      }
-    }
-    &-link {
-      color: #999;
-      font-size: responsive 14px 16px;
-      &:hover {
-        color: #999;
-        text-decoration: underline;
-      }
-    }
+  background-color: yellowgreen;
+  @media #{$max1200} {
+    padding: 24px 0;
   }
 }

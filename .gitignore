@@ -1,3 +1,17 @@
+package-lock.json
+!/robots.txt
+!.gitkeep
+.submodules
+/node_modules/
 node_modules/
+/node_modules/*
+
+#IDE
+nbproject/
+
+.idea
+.idea/workspace.xml
 .idea/
+
+build
 .DS_Store
