@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Stroke 638 + Stroke 639</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Footer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-936.000000, -728.000000)" stroke-linejoin="round">
+        <g id="Group-11" transform="translate(736.000000, 728.000000)" stroke="#808080">
+            <g id="Stroke-638-+-Stroke-639" transform="translate(200.000000, 0.000000)">
+                <path d="M23.5,12 C23.5,18.352 18.352,23.5 12,23.5 C5.648,23.5 0.5,18.352 0.5,12 C0.5,5.648 5.648,0.5 12,0.5 C18.352,0.5 23.5,5.648 23.5,12 L23.5,12 Z" id="Stroke-638" stroke-linecap="round"></path>
+                <path d="M7.5,7 C7.5,6.171 8.172,5.5 9,5.5 C9.828,5.5 10.5,6.171 10.5,7 L10.5,8.5 L14,8.5 C14.828,8.5 15.5,9.171 15.5,10 C15.5,10.829 14.828,11.5 14,11.5 L10.5,11.5 L10.5,12.5 C10.5,13.604 11.394,14.5 12.5,14.5 L14,14.5 C14.828,14.5 15.5,15.171 15.5,16 C15.5,16.829 14.828,17.5 14,17.5 L11.5,17.5 C9.291,17.5 7.5,15.709 7.5,13.5 L7.5,7 L7.5,7 Z" id="Stroke-639"></path>
+            </g>
+        </g>
+    </g>
+</svg>
