@@ -75,40 +75,187 @@
     }
   }
 }
-// eof main page
-
-
-// page
-.page {
-  &-title {
-
-  }
-  &-img {
-    &-wrapper {
-
+.who {
+  &-wrap {
+    margin: 35px 0 50px;
+    @media #{$max768} {
+      margin: 25px 0 0;
+    }
+    @media #{$max576} {
+      text-align: center;
     }
   }
   &-text {
-
+    text-align: center;
   }
-  &__flex {
-    &-container {
-
+  &-img {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    @media #{$max576} {
+      display: inline-block;
+      width: auto;
     }
-    &-item {
-
-    }
-  }
-  &-quote {
-
-  }
-  &-info {
-    &-column {
-
-    }
-  }
-  &-decor {
-
   }
 }
-// eof page
+
+.security {
+  background-color: $yellow;
+  .column-full {
+    padding: 45px 30px 30px;
+    background-color: $yellow;
+    @media #{$max768} {
+      padding: 30px 20px 20px;
+    }
+    &-img {
+      background: center/cover no-repeat;
+    }
+    &-text {
+      flex-wrap: wrap;
+      & > * {
+        flex-basis: 100%;
+      }
+      .security-title {
+        color: $titleBlueColor;
+        margin-bottom: 25px;
+        &:before {
+          background-color: $titleBlueColor;
+        }
+      }
+      p {
+        font-family: $secondFont;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.social {
+  &-wrap {
+    justify-content: center;
+    @media #{$max576} {
+      flex-wrap: wrap;
+    }
+  }
+  &-item {
+    margin: 0 10px;
+    padding: 0 15px 5px;
+    border-radius: 5px;
+    @media #{$max576} {
+      flex: 0 1 30%;
+      margin-bottom: 10px;
+    }
+    &:hover {
+      background-color: $yellow;
+      transition: .25s;
+      .social-icon, .social-text {
+        transition: .25s;
+        color: $titleBlackColor;
+      }
+    }
+  }
+  &-text {
+    text-transform: uppercase;
+  }
+  &-icon {
+    color: $yellow;
+    font-size: responsive 48px 62px;
+  }
+}
+
+.sitter {
+  &-title {
+    margin: 20px 0;
+    &.custom-line:before {
+      background-color: $orange;
+      bottom: -10px;
+    }
+  }
+  &-link {
+    margin-top: 30px;
+    @media #{$max576} {
+      margin-top: 10px;
+    }
+  }
+  &-card {
+    @media #{$max768} {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.testimonials {
+  &-item {
+    display: flex !important;
+    position: relative;
+    @media #{$max576} {
+      flex-wrap: wrap;
+    }
+  }
+  &-wrap {
+    padding-left: 30px;
+    @media #{$max576} {
+      position: relative;
+      top: -40px;
+      padding-left: 80px;
+    }
+    @media #{$max576} {
+      top: -35px;
+      padding-left: 40px;
+    }
+  }
+  &-text {
+    font-weight: 300;
+    margin: 20px 0;
+  }
+  &-quote {
+    background-color: $middleGrey;
+    margin: 30px 0;
+    padding: 30px 45px 15px;
+    font-style: italic;
+    line-height: 2;
+    @media #{$max768} {
+      margin: 20px 0;
+      line-height: 1.6;
+      padding: 20px 40px 15px;
+    }
+    p {
+      position: relative;
+    }
+    svg {
+      position: absolute;
+      left: -24px;
+      top: 5px;
+      font-size: 16px;
+    }
+  }
+  &-img {
+    align-self: flex-start;
+  }
+
+  .slick-dots {
+    display: flex !important;
+    margin: 50px 0;
+    justify-content: center;
+    @media #{$max576} {
+      margin: 15px 0;
+    }
+    li {
+      font-size: 0;
+      width: 15px;
+      height: 15px;
+      background-color: $middleGrey;
+      margin: 0 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: $middleGrey * .9;
+      }
+      &.slick-active {
+        background-color: $yellow;
+      }
+    }
+  }
+}
+
+// eof main page

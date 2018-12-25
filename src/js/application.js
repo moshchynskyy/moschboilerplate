@@ -13,15 +13,15 @@ $(window).on('load', function () {
 $(function () {
 
 // header
-    $('#toggleMenu').on('click', function(e) {
+    $('#toggleMenu').on('click', function (e) {
         e.preventDefault();
         $(this).toggleClass("on");
         $('.menu').addClass('menu-open').slideToggle();
         // $("body").children().not('header').toggleClass('blur'); // add blur filter to all elements
     });
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         $(this).scrollTop() >= 200 ? $('#header').addClass('scroll-menu')
-                                    : $('#header').removeClass('scroll-menu');
+            : $('#header').removeClass('scroll-menu');
     });
 // eof header
 
@@ -31,13 +31,35 @@ $(function () {
         slidesToScroll: 1,
         arrows: true
     });
-    $('.slick-prev').html( '<i class="fas fa-angle-left"></i>' );
-    $('.slick-next').html( '<i class="fas fa-angle-right"></i>' );
+    $('.slick-prev').html('<i class="fas fa-angle-left"></i>');
+    $('.slick-next').html('<i class="fas fa-angle-right"></i>');
+
+    $('#testimonials').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false
+    });
 // eof sliders
+
+// main page
+    const setHeightForCustomColumn = () => {
+        const height = $('.column-full-6.column-full-text').height();
+        $('.column-full-6.column-full-img').height( height );
+    };
+
+    $(window).on('resize', () => {
+        console.log(' window is being resized ');
+        $(window).width() < 768 ? setHeightForCustomColumn() : $('.column-full-6.column-full-img').height( 'auto' );
+    });
+
+    $(window).width() < 768 ? setHeightForCustomColumn() : $('.column-full-6.column-full-img').height( 'auto' );
+
+// eof main page
+
 
 // WOW
 // new WOW().init();
 // eof WOW
-
 
 });
