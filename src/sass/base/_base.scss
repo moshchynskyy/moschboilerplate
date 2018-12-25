@@ -164,6 +164,9 @@ h1, h2, h3, h4, h5, h6 {
   &.title-blue {
     color: $titleBlueColor;
   }
+  &.title-yellow {
+    color: $yellow;
+  }
 }
 
 h1 {
@@ -389,6 +392,21 @@ select::-ms-expand {
 
 
 /* CUSTOM CLASSES */
+.sublayout {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0b0c;
+    opacity: .3;
+    top: 0;
+    position: absolute;
+    left: 0;
+  }
+}
+
 
 // palette
 .color-main { background: $mainColor; }

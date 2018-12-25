@@ -1,6 +1,79 @@
 // main page
-.main {
+.main-page {
+  .main {
+    margin-top: 0;
+  }
+}
+.mainSlider {
+  position: relative;
+  &-item {
+    height: 100vh;
+    background: center/cover no-repeat;
+    display: flex !important;
+  }
+  .slick {
+    &-arrow {
+      outline: none;
+      position: absolute;
+      width: 40px;
+      top: calc(50% - 20px);
+      z-index: 40;
+      color: #fff;
+      font-size: 18px;
+      transform: translateY(-50%);
+      margin: 0;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 27px 10px;
+      transition: all 0.3s;
+      text-align: center;
+      &:hover {
+        background: rgba(0, 0, 0, 0.6);
+      }
+      @media #{$max768} {
+        width: 25px;
+        padding: 15px 0;
+      }
+    }
+    &-prev {
+      left: 0;
+    }
+    &-next {
+      right: 0;
+    }
+  }
+  .main-title {
 
+  }
+  .main-text {
+    margin: 20px 0;
+    font-size: responsive 16px 18px;
+  }
+  .main-btn-wrap {
+    max-width: 320px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    @media #{$max520} {
+      max-width: 100%;
+    }
+    a {
+      font-size: responsive 14px 16px;
+      @media #{$max520} {
+        width: 100%;
+      }
+      &:hover {
+        background-color: transparent;
+        color: $yellow;
+      }
+    }
+  }
+  .slider-content-wrap {
+    margin: auto;
+    max-width: 600px;
+    text-align: center;
+    @media #{$max768} {
+      max-width: 80%;
+    }
+  }
 }
 // eof main page
 

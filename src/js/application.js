@@ -20,16 +20,19 @@ $(function () {
         // $("body").children().not('header').toggleClass('blur'); // add blur filter to all elements
     });
     $(window).on('scroll', function() {
-        $(this).scrollTop() >= 300 ? $('#header').addClass('scroll-menu')
+        $(this).scrollTop() >= 200 ? $('#header').addClass('scroll-menu')
                                     : $('#header').removeClass('scroll-menu');
     });
 // eof header
 
 // sliders
-    $('#slider').slick({
-        slidesToShow: 3,
+    $('#mainSlider').slick({
+        slidesToShow: 1,
         slidesToScroll: 1,
+        arrows: true
     });
+    $('.slick-prev').html( '<i class="fas fa-angle-left"></i>' );
+    $('.slick-next').html( '<i class="fas fa-angle-right"></i>' );
 // eof sliders
 
 // WOW
