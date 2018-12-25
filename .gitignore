@@ -14,3 +14,4 @@ nbproject/
 .idea/
 
 .DS_Store
+build/
