@@ -12,7 +12,7 @@
     &__menu-wrap {
       & .header__contact {
         a {
-          color: #a1c4d3;
+          color: #fff;
         }
       }
       & .header__menu {
@@ -26,7 +26,7 @@
       .header__menu-wrap {
         & .header__contact {
           a {
-            color: $titleBlueColor;
+            color: $titleBlackColor;
           }
         }
         & .header__menu {
@@ -45,6 +45,9 @@
   display: block;
   width: 100%;
   z-index: 1001;
+  &__avatar {
+    border-radius: 50%;
+  }
   @media #{$max768} {
     background-color: $middleGrey;
   }
@@ -93,13 +96,38 @@
       margin-top: 35px;
       @media #{$max768} {
         display: none;
+        //justify-content: center;
+        //margin-top: 0;
+        //position: absolute;
+        //top: 0;
+        //left: 0;
+        //width: 100%;
+        //padding-top: 36px;
+        //.exit {
+        //  display: none;
+        //}
       }
-        a {
-        margin-left: 30px;
-        //font-family: $secondFont;
-        color: $titleBlueColor;
-        font-size: responsive 12px 12px;
-        display: inline-block;
+      a {
+        margin-left: 40px;
+        color: #fff;
+        font-size: responsive 11px 11px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        @media #{$max520} {
+          font-size: 0;
+          margin-left: 0;
+          img {
+            margin-left: 0;
+          }
+        }
+          &:hover {
+          text-decoration: underline;
+        }
+        & > * {
+          margin-left: 8px;
+        }
       }
     }
     & .header__menu {
@@ -117,6 +145,11 @@
       }
       li {
         display: flex;
+        &.login.logout {
+          @media #{$min768} {
+            display: none;
+          }
+        }
         a {
           padding: 15px 20px;
           color: $titleBlackColor;
@@ -160,7 +193,7 @@
     display: none;
     width: 28px;
     height: 28px;
-    position: relative;
+    position: absolute;
     right: 30px;
     background-color: $yellow;
     padding-top: 4px;

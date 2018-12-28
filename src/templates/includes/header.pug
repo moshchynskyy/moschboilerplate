@@ -6,8 +6,9 @@ header#header.header
                     img.logo.header__logo(src="./img/logo.png", title="logo", alt="logo")
             .header__menu-wrap.header__item
                 .header__contact.right.flex-container
-                    a(href="tel:0504725684").text-thin +3 050 472 56 84
-                    a(href="mailto:ad.moshchynskyy@gmail.com").text-thin ad.moshchynskyy@gmail.com
+                    a.exit(href="#") Выйти
+                    a(href="mailto:ad.moshchynskyy@gmail.com") Антон Мощинский
+                        img(src="https://via.placeholder.com/28" alt="user" title="user").header__avatar
                 ul.menu.header__menu.flex-container
                     li.header__menu-item.menu-item
                         a(href="./").header__menu-link.menu-link.transition.custom-line.active Home
@@ -21,6 +22,10 @@ header#header.header
                         a(href="./search.html").header__menu-link.menu-link.transition.custom-line Search
                     li.header__menu-item.menu-item
                         a(href="./card.html").header__menu-link.menu-link.transition.custom-line Card
+                    li.header__menu-item.menu-item.login.logout
+                        a(href="#").header__menu-link.menu-link.transition.custom-line Антон Мощинский
+                    li.header__menu-item.menu-item.login.logout
+                        a(href="#").header__menu-link.menu-link.transition.custom-line Выйти
                 #langToggle.langToggle
                     ul.langToggle__list
                         li.langToggle__item EN
