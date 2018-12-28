@@ -45,6 +45,9 @@
   display: block;
   width: 100%;
   z-index: 1001;
+  & + section {
+    margin-top: 126px;
+  }
   &__avatar {
     border-radius: 50%;
   }
@@ -109,7 +112,7 @@
       }
       a {
         margin-left: 40px;
-        color: #fff;
+        color: $titleBlackColor;
         font-size: responsive 11px 11px;
         text-transform: uppercase;
         display: flex;
