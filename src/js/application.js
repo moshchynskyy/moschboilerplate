@@ -34,7 +34,7 @@ $(function () {
     $('.slick-prev').html('<i class="fas fa-angle-left"></i>');
     $('.slick-next').html('<i class="fas fa-angle-right"></i>');
 
-    $('#testimonials').slick({
+    $('#testimonialsSlider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
@@ -57,6 +57,18 @@ $(function () {
 
 // eof main page
 
+// card page
+    const toggleDogsInfo = () => {
+        $('.card__dogs .more').on('click', function () {
+            $(this).parents('.card__dogs-wrap').toggleClass('open');
+            $(this).text() === 'Подробнее' ?
+                $(this).text('Скрыть') :
+                $(this).text('Подробнее');
+        });
+    }
+
+    toggleDogsInfo();
+// card page
 
 // WOW
 // new WOW().init();

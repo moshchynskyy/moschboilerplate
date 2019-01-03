@@ -2,8 +2,10 @@ section.card__user-panel(style="background: #f6e25d")
     .container
         .row
             .col-12
-                p user panel
-section.card__user-info
+                .card__user-panel-wrap.flex-container.flex-side
+                    h1.card__user-panel-text Name Surname
+                    img.card__user-panel-avatar.avatar(src="https://via.placeholder.com/100")
+section.card__user-info.section-padding
     .container
         .row
             .col-md-9.col-sm-9.col-12
@@ -11,10 +13,190 @@ section.card__user-info
             .col-md-3.col-sm-3.col-12
                 p Sidebar
 section.card__map
-    #map
+    #map(style="background: #f6e25d")
         p map
-section.card__comments
+section.card__user-info-second.section-padding
     .container
         .row
             .col-12
-                p Комменты
+                .heading.flex-container
+                    h2.heading-title.custom-line Детали
+                    p.heading-text Your small contribution make a huge difference and encourage us to continue our works of success. Your small contribution make a huge difference and encourage us to continue our works of success.
+            .col-12
+                .card__detail
+                    .row
+                        .col-12.col-sm-6.col-md-4
+                            .card__detail-wrap
+                                p.card__detail-heading Стоимость передержки:
+                                p.card__detail-text 600 грн/сутки
+                        .col-12.col-sm-6.col-md-4
+                            .card__detail-wrap
+                                p.card__detail-heading Опыт ухода за собакой:
+                                p.card__detail-text 15 лет
+                        .col-12.col-sm-6.col-md-4
+                            .card__detail-wrap
+                                p.card__detail-heading Тип жилья:
+                                p.card__detail-text Квартира
+                        .col-12.col-sm-6.col-md-4
+                            .card__detail-wrap
+                                p.card__detail-heading Наличие транспорта:
+                                p.card__detail-text Нет
+                        .col-12.col-sm-6.col-md-4
+                            .card__detail-wrap
+                                p.card__detail-heading Принимаемый размер собак:
+                                p.card__detail-text До 30 кг
+                        .col-12.col-sm-6.col-md-4
+                            .card__detail-wrap
+                                p.card__detail-heading Принимаемый возраст собак:
+                                p.card__detail-text Все
+                        .col-12.col-sm-6.col-md-4
+                            .card__detail-wrap
+                                p.card__detail-heading Принимает кошек:
+                                p.card__detail-text Нет
+                        .col-12.col-sm-6.col-md-4
+                            .card__detail-wrap
+                                p.card__detail-heading Животные догситтера:
+                                p.card__detail-text Собаки
+            .col-12
+                .heading.flex-container
+                    h2.heading-title.custom-line Собаки догситтера
+                    p.heading-text Your small contribution make a huge difference and encourage us to continue our works of success. Your small contribution make a huge difference and encourage us to continue our works of success.
+            .col-12
+                .card__dogs
+                    .row
+                        .col-6.col-sm-6.col-md-4
+                            img.card__dogs-img(src="https://via.placeholder.com/350x240")
+                            .card__dogs-wrap.transition-slow
+                                h4.card__dogs-title.custom-line Schweppes
+                                .card__dogs-main
+                                    .row
+                                        .col-12.col-sm-6
+                                            p.card__dogs-text <b>Имя: </b> Schweppes
+                                        .col-12.col-sm-6
+                                            p.card__dogs-text <b>Пол: </b> девочка
+                                        .col-12.col-sm-6
+                                            p.card__dogs-text <b>Возраст: </b> 2 года
+                                        .col-12.col-sm-6
+                                            p.card__dogs-text <b>Порода: </b> Цвергшнауцер
+                                .row
+                                    .col-12
+                                        p.card__dogs-text <b>Описание: </b>
+                                        p.card__dogs-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus blanditiis eum illum labore neque quae, repudiandae. Adipisci, blanditiis provident!
+                                    .col-12.col-sm-6
+                                        p.card__dogs-text <b>Имя: </b> Schweppes
+                                    .col-12.col-sm-6
+                                        p.card__dogs-text <b>Пол: </b> девочка
+                                    .col-12.col-sm-6
+                                        p.card__dogs-text <b>Возраст: </b> 2 года
+                                    .col-12.col-sm-6
+                                        p.card__dogs-text <b>Порода: </b> Цвергшнауцер
+                                    p.more Подробнее
+                        .col-6.col-sm-6.col-md-4
+                            img.card__dogs-img(src="https://via.placeholder.com/350x240")
+                            .card__dogs-wrap.transition-slow
+                                h4.card__dogs-title.custom-line Кейт
+                                .card__dogs-main
+                                    .row
+                                        .col-12.col-sm-6
+                                            p.card__dogs-text <b>Имя: </b> Кейт
+                                        .col-12.col-sm-6
+                                            p.card__dogs-text <b>Пол: </b> девочка
+                                        .col-12.col-sm-6
+                                            p.card__dogs-text <b>Возраст: </b> 2 года
+                                        .col-12.col-sm-6
+                                            p.card__dogs-text <b>Порода: </b> Цвергшнауцер
+                                .row
+                                    .col-12
+                                        p.card__dogs-text <b>Описание: </b>
+                                        p.card__dogs-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus blanditiis eum illum labore neque quae, repudiandae. Adipisci, blanditiis provident!
+                                    .col-12.col-sm-6
+                                        p.card__dogs-text <b>Имя: </b> Кейт
+                                    .col-12.col-sm-6
+                                        p.card__dogs-text <b>Пол: </b> девочка
+                                    .col-12.col-sm-6
+                                        p.card__dogs-text <b>Возраст: </b> 3 года
+                                    .col-12.col-sm-6
+                                        p.card__dogs-text <b>Порода: </b> Цвергшнауцер
+                                    p.more Подробнее
+                        .col-6.col-sm-6.col-md-4
+                            img.card__dogs-img(src="https://via.placeholder.com/350x240")
+                            .card__dogs-wrap.transition-slow
+                                h4.card__dogs-title.custom-line Кристофор
+                                .card__dogs-main
+                                    .row
+                                        .col-12.col-sm-6
+                                            p.card__dogs-text <b>Имя: </b> Кристофор
+                                        .col-12.col-sm-6
+                                            p.card__dogs-text <b>Пол: </b> мальчик
+                                        .col-12.col-sm-6
+                                            p.card__dogs-text <b>Возраст: </b> 4 года
+                                        .col-12.col-sm-6
+                                            p.card__dogs-text <b>Порода: </b> Цвергшнауцер
+                                .row
+                                    .col-12
+                                        p.card__dogs-text <b>Описание: </b>
+                                        p.card__dogs-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus blanditiis eum illum labore neque quae, repudiandae. Adipisci, blanditiis provident!
+                                    .col-12.col-sm-6
+                                        p.card__dogs-text <b>Имя: </b> Schweppes
+                                    .col-12.col-sm-6
+                                        p.card__dogs-text <b>Пол: </b> девочка
+                                    .col-12.col-sm-6
+                                        p.card__dogs-text <b>Возраст: </b> 2 года
+                                    .col-12.col-sm-6
+                                        p.card__dogs-text <b>Порода: </b> Цвергшнауцер
+                                    p.more Подробнее
+            .col-12
+                .heading.flex-container
+                    h2.heading-title.custom-line Отзывы о догситтере
+                    p.heading-text Your small contribution make a huge difference and encourage us to continue our works of success. Your small contribution make a huge difference and encourage us to continue our works of success.
+            .col-12
+                .card__comments
+                    div.testimonials-item
+                        img(src="https://via.placeholder.com/80" alt="" title="").testimonials-img
+                        .testimonials-wrap
+                            h4.custom-line.testimonials-title Pett Doe
+                            p.testimonials-text Декабрь 2019
+                            .testimonials-quote
+                                p Anima is one of the biggest pet rescue organsation in USA. The people of this organisation are very engergatic, hard working and also friendly. It’s a great honor for me to work with them in several projects and events.
+                            .testimonials-rate
+                                i.fas.fa-star
+                                i.fas.fa-star
+                                i.fas.fa-star
+                                i.fas.fa-star
+                    div.testimonials-item
+                        img(src="https://via.placeholder.com/80" alt="" title="").testimonials-img
+                        .testimonials-wrap
+                            h4.custom-line.testimonials-title Pett Doe
+                            p.testimonials-text Декабрь 2019
+                            .testimonials-quote
+                                p Anima is one of the biggest pet rescue organsation in USA. The people of this organisation are very engergatic, hard working and also friendly. It’s a great honor for me to work with them in several projects and events.
+                            .testimonials-rate
+                                i.fas.fa-star
+                                i.fas.fa-star
+                                i.fas.fa-star
+                                i.fas.fa-star
+                                i.fas.fa-star
+                    div.testimonials-item
+                        img(src="https://via.placeholder.com/80" alt="" title="").testimonials-img
+                        .testimonials-wrap
+                            h4.custom-line.testimonials-title Pett Doe
+                            p.testimonials-text Декабрь 2019
+                            .testimonials-quote
+                                p Anima is one of the biggest pet rescue organsation in USA. The people of this organisation are very engergatic, hard working and also friendly. It’s a great honor for me to work with them in several projects and events.
+                            .testimonials-rate
+                                i.fas.fa-star
+                                i.fas.fa-star
+                                i.fas.fa-star
+                                i.fas.fa-star
+                    div.testimonials-item
+                        img(src="https://via.placeholder.com/80" alt="" title="").testimonials-img
+                        .testimonials-wrap
+                            h4.custom-line.testimonials-title Pett Doe
+                            p.testimonials-text Декабрь 2019
+                            .testimonials-quote
+                                p Anima is one of the biggest pet rescue organsation in USA. The people of this organisation are very engergatic, hard working and also friendly. It’s a great honor for me to work with them in several projects and events.
+                            .testimonials-rate
+                                i.fas.fa-star
+                                i.fas.fa-star
+                                i.fas.fa-star
+                                i.fas.fa-star
