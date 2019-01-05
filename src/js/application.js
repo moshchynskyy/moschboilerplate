@@ -65,9 +65,26 @@ $(function () {
                 $(this).text('Скрыть') :
                 $(this).text('Подробнее');
         });
-    }
-
+    };
     toggleDogsInfo();
+
+    const initSitterSliders = () => {
+        $('#sitterMainSlider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            asNavFor: '#sitterNavSlider'
+        });
+        $('#sitterNavSlider').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            asNavFor: '#sitterMainSlider',
+            dots: false,
+            focusOnSelect: true
+        });
+        $('.slick-next').html('<i class="fas fa-angle-right"></i>');
+    };
+    initSitterSliders();
 // card page
 
 // WOW

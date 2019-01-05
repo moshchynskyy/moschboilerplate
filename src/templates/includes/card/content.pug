@@ -8,10 +8,51 @@ section.card__user-panel(style="background: #f6e25d")
 section.card__user-info.section-padding
     .container
         .row
-            .col-md-9.col-sm-9.col-12
-                p Main info
-            .col-md-3.col-sm-3.col-12
-                p Sidebar
+            .col-md-8.col-sm-9.col-12
+                .card-sitter-sliders
+                    #sitterMainSlider.card-sitterMainSlider
+                        div.card-sitterMainSlider-item
+                            img.card-sitterMainSlider-img(src="https://via.placeholder.com/720x400")
+                    #sitterNavSlider.card-sitterNavSlider
+                        div.card-sitterNavSlider-item
+                            img.card-sitterNavSlider-img(src="https://via.placeholder.com/160x120")
+                        div.card-sitterNavSlider-item
+                            img.card-sitterNavSlider-img(src="https://via.placeholder.com/160x120")
+                        div.card-sitterNavSlider-item
+                            img.card-sitterNavSlider-img(src="https://via.placeholder.com/160x120")
+                        div.card-sitterNavSlider-item
+                            img.card-sitterNavSlider-img(src="https://via.placeholder.com/160x120")
+                        div.card-sitterNavSlider-item
+                            img.card-sitterNavSlider-img(src="https://via.placeholder.com/160x120")
+                        div.card-sitterNavSlider-item
+                            img.card-sitterNavSlider-img(src="https://via.placeholder.com/160x120")
+                .card-sitter-info
+                    h2.card-sitter-info__title.custom-line Описание
+                    p.card-sitter-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolorum eos eveniet in mollitia, necessitatibus nemo praesentium quae qui recusandae sit ut! Commodi dolore dolorem dolorum maxime porro, reprehenderit voluptates?
+                    p.card-sitter-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolorum eos eveniet in mollitia, necessitatibus nemo praesentium quae qui recusandae sit ut! Commodi dolore dolorem dolorum maxime porro, reprehenderit voluptates?
+                    p.card-sitter-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolorum eos eveniet in mollitia, necessitatibus nemo praesentium quae qui recusandae sit ut! Commodi dolore dolorem dolorum maxime porro, reprehenderit voluptates?
+                    p.card-sitter-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolorum eos eveniet in mollitia, necessitatibus nemo praesentium quae qui recusandae sit ut! Commodi dolore dolorem dolorum maxime porro, reprehenderit voluptates?
+                    p.card-sitter-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolorum eos eveniet in mollitia, necessitatibus nemo praesentium quae qui recusandae sit ut! Commodi dolore dolorem dolorum maxime porro, reprehenderit voluptates?
+                .card-sitter__achives
+                    .row
+                        .col-6.col-sm-4.col-md-3.text-center
+                            img.card__dogs-img(src="https://via.placeholder.com/350x240")
+                            .card__dogs-wrap
+                                h4.card__dogs-title Достижение 1
+                        .col-6.col-sm-4.col-md-3.text-center
+                            img.card__dogs-img(src="https://via.placeholder.com/350x240")
+                            .card__dogs-wrap
+                                h4.card__dogs-title Достижение 2
+                        .col-6.col-sm-4.col-md-3.text-center
+                            img.card__dogs-img(src="https://via.placeholder.com/350x240")
+                            .card__dogs-wrap
+                                h4.card__dogs-title Достижение 3
+                        .col-6.col-sm-4.col-md-3.text-center
+                            img.card__dogs-img(src="https://via.placeholder.com/350x240")
+                            .card__dogs-wrap
+                                h4.card__dogs-title Достижение 4
+            .col-md-4.col-sm-3.col-12
+                include ./../../includes/sidebar.pug
 section.card__map
     #map(style="background: #f6e25d")
         p map
@@ -200,3 +241,6 @@ section.card__user-info-second.section-padding
                                 i.fas.fa-star
                                 i.fas.fa-star
                                 i.fas.fa-star
+            .col-12
+                .more-btn.text-center
+                    a(href="#").more.mybtn.mybtn-yellow Показать больше

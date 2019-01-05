@@ -1,0 +1,65 @@
+.sidebar {
+  &-item {
+
+  }
+  &__user {
+    &-img {
+
+    }
+    &-title {
+
+    }
+    &-text {
+      &.user {
+        &-age {
+
+        }
+        &-price {
+
+        }
+        &-mybtn {
+
+        }
+        &-address {
+
+        }
+        &-orders {
+
+        }
+      }
+    }
+  }
+  &__veri {
+    &-title {
+
+    }
+    &-text {
+      .veri {
+        &-date {
+
+        }
+      }
+    }
+    &-list {
+      &-title {
+
+      }
+      &-item {
+
+      }
+    }
+  }
+  &__date {
+
+  }
+  &__add {
+    &-list {
+      &-title {
+
+      }
+      &-item {
+
+      }
+    }
+  }
+}

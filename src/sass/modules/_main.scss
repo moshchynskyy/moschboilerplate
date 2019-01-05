@@ -259,6 +259,9 @@
 }
 
 // eof main page
+
+
+// card page
 .card {
   &__user {
     &-panel {
@@ -362,18 +365,99 @@
       font-size: 12px;
       margin: 15px 0 10px;
     }
-    .testimonials-rate {
-      margin-top: 10px;
-      color: $yellow;
-      font-size: 22px;
-      & > * {
-        margin-right: 5px;
-      }
-    }
     .testimonials-img {
       border-radius: 50%;
     }
   }
+  &-sitter {
+    &-sliders {
+      .card-sitterMainSlider {
+        &-item {
+          border: 1px solid $yellow;
+          padding: 3px;
+        }
+        &-img {
+          width: 100%;
+        }
+      }
+      .card-sitterNavSlider {
+        position: relative;
+        margin-top: 20px;
+        &-item {
+          padding: 3px;
+          cursor: pointer;
+          &.slick-current.slick-active {
+            //border: 1px solid $yellow;
+            //padding: 2px;
+          }
+        }
+        &-img {
+
+        }
+        .slick {
+          &-arrow {
+            outline: none;
+            position: absolute;
+            width: 40px;
+            height: 105px;
+            top: 3px;
+            z-index: 40;
+            color: #fff;
+            font-size: 16px;
+            margin: 0;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 8px;
+            transition: all 0.3s;
+            text-align: center;
+            &:hover {
+              background: rgba(0, 0, 0, 0.7);
+            }
+            @media #{$max768} {
+              width: 16px;
+              padding: 10px 0;
+            }
+          }
+          &-prev {
+            left: 0;
+            display: none !important;
+          }
+          &-next {
+            right: 3px;
+          }
+        }
+      }
+    }
+    &-info {
+      &__title {
+        margin: 50px 0 35px;
+      }
+      &__text {
+        margin-bottom: 10px;
+      }
+    }
+    &__achives {
+      margin-top: 60px;
+      .card__dogs-wrap {
+        padding: 0;
+      }
+      .card__dogs-title {
+        font-weight: 300;
+
+      }
+      .card__dogs-img {
+
+      }
+    }
+  }
 }
-// card page
+
+.testimonials-rate {
+  margin-top: 10px;
+  color: $yellow;
+  font-size: 22px;
+  & > * {
+    margin-right: 5px;
+  }
+}
+
 // eof card page
