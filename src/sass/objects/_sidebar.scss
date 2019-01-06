@@ -1,4 +1,18 @@
 .sidebar {
+  &__top {
+    .sidebar__user-img {
+      width: auto;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &-title {
+      margin-bottom: 40px;
+    }
+    .sidebar__user {
+      margin-bottom: 50px;
+    }
+  }
   &-item {
     position: relative;
     padding: 0 5px 15px;
