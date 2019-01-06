@@ -266,6 +266,9 @@
   &__user {
     &-panel {
       padding: 35px 0;
+      @media #{$max768} {
+        padding: 20px 0;
+      }
       &-wrap {
         align-items: center;
       }
@@ -294,6 +297,9 @@
       bottom: 0;
       z-index: 27;
       cursor: pointer;
+      @media #{$max576} {
+        display: none;
+      }
       &:hover {
         text-decoration: none;
       }
@@ -308,6 +314,21 @@
       position: relative;
       overflow: hidden;
       transition: .4s;
+      @media #{$max1200} {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      @media #{$max992} {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      @media #{$max768} {
+        max-height: 155px;
+        margin-bottom: 30px;
+      }
+      @media #{$max576} {
+        max-height: 100%;
+      }
       &.open {
         max-height: 100%;
       }
@@ -329,6 +350,9 @@
     &-text {
       font-size: 15px;
       margin-bottom: 5px;
+      @media #{$max1200} {
+        font-size: 14px;
+      }
       b {
         font-weight: 600;
         font-family: $secondFont;
@@ -349,8 +373,18 @@
     }
   }
   &__comments {
+    .testimonials-wrap {
+      @media #{$max576} {
+        top: 0;
+        padding-left: 0;
+        margin-top: 20px;
+      }
+    }
     .testimonials-item {
       margin-bottom: 75px;
+      @media #{$max576} {
+        margin-bottom: 55px;
+      }
     }
     .testimonials-quote {
       margin: 0;
@@ -392,15 +426,15 @@
           }
         }
         &-img {
-
+          max-height: 100px;
         }
         .slick {
           &-arrow {
             outline: none;
             position: absolute;
             width: 40px;
-            height: 105px;
-            top: 3px;
+            height: 100%;
+            top: 0;
             z-index: 40;
             color: #fff;
             font-size: 16px;
@@ -413,7 +447,7 @@
               background: rgba(0, 0, 0, 0.7);
             }
             @media #{$max768} {
-              width: 16px;
+              width: 24px;
               padding: 10px 0;
             }
           }

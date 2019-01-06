@@ -80,7 +80,21 @@ $(function () {
             slidesToScroll: 1,
             asNavFor: '#sitterMainSlider',
             dots: false,
-            focusOnSelect: true
+            focusOnSelect: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                }
+            ]
         });
         $('.slick-next').html('<i class="fas fa-angle-right"></i>');
     };

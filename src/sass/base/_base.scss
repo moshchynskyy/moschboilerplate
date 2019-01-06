@@ -505,14 +505,20 @@ select::-ms-expand {
 section {
   &.section-padding {
     padding: 120px 0 75px;
-    @media #{$max576} {
+    @media #{$max768} {
       padding: 90px 0 55px;
+    }
+    @media #{$max576} {
+      padding: 80px 0 45px;
     }
   }
 }
 
 .main {
   margin-top: 126px;
+  @media #{$max768} {
+    margin-top: 100px;
+  }
 }
 
 .custom-line {

@@ -1,51 +1,105 @@
 .sidebar {
   &-item {
-
+    position: relative;
+    padding: 0 5px 15px;
+    margin-bottom: 50px;
+    &:before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      bottom: 0;
+      height: 70px;
+      background-color: $orange;
+      width: 1px;
+      @media #{$max1200} {
+        left: -7px;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: -10px;
+      bottom: 0;
+      height: 1px;
+      background-color: $orange;
+      width: 35px;
+      @media #{$max1200} {
+        left: -7px;
+      }
+    }
   }
   &__user {
     &-img {
-
+      width: 100%;
     }
     &-title {
-
+      font-weight: 500;
+      margin: 10px 0;
     }
     &-text {
+      font-size: 14px;
       &.user {
         &-age {
-
+          font-size: 14px;
         }
         &-price {
-
+          font-size: responsive 20px 28px;
+          font-family: $secondFont;
         }
         &-mybtn {
 
         }
         &-address {
-
+          font-size: 14px;
+          margin-bottom: 15px;
         }
         &-orders {
-
+          margin-bottom: 20px;
+          b {
+            font-weight: 600;
+          }
         }
       }
+    }
+    .testimonials-rate {
+      margin-top: 0;
+      margin-bottom: 20px;
     }
   }
   &__veri {
     &-title {
-
+      font-family: $secondFont;
+      font-size: responsive 18px 22px;
+      &-wrap {
+        background-color: $yellow;
+        padding: 15px 0;
+      }
     }
     &-text {
-      .veri {
+      &.veri {
         &-date {
-
+          font-size: 12px;
+          font-style: italic;
         }
       }
     }
     &-list {
+      padding-left: 30px;
+      list-style-type: disc;
+      margin-bottom: 20px;
       &-title {
-
+        font-family: $secondFont;
+        font-size: responsive 17px 19px;
+        margin: 20px 0;
       }
       &-item {
-
+        margin-bottom: 5px;
+        color: $yellow;
+        font-size: 14px;
+        font-style: italic;
+        span {
+          color: $mainColor;
+        }
       }
     }
   }
@@ -54,11 +108,23 @@
   }
   &__add {
     &-list {
+      padding-left: 30px;
+      list-style-type: disc;
+      margin-bottom: 20px;
       &-title {
-
+        font-family: $secondFont;
+        font-size: responsive 17px 19px;
+        margin: 20px 0;
+        text-align: center;
       }
       &-item {
-
+        margin-bottom: 5px;
+        color: $yellow;
+        font-size: 14px;
+        font-style: italic;
+        span {
+          color: $mainColor;
+        }
       }
     }
   }
