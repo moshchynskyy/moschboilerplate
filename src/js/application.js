@@ -49,7 +49,6 @@ $(function () {
     };
 
     $(window).on('resize', () => {
-        console.log(' window is being resized ');
         $(window).width() < 768 ? setHeightForCustomColumn() : $('.column-full-6.column-full-img').height( 'auto' );
     });
 
@@ -100,9 +99,5 @@ $(function () {
     };
     initSitterSliders();
 // card page
-
-// WOW
-// new WOW().init();
-// eof WOW
 
 });

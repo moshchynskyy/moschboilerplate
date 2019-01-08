@@ -38,3 +38,56 @@ footer#footer.footer
     .footer-copyright
         .container
             p.center © 2018 Doggsy - Charity & Activism
+
+div(id='enter' class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+        .modal-body
+            .modal-header
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") &times;
+            .modal-content
+                .modal-title-wrap
+                    h3.modal-title Войдите в аккаунт через соцсети
+                .modal-form-wrap
+                    a(href="#").mybtn.mybtn-yellow Enter using Facebook
+                    a(href="#").mybtn.mybtn-yellow Enter using Google+
+                .modal-form-divider
+                    span.modal-form-divider-text или
+                .modal-title-wrap
+                    h3.modal-title Войдите с помощью e-mail
+                .modal-form-wrap
+                    form#modalEnterForm(action="#")
+                        .modal-input-wrap
+                            input(type="email" placeholder="Введите email").modal-input
+                        .modal-input-wrap
+                            input(type="password" placeholder="Введите пароль").modal-input
+                        .modal-input-btn-wrap.flex-container.flex-side
+                            input(type="submit" value="Войти").modal-input
+                            a(href="#").modal-input-link Забыли пароль?
+div(id='register' class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+        .modal-body
+            .modal-header
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") &times;
+            .modal-content
+                .modal-title-wrap
+                    h3.modal-title Создайте аккаунт с помощью соцсетей
+                .modal-form-wrap
+                    a(href="#").mybtn.mybtn-yellow Enter using Facebook
+                    a(href="#").mybtn.mybtn-yellow Enter using Google+
+                .modal-form-divider
+                    span.modal-form-divider-text или
+                .modal-title-wrap
+                    h3.modal-title Зарегистрируйтесь с помощью электронной почты
+                .modal-form-wrap
+                    form#modalRegisterForm(action="#")
+                        .modal-input-wrap
+                            input(type="email" placeholder="Введите email").modal-input
+                        .modal-input-wrap
+                            input(type="text" placeholder="Введите имя").modal-input
+                        .modal-input-wrap
+                            input(type="password" placeholder="Придумайте пароль").modal-input
+                        .modal-input-wrap
+                            input(type="submit" value="Продолжить").modal-input
+
