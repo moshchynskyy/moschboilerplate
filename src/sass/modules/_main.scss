@@ -497,9 +497,59 @@
 
 
 // search page
-.search-result-wrap {
-  .testimonials-img {
-    width: 150px;
+.search {
+  &__wrap {
+    padding: 35px 0;
+  }
+  &__column {
+    margin-bottom: 30px;
+    &-hide {
+      display: none;
+    }
+  }
+  &__label {
+    font-weight: 500;
+    font-family: $secondFont;
+  }
+  &__input {
+    &-wrap {
+
+    }
+  }
+  &__add {
+    &-wrap {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &-link {
+      color: $orange;
+      font-size: 13px;
+      margin-left: 30px;
+      display: flex;
+      align-items: center;
+      @media #{$min992} {
+        min-width: 120px;
+      }
+        span {
+        margin-left: 5px;
+      }
+      &:hover {
+        text-decoration: underline;
+        color: $orange;
+      }
+      &:active, &:focus {
+        color: $orange;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 35px;
+    font-weight: 400;
+  }
+  &-result-wrap {
+    .testimonials-img {
+      width: 150px;
+    }
   }
 }
 // eof search page

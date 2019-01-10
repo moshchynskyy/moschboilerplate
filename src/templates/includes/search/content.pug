@@ -2,13 +2,95 @@ section.search__panel(style="background: #fafafa")
     .container
         .row
             .col-12
-                h1.card__user-panel-text Найти догситтера
-                p ТУТ БУДЕТ БОЛЬШАЯ ФОРМА !
+                .search__wrap
+                    h1.search__title Найти догситтера
+                    form(action="").search__form.relative
+                        .row
+                            .col-12.col-sm-6.col-md-4
+                                .search__column
+                                    label.search__label Где искать?
+                                    .search__input-wrap
+                                        select(name="city")
+                                            option(selected) Kyiv
+                                            option(selected) Odessa
+                                            option(selected) Lviv
+                                            option(selected) Kharkiv
+                            .col-12.col-sm-6.col-md-4
+                                .search__column
+                                    label.search__label Даты передержки
+                                    .search__input-wrap
+                                        input(name="date" type="date" placeholder="text input")
+                            .col-12.col-sm-6.col-md-4
+                                .search__column
+                                    label.search__label Максимальная стоимость в сутки
+                                    .search__input-wrap
+                                        input(name="price" type="range")
+                            .col-12.col-sm-6.col-md-4
+                                .search__column
+                                    label.search__label Кто у вас?
+                                    .search__input-wrap
+                                        label cats
+                                            input(name="type" type="radio" value="cats")
+                                        label dogs
+                                            input(name="type" type="radio" value="dogs")
+                            .col-12.col-sm-6.col-md-4
+                                .search__column
+                                    label.search__label Размер собаки
+                                    .search__input-wrap
+                                        label do 10
+                                            input(name="size" type="radio" value="5")
+                                        label 10+
+                                            input(name="size" type="radio" value="10")
+                            .col-12.col-sm-6.col-md-4
+                                .search__column
+                                    label.search__label Количество животных?
+                                    .search__input-wrap
+                                        label 1
+                                            input(name="amount" type="radio" value="1")
+                                        label 2
+                                            input(name="amount" type="radio" value="2")
+                                        label 3+
+                                            input(name="amount" type="radio" value="3")
+                            .col-12
+                                .search__column
+                                    .search__add-wrap
+                                        a#additionalSearch.search__add-link(href="#")
+                                            i.fas.fa-angle-down
+                                            span Расширенный поиск
+                                        a#resetFilter.search__add-link(href="#")
+                                            span Сбросить фильтр
+                            .col-12.col-sm-6.col-md-4
+                                .search__column.search__column-toggle.search__column-hide
+                                    label.search__label Возраст животного
+                                    .search__input-wrap
+                                        label 1-5
+                                            input(name="age" type="radio" value="1")
+                                        label 5+
+                                            input(name="age" type="radio" value="5")
+                            .col-12.col-sm-6.col-md-4
+                                .search__column.search__column-toggle.search__column-hide
+                                    label.search__label Животные ситтера
+                                    .search__input-wrap
+                                        label cats
+                                            input(name="animals" type="radio" value="cats")
+                                        label dogs
+                                            input(name="animals" type="radio" value="dogs")
+                                        label cats & dogs
+                                            input(name="animals" type="radio" value="all")
+                            .col-12.col-sm-6.col-md-4
+                                .search__column.search__column-toggle.search__column-hide
+                                    label.search__label Специальные пожелания
+                                    .search__input-wrap
+                                        label 1
+                                            input(name="add" type="checkbox" value="1")
+                                        label 2
+                                            input(name="add" type="checkbox" value="2")
+                                        label 3 & 3.1
+                                            input(name="add" type="checkbox" value="3")
 section.section-padding.search__list
     .container
         .row
             .col-md-8.col-sm-12.col-12
-                .search-filters(style="margin-bottom: 100px") FILTERS
                 .search-result-wrap.card__comments
                     .testimonials-item
                         img(src="https://via.placeholder.com/150" alt="" title="").testimonials-img

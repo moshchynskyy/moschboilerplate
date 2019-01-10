@@ -100,4 +100,20 @@ $(function () {
     initSitterSliders();
 // card page
 
+// search page
+    const showAdditionalSearchColumn = () => {
+        $('#additionalSearch span').on('click', function(e) {
+            e.preventDefault();
+            $(this).prev().hasClass('fa-angle-up') ?
+                $(this).prev().removeClass('fa-angle-up').addClass('fa-angle-down') :
+                $(this).prev().removeClass('fa-angle-down').addClass('fa-angle-up');
+            $('.search__column-toggle').slideToggle();
+            $(this).text() === 'Расширенный поиск' ?
+                $(this).text('Скрыть') :
+                $(this).text('Расширенный поиск');
+        })
+    };
+    showAdditionalSearchColumn();
+// eof search page
+
 });
