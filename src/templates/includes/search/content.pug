@@ -19,12 +19,17 @@ section.search__panel(style="background: #fafafa")
                                 .search__column
                                     label.search__label Даты передержки
                                     .search__input-wrap
-                                        input(name="date" type="date" placeholder="text input")
+                                        //input(name="date" type="date" placeholder="text input")
+                                        label(for="dateFrom") с
+                                        input#dateFrom(type="text" name="dateFrom")
+                                        label(for="dateTo") по
+                                        input#dateTo(type="text" name="dateTo")
                             .col-12.col-sm-6.col-md-4
                                 .search__column
-                                    label.search__label Максимальная стоимость в сутки
+                                    label(for="price").search__label Максимальная стоимость в сутки
                                     .search__input-wrap
-                                        input(name="price" type="range")
+                                        #priceRange
+                                        input#price(type="text" readonly style="border:0; color:#f6931f; font-weight:bold;")
                             .col-12.col-sm-6.col-md-4
                                 .search__column
                                     label.search__label Кто у вас?

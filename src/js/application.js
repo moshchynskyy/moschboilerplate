@@ -114,6 +114,55 @@ $(function () {
         })
     };
     showAdditionalSearchColumn();
+
+
+    // jquery-UI for search block
+    $( function() {
+
+        $( "#priceRange" ).slider({
+            range: true,
+            min: 0,
+            max: 500,
+            values: [ 75, 300 ],
+            slide: function( event, ui ) {
+                $( "#price" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+        });
+        $( "#price" ).val( "$" + $( "#priceRange" ).slider( "values", 0 ) +
+            " - $" + $( "#priceRange" ).slider( "values", 1 ) );
+
+
+        let dateFormat = "mm/dd/yy",
+            from = $( "#dateFrom" )
+                .datepicker({
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    numberOfMonths: 1
+                })
+                .on( "change", function() {
+                    to.datepicker( "option", "minDate", getDate( this ) );
+                }),
+            to = $( "#dateTo" ).datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 1
+            })
+                .on( "change", function() {
+                    from.datepicker( "option", "maxDate", getDate( this ) );
+                });
+
+        function getDate( element ) {
+            let date;
+            try {
+                date = $.datepicker.parseDate( dateFormat, element.value );
+            } catch( error ) {
+                date = null;
+            }
+
+            return date;
+        }
+    } );
+    // EOF jquery-UI for search block
 // eof search page
 
 });
