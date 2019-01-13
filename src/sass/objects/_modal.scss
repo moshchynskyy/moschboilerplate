@@ -1,0 +1,135 @@
+// common styles
+.modal {
+  &-body {
+    background: #fff;
+    padding: 0;
+    .modal-content {
+      border-radius: 0;
+      border: 0;
+      padding: 12px;
+      .close {
+        position: absolute;
+        right: 12px;
+        top: 6px;
+        outline: 0;
+      }
+      .modal {
+        &-link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 400;
+          &:hover {
+            transition: .25s;
+            background-color: $orange;
+            color: #fff;
+          }
+        }
+        &-title {
+          font-weight: 300;
+          &-wrap {
+            margin-top: 24px;
+          }
+        }
+        &-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          border-radius: 0;
+          margin: 0 0 10px;
+          font-size: 11px;
+          font-weight: 400;
+          height: 36px;
+          color: #fff;
+          &.mybtn-facebook {
+            background-color: $facebook;
+            border: 1px solid $facebook;
+            &:hover {
+              background-color: $facebook * .8;
+            }
+          }
+          &.mybtn-google {
+            background-color: $google;
+            border: 1px solid $google;
+            &:hover {
+              background-color: $google * .8;
+            }
+          }
+        }
+        &-form {
+          &-wrap {
+            width: 60%;
+            margin: 30px auto 20px;
+          }
+          &-divider {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            &:after {
+              content: '';
+              position: absolute;
+              width: calc(100% + 24px);
+              z-index: 11;
+              background-color: $mainColor;
+              height: 1px;
+              left: -12px;
+              top: 15px;
+            }
+            &-text {
+              background-color: #fff;
+              z-index: 13;
+              padding: 3px 15px;
+              font-size: 16px;
+            }
+          }
+        }
+        &-input {
+          width: 100%;
+          border: 1px solid $orange;
+          height: 36px;
+          margin-bottom: 10px;
+          padding: 5px 10px;
+          font-size: 12px;
+          &[type="submit"] {
+            width: 120px;
+            text-transform: uppercase;
+            font-size: 11px;
+            &:hover {
+              background-color: $orange;
+              color: #fff;
+              transition: .25s;
+            }
+          }
+          &-link {
+            font-size: 11px;
+            color: $orange;
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+          &-btn {
+            &-wrap {
+              align-items: center;
+            }
+          }
+          &-wrap {
+
+          }
+        }
+      }
+    }
+  }
+}
+// eof common styles
+
+
+// enter pop-up
+
+// eof enter pop-up
+
+
+// register pop-up
+
+// eof register pop-up
