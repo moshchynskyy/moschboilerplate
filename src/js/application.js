@@ -119,16 +119,20 @@ $(function () {
     // jquery-UI for search block
     $( function() {
 
+        $('.search__form select').niceSelect();
+
+        $( ".search__form input.search__input").checkboxradio();
+
         $( "#priceRange" ).slider({
             range: true,
             min: 0,
             max: 500,
             values: [ 75, 300 ],
             slide: function( event, ui ) {
-                $( "#price" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                $( "#priceInput" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
             }
         });
-        $( "#price" ).val( "$" + $( "#priceRange" ).slider( "values", 0 ) +
+        $( "#priceInput" ).val( "$" + $( "#priceRange" ).slider( "values", 0 ) +
             " - $" + $( "#priceRange" ).slider( "values", 1 ) );
 
 
@@ -151,7 +155,7 @@ $(function () {
                     from.datepicker( "option", "maxDate", getDate( this ) );
                 });
 
-        function getDate( element ) {
+        const getDate = ( element ) => {
             let date;
             try {
                 date = $.datepicker.parseDate( dateFormat, element.value );
@@ -163,6 +167,7 @@ $(function () {
         }
     } );
     // EOF jquery-UI for search block
+
 // eof search page
 
 });

@@ -4,6 +4,7 @@
     margin-top: 0;
   }
 }
+
 .mainSlider {
   position: relative;
   &-item {
@@ -75,6 +76,7 @@
     }
   }
 }
+
 .who {
   &-wrap {
     margin: 35px 0 50px;
@@ -260,7 +262,6 @@
 
 // eof main page
 
-
 // card page
 .card {
   &__user {
@@ -286,7 +287,7 @@
   }
   &__dogs {
     margin-bottom: 120px;
-    .more  {
+    .more {
       font-style: italic;
       font-family: $secondFont;
       font-size: 15px;
@@ -493,8 +494,8 @@
     margin-right: 5px;
   }
 }
-// eof card page
 
+// eof card page
 
 // search page
 .search {
@@ -509,17 +510,140 @@
   }
   &__label {
     font-weight: 500;
+    margin-bottom: 10px;
     font-family: $secondFont;
+    &-date {
+      display: flex;
+      align-items: center;
+      width: 230px;
+      height: 36px;
+      background: #fff;
+      padding: 5px 10px;
+      cursor: pointer;
+      border: 1px solid $orange;
+      @media #{$max576} {
+        width: 100%;
+      }
+      span {
+        display: inline-block;
+        width: 25px;
+      }
+      input {
+        cursor: pointer;
+        margin-left: 10px;
+      }
+    }
+    &-wrap {
+      background: #fff;
+      border: 1px solid $orange;
+      color: $orange;
+      font-weight: 300;
+      font-size: responsive 13px 15px;
+      margin-left: 0;
+      margin-right: 3px;
+      margin-bottom: 3px;
+      border-radius: 0;
+      &.ui-state-active {
+        background: $orange;
+        border: 1px solid $orange;
+        font-weight: 300;
+        color: #fff;
+        &:hover {
+          background: $orange;
+          border: 1px solid $orange;
+          font-weight: 300;
+          color: #fff;
+        }
+      }
+      &.ui-visual-focus {
+        box-shadow: none;
+      }
+      &:hover {
+        background: $orange;
+        border: 1px solid $orange;
+        font-weight: 300;
+        color: #fff;
+      }
+      .ui-icon {
+        display: none;
+      }
+    }
   }
   &__input {
     &-wrap {
-
+      display: flex;
+      flex-wrap: wrap;
+      &-price {
+        .priceRange {
+          border-radius: 0;
+          border: 1px solid $orange;
+          background: #fff;
+          height: 6px;
+          margin-top: 15px;
+          .ui-slider-range {
+            background: $orange;
+          }
+          .ui-slider-handle {
+            background: #fff;
+            border: 1px solid $orange;
+            height: 16px;
+            width: 16px;
+            border-radius: 0;
+            cursor: pointer;
+            top: -6px;
+            &.ui-state-active {
+              background-color: $orange;
+            }
+          }
+        }
+        .priceInput {
+          width: 100%;
+          display: block;
+          margin-top: 12px;
+          color: #ff9d00;
+          border: 0;
+          text-align: center;
+          font-weight: 400;
+          font-size: 13px;
+          font-family: $mainFont;
+        }
+      }
+      .nice-select {
+        border-radius: 0;
+        border: 1px solid $orange;
+        width: 230px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        @media #{$max576} {
+          width: 100%;
+        }
+        .list {
+          border-radius: 0;
+          border: 1px solid orange;
+          box-shadow: none;
+          min-width: 100%;
+          .option {
+            &.selected {
+              background-color: $middleGrey;
+              cursor: default;
+            }
+            &:hover {
+              background-color: $middleGrey;
+            }
+          }
+        }
+      }
     }
   }
   &__add {
     &-wrap {
       display: flex;
       justify-content: flex-end;
+      @media #{$max400} {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+      }
     }
     &-link {
       color: $orange;
@@ -530,7 +654,11 @@
       @media #{$min992} {
         min-width: 120px;
       }
-        span {
+      @media #{$max400} {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+      span {
         margin-left: 5px;
       }
       &:hover {
@@ -552,4 +680,36 @@
     }
   }
 }
+// ui-datepicker
+.ui-datepicker {
+  z-index: 12 !important;
+  tbody {
+    tr {
+      td {
+        .ui-state-default {
+          background: #fff;
+          border: 1px solid;
+          color: $orange;
+          &.ui-state-active {
+            background: $orange;
+            color: #fff;
+            border: 1px solid $orange;
+          }
+          &.ui-state-highlight {
+            border: 1px solid $orange;
+            background: $orange;
+            color: #fff;
+          }
+          &:hover {
+            border: 1px solid rgba(243,160,47,.8);
+            background: rgba(243,160,47,.8);
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+// eof ui-datepicker
+
 // eof search page

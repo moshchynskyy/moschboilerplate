@@ -11,51 +11,58 @@ section.search__panel(style="background: #fafafa")
                                     label.search__label Где искать?
                                     .search__input-wrap
                                         select(name="city")
-                                            option(selected) Kyiv
-                                            option(selected) Odessa
-                                            option(selected) Lviv
-                                            option(selected) Kharkiv
+                                            option(selected) Киев
+                                            option() Одесса
+                                            option() Львов
+                                            option() Харьков
+                                            option() Тернополь
                             .col-12.col-sm-6.col-md-4
                                 .search__column
                                     label.search__label Даты передержки
                                     .search__input-wrap
                                         //input(name="date" type="date" placeholder="text input")
-                                        label(for="dateFrom") с
-                                        input#dateFrom(type="text" name="dateFrom")
-                                        label(for="dateTo") по
-                                        input#dateTo(type="text" name="dateTo")
+                                        label.search__label-date(for="dateFrom")
+                                            span с
+                                            input#dateFrom(type="text" name="dateFrom")
+                                        label.search__label-date(for="dateTo")
+                                            span по
+                                            input#dateTo(type="text" name="dateTo")
                             .col-12.col-sm-6.col-md-4
                                 .search__column
                                     label(for="price").search__label Максимальная стоимость в сутки
-                                    .search__input-wrap
-                                        #priceRange
-                                        input#price(type="text" readonly style="border:0; color:#f6931f; font-weight:bold;")
+                                    .search__input-wrap-price
+                                        #priceRange.priceRange
+                                        input#priceInput.priceInput(type="text" readonly)
                             .col-12.col-sm-6.col-md-4
                                 .search__column
                                     label.search__label Кто у вас?
                                     .search__input-wrap
-                                        label cats
-                                            input(name="type" type="radio" value="cats")
-                                        label dogs
-                                            input(name="type" type="radio" value="dogs")
+                                        label.search__label-wrap(for="chooseCat") Собака
+                                            input#chooseCat.search__input.search__input-type(name="type" type="radio" value="cats")
+                                        label.search__label-wrap(for="chooseDog") Кот
+                                            input#chooseDog.search__input.search__input-type(name="type" type="radio" value="dogs")
                             .col-12.col-sm-6.col-md-4
                                 .search__column
                                     label.search__label Размер собаки
                                     .search__input-wrap
-                                        label do 10
-                                            input(name="size" type="radio" value="5")
-                                        label 10+
-                                            input(name="size" type="radio" value="10")
+                                        label.search__label-wrap(for="sizeBeforeFive") 1-5 кг
+                                            input#sizeBeforeFive.search__input.search__input-size(name="size" type="radio" value="5")
+                                        label.search__label-wrap(for="sizeFiveTen") 5-10 кг
+                                            input#sizeFiveTen.search__input.search__input-size(name="size" type="radio" value="10")
+                                        label.search__label-wrap(for="sizeTenTwenty") 10-20 кг
+                                            input#sizeTenTwenty.search__input.search__input-size(name="size" type="radio" value="10")
+                                        label.search__label-wrap(for="sizeAfterTwenty") 20+ кг
+                                            input#sizeAfterTwenty.search__input.search__input-size(name="size" type="radio" value="10")
                             .col-12.col-sm-6.col-md-4
                                 .search__column
                                     label.search__label Количество животных?
                                     .search__input-wrap
-                                        label 1
-                                            input(name="amount" type="radio" value="1")
-                                        label 2
-                                            input(name="amount" type="radio" value="2")
-                                        label 3+
-                                            input(name="amount" type="radio" value="3")
+                                        label.search__label-wrap(for="animalsAmountOne") 1
+                                            input#animalsAmountOne.search__input.search__input-amount(name="amount" type="radio" value="1")
+                                        label.search__label-wrap(for="animalsAmountTwo") 2
+                                            input#animalsAmountTwo.search__input.search__input-amount(name="amount" type="radio" value="2")
+                                        label.search__label-wrap(for="animalsAmountMore") 3+
+                                            input#animalsAmountMore.search__input.search__input-amount(name="amount" type="radio" value="3")
                             .col-12
                                 .search__column
                                     .search__add-wrap
@@ -68,30 +75,34 @@ section.search__panel(style="background: #fafafa")
                                 .search__column.search__column-toggle.search__column-hide
                                     label.search__label Возраст животного
                                     .search__input-wrap
-                                        label 1-5
-                                            input(name="age" type="radio" value="1")
-                                        label 5+
-                                            input(name="age" type="radio" value="5")
+                                        label.search__label-wrap(for="ageBeforeYear") до 1 года
+                                            input#ageBeforeYear.search__input.search__input-age(name="age" type="radio" value="1")
+                                        label.search__label-wrap(for="ageOneFive") 1-5 лет
+                                            input#ageOneFive.search__input.search__input-age(name="age" type="radio" value="5")
+                                        label.search__label-wrap(for="ageFiveTen") 5-10 лет
+                                            input#ageFiveTen.search__input.search__input-age(name="age" type="radio" value="5")
+                                        label.search__label-wrap(for="ageAfterTen") 10+ лет
+                                            input#ageAfterTen.search__input.search__input-age(name="age" type="radio" value="5")
                             .col-12.col-sm-6.col-md-4
                                 .search__column.search__column-toggle.search__column-hide
                                     label.search__label Животные ситтера
                                     .search__input-wrap
-                                        label cats
-                                            input(name="animals" type="radio" value="cats")
-                                        label dogs
-                                            input(name="animals" type="radio" value="dogs")
-                                        label cats & dogs
-                                            input(name="animals" type="radio" value="all")
+                                        label.search__label-wrap(for="typeAnimalsCat") Собаки
+                                            input#typeAnimalsCat.search__input.search__input-animals(name="animals" type="radio" value="cats")
+                                        label.search__label-wrap(for="typeAnimalsDog") Коты
+                                            input#typeAnimalsDog.search__input.search__input-animals(name="animals" type="radio" value="dogs")
+                                        label.search__label-wrap(for="typeAnimalsAll") Собаки и коты
+                                            input#typeAnimalsAll.search__input.search__input-animals(name="animals" type="radio" value="all")
                             .col-12.col-sm-6.col-md-4
                                 .search__column.search__column-toggle.search__column-hide
                                     label.search__label Специальные пожелания
                                     .search__input-wrap
-                                        label 1
-                                            input(name="add" type="checkbox" value="1")
-                                        label 2
-                                            input(name="add" type="checkbox" value="2")
-                                        label 3 & 3.1
-                                            input(name="add" type="checkbox" value="3")
+                                        label.search__label-wrap(for="propose1") Lorem ipsum dolor sit.
+                                            input#propose1.search__input.search__input-add(name="add" type="checkbox" value="1")
+                                        label.search__label-wrap(for="propose2") Lorem ipsum dolor sit.
+                                            input#propose2.search__input.search__input-add(name="add" type="checkbox" value="2")
+                                        label.search__label-wrap(for="propose3") Lorem ipsum dolor sit.
+                                            input#propose3.search__input.search__input-add(name="add" type="checkbox" value="3")
 section.section-padding.search__list
     .container
         .row
