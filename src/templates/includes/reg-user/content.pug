@@ -1,0 +1,163 @@
+section.section-padding
+    .container
+        .big-box.no-border
+            form.reg-form#regStepZero(action="#")
+                .reg-form-wrap
+                    .row
+                        .modal-body
+                            .modal-content
+                                .modal-title-wrap
+                                    h3.modal-title.text-center Войдите в аккаунт через соцсети
+                                .modal-form-wrap
+                                    a(href="#").modal-btn.mybtn.mybtn-yellow.mybtn-facebook Авторизация через Facebook
+                                    a(href="#").modal-btn.mybtn.mybtn-yellow.mybtn-google Авторизация через Google+
+                                .modal-form-divider
+                                    span.modal-form-divider-text или
+                                .modal-title-wrap
+                                    h3.modal-title.text-center Войдите с помощью e-mail
+                                .modal-form-wrap
+                                    form.modal-form#modalEnterForm(action="#")
+                                        .modal-input-wrap
+                                            input(type="email" placeholder="Введите email").modal-input
+                                        .modal-input-wrap
+                                            input(type="password" placeholder="Введите пароль").modal-input
+                                        .modal-input-btn-wrap.flex-container.flex-side
+                                            input(type="submit" value="Войти").modal-input.transition
+                                            a(href="#").modal-input-link Забыли пароль?
+        .big-box
+            form.reg-form#regStepOne(action="#")
+                .reg-form-wrap
+                    .row
+                        .col-12
+                            h1.reg-title.text-center Ваша собака
+                        .col-12.reg-column
+                            p.reg-text.text-center Если у вас несколько собак, добавить еще вы сможете позже в личном кабинете
+                        .col-4.reg-column
+                            label(for="dogName").reg-label Имя собаки
+                        .col-8.reg-column
+                            .reg-input-wrap
+                                input#dogName.reg-input(type="text" name="name")
+                        .col-4.reg-column
+                            label(for="dogPhoto").reg-label Фотографии
+                                p.reg-label-text Загрузите фотографии вашей собаки
+                        .col-8.reg-column
+                            .reg-input-wrap
+                                input#dogPhoto.reg-input(type="text" name="files")
+                        .col-4.reg-column
+                            label(for="ageYear").reg-label Возраст
+                        .col-4.reg-column
+                            .reg-input-wrap
+                                input#ageYear.reg-input(type="number" name="ageYear")
+                            p.reg-label-text лет
+                        .col-4.reg-column
+                            .reg-input-wrap
+                                input#ageMonth.reg-input(type="number" name="ageMonth")
+                            p.reg-label-text месяцев
+                        .col-4.reg-column
+                            label(for="dogType").reg-label Порода
+                        .col-8.reg-column
+                            .reg-input-wrap
+                                input#dogType.reg-input(type="text" name="type")
+                        .col-4.reg-column
+                            label(for="dogSize").reg-label Размер
+                        .col-8.reg-column
+                            .reg-input-wrap
+                                select#dogSize.reg-select(name="type")
+                                    option(selected) до 5 кг
+                                    option 5-10 кг
+                                    option 10-20 кг
+                                    option 20+ кг
+                        .col-12.reg-column
+                            label(for="dogDescription").reg-label.reg-label-height Опишите вашу собаку
+                        .col-6.reg-column
+                            textarea#dogDescription.reg-textarea(name="dogDescription")
+                        .col-6.reg-column
+                            ul.reg-list
+                                li.reg-list-item
+                                    span Особенности характера
+                                li.reg-list-item
+                                    span Не метит ли дома, не грызет ли вещи?
+                                li.reg-list-item
+                                    span Остается ли одна в квартире или необходим круглосуточный присмотр?
+                                li.reg-list-item
+                                    span Сколько выгулов в день необходимо?
+                                li.reg-list-item
+                                    span Чем питается: корм или необходимо готовить еду?
+                        .col-12.reg-column
+                            label.reg-label.reg-label-height Пол
+                        .col-12.reg-column
+                            .reg-checkbox-wrap
+                                label(for="dogMale").reg-checkbox-label
+                                    input#dogMale.reg-checkbox(type="radio" name="sex" value="male")
+                                    span Мальчик
+                                label(for="dogFemale").reg-checkbox-label
+                                    input#dogFemale.reg-checkbox(type="radio" name="sex" value="female")
+                                    span Девочка
+                        .col-12.reg-column
+                            label.reg-label.reg-label-height Ваша собака стерилизована/кастрирована?
+                        .col-12.reg-column
+                            .reg-checkbox-wrap
+                                label(for="sterYes").reg-checkbox-label
+                                    input#sterYes.reg-checkbox(type="radio" name="ster" value="yes")
+                                    span Да
+                                label(for="sterNo").reg-checkbox-label
+                                    input#sterNo.reg-checkbox(type="radio" name="ster" value="no")
+                                    span Нет
+                                label(for="sterMaybe").reg-checkbox-label
+                                    input#sterMaybe.reg-checkbox(type="radio" name="ster" value="maybe")
+                                    span Не знаю точно
+                        .col-12.reg-column
+                            label.reg-label.reg-label-height Ваша собака дружелюбна к другим собакам?
+                        .col-12.reg-column
+                            .reg-checkbox-wrap
+                                label(for="politeYes").reg-checkbox-label
+                                    input#politeYes.reg-checkbox(type="radio" name="polite" value="yes")
+                                    span Да
+                                label(for="politeNo").reg-checkbox-label
+                                    input#politeNo.reg-checkbox(type="radio" name="polite" value="no")
+                                    span Нет
+                                label(for="politeMaybe").reg-checkbox-label
+                                    input#politeMaybe.reg-checkbox(type="radio" name="polite" value="maybe")
+                                    span Не знаю точно
+                        .col-12.reg-column
+                            label.reg-label.reg-label-height Ваша собака дружелюбна к кошкам?
+                        .col-12.reg-column
+                            .reg-checkbox-wrap
+                                label(for="politeCatYes").reg-checkbox-label
+                                    input#politeCatYes.reg-checkbox(type="radio" name="politeCat" value="yes")
+                                    span Да
+                                label(for="politeCatNo").reg-checkbox-label
+                                    input#politeCatNo.reg-checkbox(type="radio" name="politeCat" value="no")
+                                    span Нет
+                                label(for="politeCatMaybe").reg-checkbox-label
+                                    input#politeCatMaybe.reg-checkbox(type="radio" name="politeCat" value="maybe")
+                                    span Не знаю точно
+                        .col-12.reg-column
+                            label.reg-label.reg-label-height Остается ли собака дома одна?
+                        .col-12.reg-column
+                            .reg-checkbox-wrap
+                                label(for="aloneTot").reg-checkbox-label
+                                    input#aloneTot.reg-checkbox(type="radio" name="alone" value="male")
+                                    span Остается одна, пока я на работе
+                                label(for="aloneLittle").reg-checkbox-label
+                                    input#aloneLittle.reg-checkbox(type="radio" name="alone" value="female")
+                                    span Остается на пару часов
+                                label(for="aloneNo").reg-checkbox-label
+                                    input#aloneNo.reg-checkbox(type="radio" name="alone" value="female")
+                                    span Почти всегда дома с собакой кто-то есть
+                        .col-12.reg-column
+                            label.reg-label.reg-label-height Собака имеет все необходимые вакцинации в соответствии с ветеринарными требованиями?
+                        .col-12.reg-column
+                            .reg-checkbox-wrap
+                                label(for="medicineYes").reg-checkbox-label
+                                    input#medicineYes.reg-checkbox(type="radio" name="medicine" value="yes")
+                                    span Да
+                                label(for="medicineNo").reg-checkbox-label
+                                    input#medicineNo.reg-checkbox(type="radio" name="medicine" value="no")
+                                    span Нет
+                                label(for="medicineMaybe").reg-checkbox-label
+                                    input#medicineMaybe.reg-checkbox(type="radio" name="medicine" value="maybe")
+                                    span Не знаю точно
+                        .col-12.reg-column
+                            .more-btn.text-center
+                                input(type="submit" value="Отправить").more.mybtn.mybtn-orange.reg-btn

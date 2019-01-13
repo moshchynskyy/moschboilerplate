@@ -170,4 +170,12 @@ $(function () {
 
 // eof search page
 
+// register page
+    $( function() {
+        $('.reg-form select').niceSelect();
+        $( ".reg-form input.reg-checkbox").checkboxradio();
+
+    });
+// eof register page
+
 });
