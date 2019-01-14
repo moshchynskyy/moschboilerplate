@@ -1,0 +1,39 @@
+section.section-padding.reg-sitter
+    .container
+        .big-box
+            form.reg-form#regSitterStepFirst(action="#")
+                .reg-form-wrap
+                    h1.reg-title.text-center Расскажите о себе, чтобы клиенты знали, с кем будет их собака
+                    .row
+                        .col-sm-12.col-md-7
+                            .reg-sitter__column
+                                .reg-sitter__label-wrap
+                                    label.reg-label
+                                        span Ваше имя
+                                        input.reg-input(type="text" name="name" placeholder="Ваше имя")
+                                .reg-sitter__label-wrap
+                                    label.reg-label
+                                        span Ваша фамилия
+                                        input.reg-input(type="text" name="surname" placeholder="Ваша фамилия")
+                                .reg-sitter__label-wrap
+                                    label.reg-label
+                                        span Мобильный телефон
+                                        input.reg-input(type="tel" name="phone" placeholder="Мобильный телефон")
+                                .reg-sitter__label-wrap
+                                    label.reg-label
+                                        span Ваш город
+                                        input.reg-input(type="text" name="city" placeholder="Ваш город")
+                                .reg-sitter__label-wrap
+                                    label.reg-label
+                                        span Дата рождения
+                                        input.reg-input(type="text" name="date" placeholder="Дата рождения")
+                        .col-sm-12.col-md-5
+                            .reg-sitter__column
+                                .reg-sitter__img-wrap
+                                    img.reg-sitter__img(src="https://via.placeholder.com/150")
+                                .reg-sitter__btn.text-center
+                                    button.more.mybtn.mybtn-orange.reg-btn Загрузить фото
+                                    input(type="file" name="file" hidden)
+                        .col-12
+                            .more-btn.text-center
+                                input(type="submit" value="Завершить").more.mybtn.mybtn-orange.reg-btn

@@ -760,7 +760,7 @@
     }
   }
   &-btn {
-
+    font-weight: 400;
   }
   &-text {
 
@@ -881,5 +881,32 @@
 // user
 
 // sitter
+.reg-sitter {
+  &__column {
+    padding-top: 20px;
+  }
+  &__btn {
+    margin-top: 10px;
+  }
+  &__img {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    &-wrap {
 
+    }
+  }
+  &__label {
+    &-wrap {
+      margin-bottom: 15px;
+      span {
+        display: block;
+        margin-bottom: 3px;
+      }
+      input {
+        font-weight: 300;
+      }
+    }
+  }
+}
 // eof register page
