@@ -175,6 +175,9 @@ $(function () {
         $('.reg-form select').niceSelect();
         $( ".reg-form input.reg-checkbox").checkboxradio();
 
+        $('#setAddress').on('click', function (e) {
+            e.preventDefault();
+        })
     });
 // eof register page
 

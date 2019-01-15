@@ -37,3 +37,75 @@ section.section-padding.reg-sitter
                         .col-12
                             .more-btn.text-center
                                 input(type="submit" value="Завершить").more.mybtn.mybtn-orange.reg-btn
+
+        .big-box
+            form.reg-form#regSitterStepSecond(action="#")
+                .reg-form-wrap
+                    h1.reg-title.text-center Стоимость передержки
+                    .row
+                        .col-12
+                            .reg-sitter__column
+                                .reg-sitter__label-wrap
+                                    label.reg-label.reg-sitter__label-center
+                                        input.reg-input(type="number" name="amount" placeholder="400 грн")
+                                        span грн в сутки
+                                .reg-sitter__text
+                                    p Вы получаете 80% от итоговой суммы заказа, комиссия Догси составляет 20%. Эти деньги идут на улучшение сайта и мобильных приложений, обеспечение работы службы поддержки и на рекламу, чтобы вы получали новые заказы.
+                                    blockquote Обычно передержка длится около 9 суток, поэтому в среднем за заказ вы будете получать:
+                                        p 400 грн
+                                    h4 Что такое передержка?
+                                    p Вы берете собаку клиента в свой дом на время пока клиент в отъезде, кормите и гуляете с ней, как со своей собакой.
+                                    h4 Не знаете какую цену поставить?
+                                    p Минимальные цены начинаются от 200 руб в сутки (от 350 руб для Москвы). Однако цены догситтеров индивидуальны и могут быть выше. Клиент принимает решение, сопоставляя вас с другими вариантами в вашем городе.
+                                    p Привлекательность вашей анкеты складывается из цены, опыта ухода за собаками, условий содержания животных, удобства расположения, доверия и наличия отзывов, и общим впечатлением о вас.
+                                    p Корм оплачивается отдельно или привозится хозяином.
+                                    p Вы можете поменять цену в любой момент.
+                        .col-12
+                            .more-btn.text-center
+                                input(type="submit" value="Завершить").more.mybtn.mybtn-orange.reg-btn
+
+        .big-box
+            form.reg-form#regSitterStepThird(action="#")
+                .reg-form-wrap
+                    h1.reg-title.text-center Детали объявления
+                    p.reg-sitter__subtitle.text-center Решиться оставить собаку с незнакомым человеком сложно. Подробная анкета — доверие клиентов!
+                    .row
+                        .col-6.col-sm-5.reg-column
+                            label().reg-label Заголовок
+                                span.reg-label-text Например: «Позабочусь о вашем любимце!»
+                        .col-6.col-sm-7.reg-column
+                            .reg-input-wrap
+                                input.reg-input(type="text" name="name")
+                        .col-6.col-sm-5.reg-column
+                            label().reg-label Текст объявления
+                                span.reg-label-text Расскажите о себе, вашем опыте и условиях проживания собаки. <b>Минимум один абзац.</b>
+                        .col-6.col-sm-7.reg-column
+                            .reg-input-wrap
+                                textarea.reg-textarea(name="name")
+                        .col-12
+                            .reg-sitter__text
+                                h4 Адрес передержки <a href="#" id="setAddress" class="reg-sitter__text-link" data-toggle="modal" data-target="#setAddressModal">(указать адрес)</a>
+                                p Ваш точный адрес будет скрыт на сайте. Клиенты увидят только ваш район или случайно смещенную точку на карте, пока вы не согласитесь взять их заказ.
+
+                                h4 Добавьте фотографии – Самый важный раздел!
+                                ul
+                                    li <b>Ваши позитивные фото,</b> фото мест прогулок и фото с животными, если есть. Пример фотографий одного из догситтеров – dogsy.ru/sitter/136
+                                    li <b>Крайне желательно</b> загрузить хотя бы одну фотографию, где видна ваша квартира, то есть условия проживания. Зачем это?
+                                    li <b>Минимум 3 фото,</b> по нашей статистике больше заказов получают те, кто имеет от 7 фотографий.
+                                    li <b>Нет фото под рукой?</b> Можно добавить фото позднее в кабинете, но анкета не может быть одобрена, пока вы не добавите фото.
+                        .col-12
+                            .more-btn.text-center
+                                input(type="submit" value="Завершить").more.mybtn.mybtn-orange.reg-btn
+div(id='setAddressModal' class="modal fade setAddressModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+        .modal-body
+            form(action="#").modal-content
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") &times;
+                .modal-title-wrap
+                    h3.modal-title.text-center Укажите свой адрес
+                    p.modal-text.text-center Необходимо отметить адрес с точностью до номера дома, где будут содержаться собаки. В целях приватности этот адрес будет скрыт на сайте. Клиенты увидят только ваш район или случайно смещенную точку на карте, пока вы не согласитесь взять их заказ.
+                    .modal-input-wrap
+                        input.modal-input(type="text" name="address" placeholder="Ваш адресс")
+                    .more-btn.text-center
+                        input(type="submit" value="Сохранить").more.mybtn.mybtn-orange.reg-btn
