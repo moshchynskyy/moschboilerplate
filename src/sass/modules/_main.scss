@@ -767,6 +767,9 @@
   }
   &-column {
     margin-bottom: 25px;
+    &-soc {
+      margin-bottom: 10px;
+    }
   }
   &-input {
     width: 100%;
@@ -881,7 +884,7 @@
 // user
 
 // sitter
-.setAddressModal {
+.setAddressModal, .setLinkGoogle, .setLinkFacebook {
   .modal {
     &-text {
       line-height: 1.2;
@@ -900,6 +903,27 @@
 }
 
 .reg-sitter {
+  .reg-btn-soclink {
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &.mybtn-facebook {
+      color: #fff;
+      background-color: $facebook;
+      border-color: $facebook;
+      &:hover {
+        background-color: $facebook * .8;
+      }
+    }
+    &.mybtn-google {
+      color: #fff;
+      background-color: $google;
+      border-color: $google;
+      &:hover {
+        background-color: $google * .8;
+      }
+    }
+  }
   input[type="file"] {
     display: none;
   }
@@ -908,6 +932,21 @@
   }
   .reg-label {
     justify-content: flex-start;
+    &-checkbox {
+      display: flex;
+      align-items: center;
+      span {
+        font-size: 13px;
+      }
+      input {
+        width: auto;
+        margin-right: 10px;
+      }
+    }
+  }
+  .reg-sublabel {
+    line-height: 1.2;
+    margin: 20px 0 -10px;
   }
   &__column {
     padding-top: 20px;

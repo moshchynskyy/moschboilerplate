@@ -186,6 +186,7 @@ $(function () {
         })
     };
     showUploadedImg();
+
 // eof register page
 
 });

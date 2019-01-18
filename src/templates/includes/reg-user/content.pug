@@ -38,11 +38,13 @@ section.section-padding.reg-user
                             .reg-input-wrap
                                 input#dogName.reg-input(type="text" name="name")
                         .col-4.reg-column
-                            label(for="dogPhoto").reg-label Фотографии
+                            label().reg-label Фотографии
                                 p.reg-label-text Загрузите фотографии вашей собаки
                         .col-8.reg-column
                             .reg-input-wrap
-                                input#dogPhoto.reg-input(type="text" name="files")
+                                label(for="dogsPhotos").more.mybtn.mybtn-orange.reg-btn(style="border-width:1px")
+                                    input#dogsPhotos(type="file" name="dogsPhotos" hidden)
+                                    span Добавить фотографии
                         .col-4.reg-column
                             label(for="ageYear").reg-label Возраст
                         .col-4.reg-column

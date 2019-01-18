@@ -99,9 +99,173 @@ section.section-padding.reg-sitter
                                 label(for="yourPhotos").more.mybtn.mybtn-orange.reg-btn
                                     input#yourPhotos(type="file" name="yourPhotos")
                                     span Добавить фотографии
+                        .col-12.reg-column(style="margin-top:20px")
+                            label.reg-label.reg-label-height Тип жилья
+                        .col-12.reg-column
+                            .reg-checkbox-wrap
+                                label(for="homeFlat").reg-checkbox-label
+                                    input#homeFlat.reg-checkbox(type="radio" name="home" value="flat")
+                                    span Квартира
+                                label(for="homeHouse").reg-checkbox-label
+                                    input#homeHouse.reg-checkbox(type="radio" name="home" value="house")
+                                    span Частный дом
+                        .col-12.reg-column
+                            label.reg-label.reg-label-height Есть ли в доме дети до 10 лет?
+                        .col-12.reg-column
+                            .reg-checkbox-wrap
+                                label(for="childYes").reg-checkbox-label
+                                    input#childYes.reg-checkbox(type="radio" name="child" value="yes")
+                                    span Да
+                                label(for="childNo").reg-checkbox-label
+                                    input#childNo.reg-checkbox(type="radio" name="child" value="no")
+                                    span Нет
+                        .col-12.reg-column
+                            label.reg-label.reg-label-height Будет ли собака находиться под присмотром постоянно?
+                            label.reg-label.reg-sublabel.reg-label-height.text-thin Как правило собаки могут оставаться дома одни в рабочее время, но некоторым клиентам важен постоянный присмотр. Отметьте «Да», если вы не отлучаетесь из дома на длительный срок, например, на работу или учебу.
+                        .col-12.reg-column
+                            .reg-checkbox-wrap
+                                label(for="carryYes").reg-checkbox-label
+                                    input#carryYes.reg-checkbox(type="radio" name="carry" value="flat")
+                                    span Да
+                                label(for="carryNo").reg-checkbox-label
+                                    input#carryNo.reg-checkbox(type="radio" name="carry" value="house")
+                                    span Нет
+                        .col-12.reg-column
+                            label.reg-label.reg-label-height Есть ли машина на случай экстренной ситуации?
+                            label.reg-label.reg-sublabel.reg-label-height.text-thin Если собаке потребуется помощь ветеринара
+                        .col-12.reg-column
+                            .reg-checkbox-wrap
+                                label(for="carYes").reg-checkbox-label
+                                    input#carYes.reg-checkbox(type="radio" name="car" value="yes")
+                                    span Да
+                                label(for="carNo").reg-checkbox-label
+                                    input#carNo.reg-checkbox(type="radio" name="car" value="no")
+                                    span Нет
+                        .col-12.reg-column
+                            label.reg-label.reg-label-height Собак какого размера вы берете на передержку?
+                        .col-12.reg-column
+                            .reg-checkbox-wrap
+                                label(for="dogSizeMini").reg-checkbox-label
+                                    input#dogSizeMini.reg-checkbox(type="checkbox" name="dogSize" value="mini")
+                                    span Мини (до 5кг)
+                                label(for="dogSizeLittle").reg-checkbox-label
+                                    input#dogSizeLittle.reg-checkbox(type="checkbox" name="dogSize" value="little")
+                                    span Малый (5-10кг)
+                                label(for="dogSizeMiddle").reg-checkbox-label
+                                    input#dogSizeMiddle.reg-checkbox(type="checkbox" name="dogSize" value="middle")
+                                    span Средний (10-20кг)
+                                label(for="dogSizeBig").reg-checkbox-label
+                                    input#dogSizeBig.reg-checkbox(type="checkbox" name="dogSize" value="big")
+                                    span Большой (20-40кг)
+                                label(for="dogSizeHuge").reg-checkbox-label
+                                    input#dogSizeHuge.reg-checkbox(type="checkbox" name="dogSize" value="huge")
+                                    span Очень большой (более 40кг)
+                                label(for="dogSizeAny").reg-checkbox-label
+                                    input#dogSizeAny.reg-checkbox(type="checkbox" name="dogSize" value="any")
+                                    span Любой
+                        .col-12.reg-column
+                            label.reg-label.reg-label-height Собак какого возраста вы берете на передержку?
+                        .col-12.reg-column
+                            .reg-checkbox-wrap
+                                label(for="dogAgeMini").reg-checkbox-label
+                                    input#dogAgeMini.reg-checkbox(type="checkbox" name="dogAge" value="mini")
+                                    span Щенки (до 1 года)
+                                label(for="dogAgeAdult").reg-checkbox-label
+                                    input#dogAgeAdult.reg-checkbox(type="checkbox" name="dogAge" value="adult")
+                                    span Взрослые (1-7 лет)
+                                label(for="dogAgeOld").reg-checkbox-label
+                                    input#dogAgeOld.reg-checkbox(type="checkbox" name="dogAge" value="old")
+                                    span Пожилые (от 7 лет)
+                                label(for="dogAgeAny").reg-checkbox-label
+                                    input#dogAgeAny.reg-checkbox(type="checkbox" name="dogAge" value="any")
+                                    span Любой возраст
+                        .col-12.reg-column
+                            label.reg-label.reg-label-height Есть ли какие-нибудь животные у вас в доме кроме собак?
+                        .col-12.reg-column
+                            .reg-checkbox-wrap
+                                label(for="andCats").reg-checkbox-label
+                                    input#andCats.reg-checkbox(type="checkbox" name="addAnimal" value="andCats")
+                                    span Кошки
+                                label(for="andRats").reg-checkbox-label
+                                    input#andRats.reg-checkbox(type="checkbox" name="addAnimal" value="andRats")
+                                    span Кролики / грызуны
+                                label(for="andBirds").reg-checkbox-label
+                                    input#andBirds.reg-checkbox(type="checkbox" name="addAnimal" value="andBirds")
+                                    span Птицы / Рептилии
+                                label(for="otherAnimals").reg-checkbox-label
+                                    input#otherAnimals.reg-checkbox(type="checkbox" name="addAnimal" value="otherAnimals")
+                                    span Другие
+                                label(for="noAnimals").reg-checkbox-label
+                                    input#noAnimals.reg-checkbox(type="checkbox" name="addAnimal" value="noAnimals")
+                                    span Нет
+                        .col-12.reg-column
+                            label.reg-label.reg-label-height Можете ли вы брать кошек на передержку?
+                        .col-12.reg-column
+                            .reg-checkbox-wrap
+                                label(for="catsYes").reg-checkbox-label
+                                    input#catsYes.reg-checkbox(type="radio" name="cats" value="yes")
+                                    span Да
+                                label(for="catsNo").reg-checkbox-label
+                                    input#catsNo.reg-checkbox(type="radio" name="cats" value="no")
+                                    span Нет
+                        .col-6.col-sm-5.reg-column
+                            label(for="dogsType").reg-label Породы, которые вы не можете брать
+                        .col-6.col-sm-7.reg-column
+                            .reg-input-wrap
+                                input#dogsType.reg-input(type="text" name="dogsType")
+                                label(for="dogsTypeCheck").reg-label-checkbox
+                                    input#dogsTypeCheck.reg-input(type="checkbox" name="dogsTypeCheck")
+                                    span Беру любые породы
                         .col-12
                             .more-btn.text-center
                                 input(type="submit" value="Завершить").more.mybtn.mybtn-orange.reg-btn
+        .big-box
+            form.reg-form#regSitterStepFifth(action="#")
+                .reg-form-wrap
+                    h1.reg-title.text-center Специальные навыки
+                    .reg-sitter__column
+                        .row
+                            .col-6.col-sm-5.reg-column
+                                label().reg-label Опыт ухода за собакой:
+                                    span.reg-label-text (лет)
+                            .col-6.col-sm-7.reg-column
+                                .reg-input-wrap
+                                    input.reg-input(type="text" name="name")
+                            .col-12.reg-column
+                                label(for="cynologist").reg-checkbox-label
+                                    input#cynologist.reg-checkbox(type="checkbox" name="cynologist" value="yes")
+                                    span Я сертифицированный кинолог
+                            .col-12.reg-column
+                                label.reg-label.reg-label-height Ветеринарные навыки
+                            .col-12.reg-column
+                                .reg-checkbox-wrap
+                                    label(for="addDoctor").reg-checkbox-label
+                                        input#addDoctor.reg-checkbox(type="checkbox" name="add" value="addDoctor")
+                                        span Я сертифицированный ветеринар
+                                    label(for="addDrugs").reg-checkbox-label
+                                        input#addDrugs.reg-checkbox(type="checkbox" name="add" value="addDrugs")
+                                        span Умею давать медицинские препараты
+                                    label(for="addInject").reg-checkbox-label
+                                        input#addInject.reg-checkbox(type="checkbox" name="add" value="addInject")
+                                        span Умею делать инъекции
+                            .col-12
+                                .more-btn.text-center
+                                    input(type="submit" value="Завершить").more.mybtn.mybtn-orange.reg-btn
+        .big-box
+            form.reg-form#regSitterStepLast(action="#")
+                .reg-form-wrap
+                    h1.reg-title.text-center Привяжите социальные сети
+                    p.reg-sitter__subtitle.text-center Укажите ваши личные страницы в социальных сетях. Это необходимо в качестве дополнительного доказательства, что созданная вами анкета принадлежит вам.
+                    p.reg-sitter__subtitle.text-center Ссылки на ваши страницы будет видеть только сотрудник Догси. Укажите ВСЕ соцсети, которыми пользуетесь.
+                    .row
+                        .col-12.reg-column.reg-column-soc
+                            a(href="#" data-toggle="modal" data-target="#setLinkFacebook").mybtn.mybtn-facebook.reg-btn-soclink.reg-label Укажите страницу facebook
+                        .col-12.reg-column.reg-column-soc
+                            a(href="#" data-toggle="modal" data-target="#setLinkGoogle").mybtn.mybtn-google.reg-btn-soclink.reg-label Укажите страницу google
+                        .col-12
+                            .more-btn.text-center
+                                input(type="submit" value="Завершить").more.mybtn.mybtn-orange.reg-btn
+
 div(id='setAddressModal' class="modal fade setAddressModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
     .modal-dialog.modal-dialog-centered(role="document")
         .modal-body
@@ -111,6 +275,32 @@ div(id='setAddressModal' class="modal fade setAddressModal" tabindex="-1" role="
                 .modal-title-wrap
                     h3.modal-title.text-center Укажите свой адрес
                     p.modal-text.text-center Необходимо отметить адрес с точностью до номера дома, где будут содержаться собаки. В целях приватности этот адрес будет скрыт на сайте. Клиенты увидят только ваш район или случайно смещенную точку на карте, пока вы не согласитесь взять их заказ.
+                    .modal-input-wrap
+                        input.modal-input(type="text" name="address" placeholder="Ваш адресс")
+                    .more-btn.text-center
+                        input(type="submit" value="Сохранить").more.mybtn.mybtn-orange.reg-btn
+div(id='setLinkFacebook' class="modal fade setLinkFacebook" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+        .modal-body
+            form(action="#").modal-content
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") &times;
+                .modal-title-wrap
+                    h3.modal-title.text-center Укажите свой адрес Facebook
+                    p.modal-text.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, velit. Lorem ipsum dolor sit amet, consectetur.
+                    .modal-input-wrap
+                        input.modal-input(type="text" name="address" placeholder="Ваш адресс")
+                    .more-btn.text-center
+                        input(type="submit" value="Сохранить").more.mybtn.mybtn-orange.reg-btn
+div(id='setLinkGoogle' class="modal fade setLinkGoogle" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+        .modal-body
+            form(action="#").modal-content
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") &times;
+                .modal-title-wrap
+                    h3.modal-title.text-center Укажите свой адрес Google
+                    p.modal-text.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, velit. Lorem ipsum dolor sit amet.
                     .modal-input-wrap
                         input.modal-input(type="text" name="address" placeholder="Ваш адресс")
                     .more-btn.text-center
