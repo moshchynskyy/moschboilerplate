@@ -32,8 +32,9 @@ section.section-padding.reg-sitter
                                 .reg-sitter__img-wrap
                                     img.reg-sitter__img(src="https://via.placeholder.com/150")
                                 .reg-sitter__btn.text-center
-                                    button.more.mybtn.mybtn-orange.reg-btn Загрузить фото
-                                    input(type="file" name="file" hidden)
+                                    label(for="dogsPhotos").more.mybtn.mybtn-orange.reg-btn
+                                        input#dogsPhotos(type="file" name="dogsPhotos")
+                                        span Добавить фотографии
                         .col-12
                             .more-btn.text-center
                                 input(type="submit" value="Завершить").more.mybtn.mybtn-orange.reg-btn
@@ -93,6 +94,11 @@ section.section-padding.reg-sitter
                                     li <b>Крайне желательно</b> загрузить хотя бы одну фотографию, где видна ваша квартира, то есть условия проживания. Зачем это?
                                     li <b>Минимум 3 фото,</b> по нашей статистике больше заказов получают те, кто имеет от 7 фотографий.
                                     li <b>Нет фото под рукой?</b> Можно добавить фото позднее в кабинете, но анкета не может быть одобрена, пока вы не добавите фото.
+                        .col-12
+                            .more-btn
+                                label(for="yourPhotos").more.mybtn.mybtn-orange.reg-btn
+                                    input#yourPhotos(type="file" name="yourPhotos")
+                                    span Добавить фотографии
                         .col-12
                             .more-btn.text-center
                                 input(type="submit" value="Завершить").more.mybtn.mybtn-orange.reg-btn

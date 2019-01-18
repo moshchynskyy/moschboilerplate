@@ -179,6 +179,13 @@ $(function () {
             e.preventDefault();
         })
     });
+
+    const showUploadedImg = () => {
+        $('input[type="file"]').on('change', function () {
+            console.log( $(this).val() ); // TODO: change default img after uploading
+        })
+    };
+    showUploadedImg();
 // eof register page
 
 });
