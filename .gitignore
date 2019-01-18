@@ -1,4 +1,5 @@
 package-lock.json
+package.json
 !/robots.txt
 !.gitkeep
 .submodules
