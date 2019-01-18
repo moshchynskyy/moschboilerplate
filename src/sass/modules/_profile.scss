@@ -1,0 +1,87 @@
+.profile {
+	&__row {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 15px;
+		@media #{$min768} {
+			flex-direction: row;
+		}
+	}
+	&__col {
+		margin-bottom: 15px;
+	}
+	&__notification-box {
+		max-width: none;
+	}
+	&__pay-wraper {
+		padding: 20px;
+		background-color: rgba($orange, .7);
+	}
+	&__menu-wrapper {
+		// margin-bottom: 35px;
+	}
+	&__menu {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	&__menu-link {
+		display: block;
+		padding: 15px 20px;
+		background-color: $orange;
+		border: 2px solid transparent;
+		font-weight: 700;
+		&.active {
+			background-color: #fff;
+			color: $orange;
+			border: 2px solid $orange;
+			&:hover {
+				background-color: #fff;
+			}
+		}
+		&:hover {
+			background-color: lighten($orange, 10%);
+		}
+	}
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 50px;
+	}
+	&__user-header-wrapper {
+		display: flex;
+		align-items: center;
+		&:hover {
+			color: $orange;
+		}
+	}
+	&__avatar {
+		margin-left: 8px;
+		border-radius: 50%;
+	}
+}
+
+p {
+	& > a {
+		color: $orange;
+		&:hover {
+			color: $orange;
+			text-decoration: underline;
+		}
+	}
+	& > b {
+		font-weight: 700;
+	}
+}
+
+
+.mb20 {
+	margin-bottom: 20px;
+}
+
+textarea {
+	font-size: 12px;
+	&::-webkit-input-placeholder {
+		font-size: 12px;
+	}
+}

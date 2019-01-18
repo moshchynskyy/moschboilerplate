@@ -1,5 +1,107 @@
-section.profile
-	.reg-sitter__label-wrap
-		label.reg-label
-			span Ваше имя
-			input.reg-input(type="text" name="name" placeholder="Ваше имя")
+section.section-padding.profile
+	.container
+		.profile__header
+			.profile__menu-wrapper
+				ul.profile__menu
+					li.profile__menu-item
+						a(href="./").profile__menu-link.transition.active Уведомления
+					li.profile__menu-item
+						a(href="./").profile__menu-link.transition Заказы
+					li.profile__menu-item
+						a(href="./").profile__menu-link.transition Календарь
+					li.profile__menu-item
+						a(href="./").profile__menu-link.transition Профиль
+					li.profile__menu-item
+						a(href="./").profile__menu-link.transition Полезные материалы
+			a(href="./").profile__user-header-wrapper
+				p Denys Yatsko
+				img(src="https://via.placeholder.com/28" alt="user" title="user").profile__avatar
+		.profile__notification-box.big-box
+			h5 Ваша анкета на рассмотрении
+			p Ваша анкета принята на рассмотрение. Мы свяжемся с вами, как только рассмотрим ее. Если у вас есть вопрос, свяжитесь с нами <a href="#">любым удобным способом</a>
+		.profile__notification-box.big-box.center
+			.mb20
+				h4 Подтвердите вашу личность
+				span Шаг 1 из 2
+			.mb20
+				p Вы не можете откликаться на заказы без подтверждения личности и дополнительных данных.
+			form.passport-form#passport-form(action='#')
+				.profile__row
+					.col-md-5
+						label.reg-label
+							span Имя
+					.col-md-7
+						input.reg-input(type="text" name="name" placeholder="Имя")
+				.profile__row
+					.col-md-5
+						label.reg-label
+							span Фамилия
+					.col-md-7
+						input.reg-input(type="text" name="surname" placeholder="Фамилия")
+				.profile__row
+					.col-md-5
+						label.reg-label
+							span Отчество
+					.col-md-7
+						input.reg-input(type="text" name="middle_name" placeholder="Отчество")
+				.profile__row
+					.col-md-5
+						label.reg-label
+							span Дата рождения
+					.col-md-7
+						input.reg-input(type="text" name="date" placeholder="Дата рождения" id="birthday")
+				.profile__row
+					.col-md-5
+						label.reg-label
+							span Место рождения
+					.col-md-7
+						input.reg-input(type="text" name="city" placeholder="Место рождения")
+				.profile__row
+					.col-md-5
+						label.reg-label.justify-content-start
+							span Адрес регистрации
+					.col-md-7
+						textarea.reg-textarea(type="text" name="residence" placeholder="Стр. 5 в паспорте")
+				.profile__row
+					.col-md-5
+						label.reg-label
+							span Серия и номер паспорта
+					.col-md-7
+						input.reg-input(type="text" name="series" placeholder="AA-000000" maxlength="8" id="series")
+				.profile__row
+					.col-md-5
+						label.reg-label
+							span Дата выдачи
+					.col-md-7
+						input.reg-input(type="text" name="issue_date" placeholder="Дата выдачи" maxlength="8" id="issue_date")
+				.profile__row
+					.col-md-5
+						label.reg-label
+							span Кем выдан
+					.col-md-7
+						input.reg-input(type="text" name="issue_date" placeholder="Кем выдан")
+				.col-12
+					.more-btn.text-center
+						input(type="submit" value="Продолжить").more.mybtn.mybtn-orange.reg-btn
+		.profile__notification-box.big-box
+			.center.mb20
+				h4 Информация на случай экстренных ситуаций
+				span (не отображается на сайте)
+			form(action='#')
+				.profile__col
+					label Дополнительный контакт, если ваш телефон не отвечает длительное время, а у вас на передержке находится животное клиента. Это может быть родственник или друг:
+					input.reg-input(type="text" name="additional_phone" placeholder="Александр, друг, 8-900-000-00-00")
+				.profile__col
+					label Адрес фактического содержания животных (с точностью до квартиры):
+					input.reg-input(type="text" name="actual_address" placeholder="Киев, ул. Борщаговская, 146, кв. 37")
+				.col-12
+					.more-btn.text-center
+						input(type="submit" value="Отправить").more.mybtn.mybtn-orange.reg-btn
+		.profile__notification-box.big-box
+			h5 Ознакомьтесь с инструкцией Догситтера
+			p Чтобы брать собак на передержку необходимо прочитать нашу инструкцию Догситтера и пройти простое тестирование по ней. Ссылка на тест находится в конце инструкции. <a href="#">Перейти к инструкции</a> 
+		.profile__notification-box.big-box
+			.profile__pay-wraper.mb20
+				h3.no-margin К оплате: 0 UAH
+			p Dogsy взимает комиссию в размере 20% от суммы заказа. Счет на оплату выставляется в первый день передержки.
+			p <b>Быстрая оплата – больше заказов</b><br>Необходимо оплачивать комиссию в первый день передержки, после получения денег от клиента. Быстрая оплата заказа влияет на ваш рейтинг на сайте.
