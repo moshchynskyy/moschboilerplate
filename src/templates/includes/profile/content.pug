@@ -1,6 +1,6 @@
 section.section-padding.profile
 	.container
-		.profile__header
+		.profile__header 
 			.profile__menu-wrapper
 				ul.profile__menu
 					li.profile__menu-item
@@ -84,6 +84,22 @@ section.section-padding.profile
 					.more-btn.text-center
 						input(type="submit" value="Продолжить").more.mybtn.mybtn-orange.reg-btn
 		.profile__notification-box.big-box
+			.mb20.center
+				h4 Подтвердите вашу личность
+				span Шаг 2 из 2
+			p.mb20 Для подтверждения личности загрузите фотографии или сканы следующих документов:
+			ul.custom-list.mb20
+				li
+					span Первый разворот паспорта (т.е. страницы с фотографией и местом выдачи)
+				li
+					span Страница паспорта, где указан адрес вашей постоянной регистрации по месту жительства
+				li
+					span Также необходимо загрузить вашу фотографию с паспортом в руках в развернутом виде. Паспорт должен быть на фоне листа бумаги с надписью от руки "Dogsy" и текущей датой, в точности как <a href="#" class="link" data-toggle="modal" data-target="#modal-gallery">показано в примере.</a> Зачем это нужно? Так мы поймем, что это действительно вы, а не кто-то другой хочет стать догситтером по вашему паспорту.
+			p.text-thin ООО «Догси.ру» является зарегистрированным оператором, осуществляющим сбор персональных данных пользователей.
+			.more-btn.text-center
+				button.more.mybtn.mybtn-orange.reg-btn
+					input(type="file" name accept="image/jpeg,image/png")
+		.profile__notification-box.big-box
 			.center.mb20
 				h4 Информация на случай экстренных ситуаций
 				span (не отображается на сайте)
@@ -99,9 +115,17 @@ section.section-padding.profile
 						input(type="submit" value="Отправить").more.mybtn.mybtn-orange.reg-btn
 		.profile__notification-box.big-box
 			h5 Ознакомьтесь с инструкцией Догситтера
-			p Чтобы брать собак на передержку необходимо прочитать нашу инструкцию Догситтера и пройти простое тестирование по ней. Ссылка на тест находится в конце инструкции. <a href="#">Перейти к инструкции</a> 
+			p Чтобы брать собак на передержку необходимо прочитать нашу инструкцию Догситтера и пройти простое тестирование по ней. Ссылка на тест находится в конце инструкции. <a href="#" class="link">Перейти к инструкции</a> 
 		.profile__notification-box.big-box
 			.profile__pay-wraper.mb20
 				h3.no-margin К оплате: 0 UAH
 			p Dogsy взимает комиссию в размере 20% от суммы заказа. Счет на оплату выставляется в первый день передержки.
 			p <b>Быстрая оплата – больше заказов</b><br>Необходимо оплачивать комиссию в первый день передержки, после получения денег от клиента. Быстрая оплата заказа влияет на ваш рейтинг на сайте.
+div(id='modal-gallery' class="modal fade modal-gallery" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-body
+			form(action="#").modal-content
+				button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+					span(aria-hidden="true") &times;
+				.modal-title-wrap
+					img(src="https://via.placeholder.com/550")
