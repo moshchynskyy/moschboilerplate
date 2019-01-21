@@ -1,22 +1,5 @@
 .profile {
-	&__row {
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 15px;
-		@media #{$min768} {
-			flex-direction: row;
-		}
-	}
-	&__col {
-		margin-bottom: 15px;
-	}
-	&__notification-box {
-		max-width: none;
-	}
-	&__pay-wraper {
-		padding: 20px;
-		background-color: rgba($orange, .7);
-	}
+	// MENU START
 	&__menu {
 		display: flex;
 		align-items: flex-start;
@@ -51,16 +34,203 @@
 		&:hover {
 			color: $orange;
 		}
-	}
-	&__avatar {
-		margin-left: 8px;
-		border-radius: 50%;
-	}
-	p {
-		& > b {
-			font-weight: 700;
+		p {
+			white-space: nowrap;
 		}
 	}
+	// MENU END
+
+	// NOTIFICATION START
+	&__row {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 15px;
+		@media #{$min768} {
+			flex-direction: row;
+		}
+	}
+	&__col {
+		margin-bottom: 15px;
+	}
+	&__notification-box {
+		max-width: none;
+	}
+	&__pay-wraper {
+		padding: 20px;
+		background-color: rgba($orange, .7);
+	}
+	// NOTIFICATION END
+
+	// MESSAGES START
+	&__messages-layout {
+		display: flex;
+		flex-direction: column;
+		width: 100vw;
+		margin-left: calc(-50vw + 50%);
+		margin-right: calc(-50vw + 50%);
+		@media #{$min992} {
+			width: 100%;
+			margin-right: auto;
+			margin-left: auto;
+			flex-direction: row;
+			align-items: flex-start;
+		}
+	}
+	&__messages-left-col {
+		margin-bottom: 20px;
+		@media #{$min992} {
+			width: 280px;
+			margin: 30px 0 0 0;
+		}
+		a {
+			display: flex;
+			align-items: center;
+			padding: 15px 25px;
+			background-color: rgba($orange, .7);
+			@media #{$min992} {
+				margin-bottom: 15px;
+			}
+		}
+	}
+	&__messages-right-col {
+		border: 3px solid $orange;
+	}
+	&__message-header {
+		border-bottom: 3px solid $orange;
+		padding: 15px 25px;
+	}
+	&__message {
+		width: 100%;
+		max-width: 850px;
+		display: flex;
+		align-items: flex-end;
+		margin: 0 auto 20px auto;
+		&.in {
+			justify-content: flex-start;
+			.profile__message-time {
+				margin-left: auto;
+			}
+			.profile__message-content:after {
+				content: '';
+				border-top: 15px solid transparent;
+				border-right: 15px solid $yellow;
+				background-color: transparent;
+				width: 0;
+				height: 0;
+				position: absolute;
+				bottom: 0;
+				left: -10px;
+			}
+		}
+		&.out {
+			justify-content: flex-end;
+			img {
+				order: 3;
+			}
+			.profile__message-content {
+				order: 2;
+				&:after {
+					content: '';
+					border-top: 15px solid transparent;
+					border-left: 15px solid $orange;
+					background-color: transparent;
+					width: 0;
+					height: 0;
+					position: absolute;
+					bottom: 0;
+					right: -10px;
+				}
+			}
+			.profile__message-time {
+				order: 1;
+				margin-right: auto;
+			}
+		}
+	}
+	&__message-content {
+		width: 85%;
+		margin: 0 20px;
+		padding: 20px;
+		position: relative;
+	}
+	&__message-time {
+		white-space: nowrap;
+	}
+	&__message-area {
+		// margin-right: -30px;
+		// padding-right: 30px;
+		padding: 40px 20px 0 20px;
+		max-height: 500px;
+		overflow: auto;
+	}
+	&__message-footer {
+		border-top: 3px solid $orange;
+		padding: 10px 20px;
+	}
+	&__send-file {
+		width: 30px;
+		height: 30px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		&:hover svg {
+			color: $orange;
+		}
+		input[type="file"] {
+			filter:alpha(opacity=1);
+			opacity: 0.01;
+			cursor: pointer;
+			position: absolute;
+			right: 0;
+		}
+	}
+	&__send-file-icon {
+		width: 100%;
+		height: 100%;
+		flex-shrink: 0;
+		cursor: pointer;
+		font-size: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		svg {
+			width: 100%;
+			color: #333;
+		}
+	}
+	&__send-textarea-wrapper {
+		width: 100%;
+		display: flex;
+		align-items: flex-end;
+	}
+	&__send-message-btn {
+		width: 26px;
+		height: 26px;
+		background-color: transparent;
+		background-image: url('../img/svg/right-arrow.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		border: none;
+		&:focus {
+			outline: none;
+		}
+	}
+	.send-textarea {
+		width: 100%;
+		padding: 0 15px;
+		height: 22px;
+		// padding-top: 5px;
+		max-height: 180px;
+		resize: none;
+		overflow: auto;
+		font-size: calc(14px + 2 * ((100vw - 420px) / 860));;
+	}
+	// MESSAGES END
+
+	p > b {
+		font-weight: 700;
+	}
+
 	a.link {
 		color: $orange;
 		&:hover {
@@ -68,15 +238,18 @@
 			text-decoration: underline;
 		}
 	}
+
 	.mb20 {
 		margin-bottom: 20px;
 	}
+
 	textarea {
 		font-size: 12px;
 		&::-webkit-input-placeholder {
 			font-size: 12px;
 		}
-	} 
+	}
+
 	.custom-list {
 		list-style-type: disc;
 		padding-left: 30px;
