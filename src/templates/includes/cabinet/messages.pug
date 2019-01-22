@@ -1,0 +1,60 @@
+section.section-padding.profile
+	.container
+		.profile__header 
+			.profile__menu-wrapper
+				ul.profile__menu
+					li.profile__menu-item
+						a(href="cabinet-notification.html").profile__menu-link.transition Уведомления
+					li.profile__menu-item
+						a(href="cabinet-messages.html").profile__menu-link.transition.active Заказы
+					li.profile__menu-item
+						a(href="cabinet-calendar.html").profile__menu-link.transition Календарь
+					li.profile__menu-item
+						a(href="cabinet-profile.html").profile__menu-link.transition Профиль
+					li.profile__menu-item
+						a(href="cabinet-materials.html").profile__menu-link.transition Полезные материалы
+			a(href="./").profile__user-header-wrapper
+				p Denys Yatsko
+				img(src="https://via.placeholder.com/28" alt="user" title="user").rounded-circle.ml-3
+		.profile__messages-layout
+			.profile__messages-left-col 
+				a(href="#")
+					img(src="https://via.placeholder.com/28").rounded-circle.mr-3
+					p.text-medium Admin
+			.profile__messages-right-col 
+				.profile__message-header.text-medium Admin
+				.profile__message-area
+					.profile__message.in
+						img(src="https://via.placeholder.com/28").rounded-circle
+						.profile__message-content.color-yellow
+							p Добрый день, Denis! Это чат с администраторами Догси. Мы будем рады вам помочь. Мы отвечаем с 9:00 до 22:45 ежедневно. Обращаем ваше внимание, что по экстренным вопросам мы доступны по телефону круглосуточно. По вопросам, не связанными с экстренными ситуациями, напишите нам в чате.
+						span.profile__message-time 3 дня
+					.profile__message.out
+						img(src="https://via.placeholder.com/28").rounded-circle
+						.profile__message-content.color-orange
+							p Добрый день!
+						span.profile__message-time 3 дня
+					.profile__message.in
+						img(src="https://via.placeholder.com/28").rounded-circle
+						.profile__message-content.color-yellow
+							p  Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Журчит коварный запятых текста! Щеке языком гор всемогущая лучше. Безорфографичный.
+						span.profile__message-time 3 дня
+					.profile__message.in
+						img(src="https://via.placeholder.com/28").rounded-circle
+						.profile__message-content.color-yellow
+							p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Реторический они образ переписывается подзаголовок, всемогущая которое ты текст, однажды сбить, рукопись жаренные рыбными.
+						span.profile__message-time 3 дня
+					.profile__message.out
+						img(src="https://via.placeholder.com/28").rounded-circle
+						.profile__message-content.color-orange
+							p  Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Послушавшись осталось жаренные лучше. Дорогу своего строчка, на берегу вдали, пустился рукописи? Своих над языком рукопись оксмокс безорфографичный не текстов, несколько, всемогущая сбить но назад осталось, рукописи грустный свою послушавшись.
+				.profile__message-footer
+					form.send-message#send-message(action="#")
+						.d-flex.align-items-end
+							.profile__send-textarea-wrapper
+								.profile__send-file.send-file-btn-wrapper
+									input(type="file" accept="image/jpeg,image/png")
+									.profile__send-file-icon
+										i.fas.fa-camera
+								textarea.send-textarea.js-autoheight(type="text" name="send-message" placeholder="Текст сообщения...")
+							button(type="submit").profile__send-message-btn

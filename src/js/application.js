@@ -189,4 +189,20 @@ $(function () {
 
 // eof register page
 
+    // masks for input 
+    $('#series').mask('AA-000000');
+    $('#issue_date').mask('00/00/0000');
+    $('#birthday').mask('00/00/0000');
+
+    $('.js-autoheight').on('keyup',function(){
+        let height = this.scrollHeight;
+        let elHeight = $('.js-autoheight').height();
+        console.log(elHeight);
+        if (height > elHeight) {
+            $(this).css('height','auto');
+            $(this).height(this.scrollHeight); 
+        }
+    });
+
+
 });
