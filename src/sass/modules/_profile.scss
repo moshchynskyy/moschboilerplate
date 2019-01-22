@@ -27,6 +27,9 @@
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 50px;
+		@media #{$max992} {
+			display: none;
+		}
 	}
 	&__user-header-wrapper {
 		display: flex;
@@ -78,11 +81,13 @@
 	}
 	&__messages-left-col {
 		margin-bottom: 20px;
+		flex-shrink: 0;
 		@media #{$min992} {
 			width: 280px;
 			margin: 30px 0 0 0;
 		}
 		a {
+			width: 100%;
 			display: flex;
 			align-items: center;
 			padding: 15px 25px;
@@ -93,6 +98,8 @@
 		}
 	}
 	&__messages-right-col {
+		width: 100%;
+		align-self: stretch;
 		border: 3px solid $orange;
 	}
 	&__message-header {
@@ -157,9 +164,9 @@
 		white-space: nowrap;
 	}
 	&__message-area {
-		// margin-right: -30px;
-		// padding-right: 30px;
-		padding: 40px 20px 0 20px;
+		margin: 40px 20px 20px 20px;
+		padding: 0px 0px 0 0px;
+		padding-right: 20px;
 		max-height: 500px;
 		overflow: auto;
 	}
@@ -168,8 +175,8 @@
 		padding: 10px 20px;
 	}
 	&__send-file {
-		// width: 30px;
-		// height: 30px;
+		width: 30px;
+		height: 30px;
 		&:hover svg {
 			color: $orange;
 		}
@@ -209,14 +216,74 @@
 		width: 100%;
 		padding: 0 15px;
 		height: 26px;
-		// padding-top: 5px;
 		max-height: 180px;
 		resize: none;
-		// overflow: auto;
 		overflow: hidden;
 		font-size: calc(14px + 2 * ((100vw - 420px) / 860));;
 	}
 	// MESSAGES END
+
+	// PROFILE START
+	&__tabs-nav {
+		justify-content: center;
+		@media #{$min992} {
+			border: 2px solid $orange;
+			border-right: none;
+		}
+		a {
+			margin: 0;
+			padding-right: 10px;
+			padding-left: 10px;
+			background-color: #fff;
+			&.active {
+				color: #fff;
+				background-color: $orange;
+			}
+			&:hover {
+				background-color: $orange;
+				color: #fff;
+			}
+			@media #{$max992} {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				padding: 0;
+				height: 65px;
+				text-align: center;
+				background-color: rgba($orange, 0.7);
+			}
+		}
+		li {
+			width: 50%;
+			border: 1px solid #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@media #{$min992} {
+				width: 100%;
+				border: none;
+			}
+		}
+	}
+	&__tabs-content {
+		padding: 20px 5px;
+		@media #{$min992} {
+			padding: 20px;
+		}
+	}
+	&__logo-priview {
+		width: 150px;
+		height: 150px;
+		overflow: hidden;
+		border-radius: 50%;
+		margin: 0 auto 15px auto;
+	}
+	&__price-bold-text {
+		font-size: 30px;
+		font-weight: 700;
+	}
+	// PROFILE END
 
 	p > b {
 		font-weight: 700;
@@ -267,5 +334,17 @@
 			width: 100%;
 			height: 200%;
 		}
+	}
+
+	.small-italic-text {
+		font-weight: 300;
+		font-style: italic;
+		font-size: 14px;
+		display: block;
+		padding-left: 10px;
+	}
+
+	.fsh-0 {
+		flex-shrink: 0;
 	}
 }

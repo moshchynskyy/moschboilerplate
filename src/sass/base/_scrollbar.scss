@@ -1,0 +1,17 @@
+// --------------- Safari, Chrome, Edge, Opera --------------------
+
+::-webkit-scrollbar {
+	width: 5px;
+	background-color: $middleGrey;
+}
+::-webkit-scrollbar:horizontal {
+	height: 3px;
+}
+::-webkit-scrollbar-thumb {
+	border-width: 1px 1px 1px 2px;
+	border-color: $middleGrey;
+	background-color: $muted;
+}
+::-webkit-scrollbar-track {
+	border-width: 0;
+}

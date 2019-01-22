@@ -16,4 +16,104 @@ section.section-padding.profile
 			a(href="./").profile__user-header-wrapper
 				p Denys Yatsko
 				img(src="https://via.placeholder.com/28" alt="user" title="user").rounded-circle.ml-3
-		p profile
+		.profile__messages-layout
+			.profile__messages-left-col
+				ul.nav.profile__tabs-nav
+					li
+						a.active(data-toggle="tab" href="#profile-tab-1") Основные данные
+					li
+						a(data-toggle="tab" href="#profile-tab-2") Услуги и стоимость
+					li
+						a(data-toggle="tab" href="#profile-tab-3") Детали объявления и фото
+					li
+						a(data-toggle="tab" href="#profile-tab-4") Ваши собаки
+					li
+						a(data-toggle="tab" href="#profile-tab-5") Специальные навыки
+					li
+						a(data-toggle="tab" href="#profile-tab-6") Дополнительные контакты
+					li
+						a(data-toggle="tab" href="#profile-tab-7") Настройки оповещений
+			.profile__messages-right-col
+				.tab-content.profile__tabs-content
+					#profile-tab-1.tab-pane.active
+						h3.center.mb-4 Основные данные
+						form(action="#")
+							.row
+								.col-sm-8
+									.profile__row
+										.col-md-4
+											label.reg-label
+												span Имя
+										.col-md-8
+											input.reg-input(type="text" name="name" placeholder="Имя")
+									.profile__row.mb-1
+										.col-md-4
+											label.reg-label
+												span Фамилия
+										.col-md-8
+											input.reg-input(type="text" name="surname" placeholder="Фамилия")
+									.profile__row.justify-content-end
+										.col-md-8
+											span.small-italic-text Необходимо указать реальную фамилию. В целях приватности ваша фамилия не будет отображаться на Вашей странице на сайте.
+									.profile__row
+										.col-md-4
+											label.reg-label
+												span Мобильный телефон
+										.col-md-8.align-self-end
+											input.reg-input(type="tel" name="phone" placeholder="Мобильный телефон")
+									.profile__row
+										.col-md-4
+											label.reg-label
+												span Ваш город
+										.col-md-8
+											input.reg-input(type="text" name="city" placeholder="Ваш город")
+									.profile__row
+										.col-md-4
+											label.reg-label
+												span Дата рождения
+										.col-md-8
+											input.reg-input(type="text" name="date" placeholder="Дата рождения" id="birthday")
+								.col-sm-4
+									.d-flex.flex-column.justify-content-center.align-items-center
+										.profile__logo-priview
+											img(src="https://via.placeholder.com/150" alt="user")
+										button.mybtn.mybtn-yellow.send-file-btn-wrapper Загрузить фото
+											input(type="file" accept="image/jpeg,image/png")
+							.text-center
+								input(type="submit" value="Сохранить").mybtn.mybtn-orange.reg-btn
+					#profile-tab-2.tab-pane.fade
+						h3.center.mb-4 Стоимость передержки
+						form(action="#")
+							.d-flex.justify-content-center.mb-3
+								.col-5.d-flex
+									input.reg-input(type="text" name="UserSitterServiceForm[price]" value="100")
+									span.d-flex.align-items-center.fsh-0.ml-2 UAH/час
+							.col-12
+								p.mb-3 Вы получаете 80% от итоговой суммы заказа, комиссия Догси составляет 20%. Эти деньги идут на улучшение сайта и мобильных приложений, обеспечение работы службы поддержки и на рекламу, чтобы вы получали новые заказы.
+								.profile__pay-wraper.mb-3
+									p.no-margin Обычно передержка длится около 9 суток, поэтому в среднем за заказ вы будете получать:
+									p.profile__price-bold-text 30000 UAH 
+								h5.mb-3 Что такое передержка?
+								p.mb-3  Вы берете собаку клиента в свой дом на время пока клиент в отъезде, кормите и гуляете с ней, как со своей собакой.
+								h5.mb-3 Не знаете какую цену поставить?
+								p.mb-3 Минимальные цены начинаются от 200 руб в сутки (от 350 руб для Москвы). Однако цены догситтеров индивидуальны и могут быть выше. Клиент принимает решение, сопоставляя вас с другими вариантами в вашем городе.
+								p.mb-3 Привлекательность вашей анкеты складывается из цены, опыта ухода за собаками, условий содержания животных, удобства расположения, доверия и наличия отзывов, и общим впечатлением о вас.
+								p.mb-3 Корм оплачивается отдельно или привозится хозяином.
+								p.mb-3 Вы можете поменять цену в любой момент.
+							.text-center
+								input(type="submit" value="Сохранить").mybtn.mybtn-orange.reg-btn
+					#profile-tab-3.tab-pane.fade
+						h3.center Детали объявления и фото
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					#profile-tab-4.tab-pane.fade
+						h3.center Ваши собаки
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					#profile-tab-5.tab-pane.fade
+						h3.center Специальные навыки
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					#profile-tab-6.tab-pane.fade
+						h3.center Дополнительные контакты
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					#profile-tab-7.tab-pane.fade
+						h3.center Настройки оповещений
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
