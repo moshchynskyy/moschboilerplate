@@ -17,7 +17,6 @@ $(function () {
         e.preventDefault();
         $(this).toggleClass("on");
         $('.menu').addClass('menu-open').slideToggle();
-        // $("body").children().not('header').toggleClass('blur'); // add blur filter to all elements
     });
     $(window).on('scroll', function () {
         $(this).scrollTop() >= 200 ? $('#header').addClass('scroll-menu')
@@ -189,7 +188,7 @@ $(function () {
 
 // eof register page
 
-    // masks for input 
+    // masks for input
     $('#series').mask('AA-000000');
     $('#issue_date').mask('00/00/0000');
     $('#birthday').mask('00/00/0000');
@@ -200,9 +199,21 @@ $(function () {
         console.log(elHeight);
         if (height > elHeight) {
             $(this).css('height','auto');
-            $(this).height(this.scrollHeight); 
+            $(this).height(this.scrollHeight);
         }
     });
 
-
+    // content-page
+    const animateScroll = () => {
+        $(document).ready(function(){
+            $(".content-page").on("click", "a", function (e) {
+                // e.preventDefault();
+                let id  = $(this).attr('href'),
+                    top = $(id).offset().top;
+                $('body,html').animate({scrollTop: top}, 1500);
+            });
+        });
+    };
+    animateScroll();
+    // eof content-page
 });
