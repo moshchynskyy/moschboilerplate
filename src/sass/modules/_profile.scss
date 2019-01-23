@@ -45,6 +45,7 @@
 
 	// NOTIFICATION START
 	&__row {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		margin-bottom: 15px;
@@ -61,6 +62,10 @@
 	&__pay-wraper {
 		padding: 20px;
 		background-color: rgba($orange, .7);
+		border-radius: 5px;
+		width: calc(100% + 30px);
+		left: -15px;
+		position: relative;
 	}
 	// NOTIFICATION END
 
@@ -235,6 +240,7 @@
 			padding-right: 10px;
 			padding-left: 10px;
 			background-color: #fff;
+			font-size: 12px;	
 			&.active {
 				color: #fff;
 				background-color: $orange;
@@ -242,6 +248,9 @@
 			&:hover {
 				background-color: $orange;
 				color: #fff;
+			}
+			@media #{$min400} {
+				font-size: inherit;
 			}
 			@media #{$max992} {
 				display: flex;
@@ -255,7 +264,7 @@
 			}
 		}
 		li {
-			width: 50%;
+			width: 33%;
 			border: 1px solid #fff;
 			display: flex;
 			align-items: center;
@@ -267,9 +276,9 @@
 		}
 	}
 	&__tabs-content {
-		padding: 20px 5px;
+		// padding: 20px 5px;
 		@media #{$min992} {
-			padding: 20px;
+			// padding: 20px;
 		}
 	}
 	&__logo-priview {
@@ -280,12 +289,12 @@
 		margin: 0 auto 15px auto;
 	}
 	&__price-bold-text {
-		font-size: 30px;
-		font-weight: 700;
+		font-weight: 600;
+		font-family: $secondFont;
 	}
 	// PROFILE END
 
-	p > b {
+	b {
 		font-weight: 700;
 	}
 
@@ -346,5 +355,39 @@
 
 	.fsh-0 {
 		flex-shrink: 0;
+	}
+
+	.reg-label {
+		&-text.pl-10 {
+			padding-left: 10px;
+		}
+		&.h-auto {
+			line-height: 35px;
+		}
+	}
+
+	.tooltip-text {
+		color: $orange !important;
+	}
+
+	.small-red-text {
+		color: #ea484b;
+		font-size: 14px;
+	}
+
+	.reg-label-checkbox {
+		display: flex;
+		align-items: center;
+		input {
+			width: auto;
+			margin-right: 10px;
+		}
+		span {
+			font-size: 13px;
+		}
+	}
+
+	.border-bottom-orange {
+		border-bottom: 3px solid $orange;
 	}
 }
