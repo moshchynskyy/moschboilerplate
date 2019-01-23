@@ -1089,3 +1089,38 @@
     margin-bottom: 10px;
   }
 }
+
+// order page
+.order {
+  &-title {
+    font-size: responsive 24px 28px;
+    font-weight: 400;
+    line-height: 1.2;
+    span {
+      display: inline-block;
+    }
+  }
+  &-avatar {
+    border-radius: 50%;
+  }
+  &-link {
+    &-back {
+      display: flex;
+      padding: 8px 10px;
+      font-size: 12px;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid $orange;
+      background: $orange;
+      &:hover {
+        background-color: #fff;
+        transition: .25s;
+      }
+      span {
+        line-height: 1;
+        font-size: 12px;
+      }
+    }
+  }
+}
+// eof order page
