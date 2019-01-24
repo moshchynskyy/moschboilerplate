@@ -16,4 +16,30 @@ section.section-padding.profile
 			a(href="./").profile__user-header-wrapper
 				p Denys Yatsko
 				img(src="https://via.placeholder.com/28" alt="user" title="user").rounded-circle.ml-3
-		p calendar
+		.profile__notification-box.big-box
+			.profile__row.justify-content-center.align-items-center
+				.col-12.col-md-7.col-lg-5
+					p.center.text-md-left.mb-3.mb-md-0 Укажите максимальное количество собак в день, которых вы готовы взять на передержку
+				.col-4.col-sm-2
+					input.reg-input.center(type="number" name="amount" placeholder="1" min="0")
+			.row.d-flex.justify-content-center
+				.col-12.col-md-7
+					p.profile__subtitle.center Если у вас уже есть подтвержденная передержка, и вы не готовы брать других собак на эти даты — нажмите на ячейку, чтобы отметить даты полностью занятыми.
+			.row
+				.col-12.reg-column
+					p Calendar here!
+			.row
+				.col-12.col-lg
+					.profile__status-item-wrapper
+						.profile__status-item.available
+							p Свободно
+						.profile__status-item.unavailable
+							p Недоступно
+						.profile__status-item.partially-occupied
+							p Частично занято
+						.profile__status-item.fully-occupied
+							p Полностью занято
+				.col-12.col-lg
+					p <b>Что делать, если я не хочу больше брать собак в частично занятый день?</b><br>Нажмите на галочку в правом углу даты, чтобы закрыть для бронирования частично занятые дни. Чтобы отменить изменения, нажмите на галку еще раз.
+				.col-12.col-lg
+					p <b>Что делать, если я хочу взять выходной?</b><br>Отметьте серым цветом даты, которые вы хотите сделать недоступными для бронирования. Чтобы отменить изменения, нажмите на дату еще раз.
