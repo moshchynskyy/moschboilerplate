@@ -216,4 +216,8 @@ $(function () {
     };
     animateScroll();
     // eof content-page
+
+    // order page
+    $('#orderTel').mask('380(00)-000-00-00');
+    // eof order page
 });

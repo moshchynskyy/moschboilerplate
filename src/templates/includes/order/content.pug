@@ -16,5 +16,18 @@ section.order.section-padding
                     .order-content
                         .row
                             .col-12
+                                label.order-label Когда вы хотите оставить собаку?
+                            .col-6
+                                label.order-label-date(for="dateFrom")
+                                    span Отдадите
+                                    input#dateFrom(type="text" name="dateFrom")
+                            .col-6
+                                label.order-label-date(for="dateTo")
+                                    span Заберете
+                                    input#dateTo(type="text" name="dateTo")
+                            .col-6
+                                .order-input-wrap
+                                    input#orderTel.order-input(type="tel" name="orderTel" placeholder="+380(50)XXX-XX-XX")
+                            .col-12
                                 .more-btn.text-center
                                     input(type="submit" value="Завершить").more.mybtn.mybtn-orange.reg-btn

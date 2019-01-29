@@ -28,6 +28,7 @@
         }
         &-title {
           font-weight: 300;
+          line-height: 1.2;
           &-wrap {
             margin-top: 24px;
           }
@@ -55,6 +56,24 @@
             border: 1px solid $google;
             &:hover {
               background-color: $google * .8;
+            }
+          }
+        }
+        &-text {
+          margin-top: 25px;
+          line-height: 1.2;
+          font-size: 14px;
+          font-weight: 300;
+          & b {
+            font-weight: 600;
+          }
+          & + p {
+            margin-top: 15px;
+          }
+          &-wrap {
+            margin-bottom: 20px;
+            .modal-text {
+              margin-top: 10px;
             }
           }
         }
@@ -87,6 +106,7 @@
         }
         &-input {
           width: 100%;
+          font-weight: 300;
           border: 1px solid $orange;
           height: 36px;
           margin-bottom: 10px;
@@ -94,8 +114,10 @@
           font-size: 12px;
           &[type="submit"] {
             width: 120px;
+            margin-top: 10px;
             text-transform: uppercase;
             font-size: 11px;
+            font-weight: 400;
             &:hover {
               background-color: $orange;
               color: #fff;
