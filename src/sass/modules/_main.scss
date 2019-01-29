@@ -1160,13 +1160,68 @@
       }
     }
   }
+  &-text {
+    margin-top: 25px;
+    font-size: 14px;
+    b {
+      font-weight: 700;
+    }
+  }
+  &-calc {
+    &-wrap {
+      background-color: rgba(255, 157, 0, 0.7);
+      padding: 35px 10px 30px;
+      margin: 20px 0 10px;
+      border-radius: 5px;
+    }
+    &-text {
+      font-size: 14px;
+      margin-bottom: 5px;
+      b {
+        font-weight: 700;
+      }
+    }
+  }
   &-input {
     border: 1px solid $orange;
     padding: 5px 10px;
     height: 36px;
     width: 100%;
+    font-weight: 300;
+    font-size: 14px;
     &-wrap {
-
+      margin-bottom: 10px;
+    }
+  }
+  &-textarea {
+    border: 1px solid $orange;
+    padding: 5px 10px;
+    min-height: 72px;
+    width: 100%;
+    font-weight: 300;
+    font-size: 14px;
+    resize: none;
+    &-wrap {
+      margin-bottom: 10px;
+    }
+  }
+  &-dog {
+    margin-bottom: 55px;
+    &-list {
+      padding: 35px 0;
+    }
+    &-add {
+      margin-top: -35px;
+      &-link {
+        text-decoration: underline;
+        font-size: 15px;
+        font-family: $secondFont;
+        color: $orange;
+        &:hover, &:focus, &:active {
+          color: $orange;
+          text-decoration: none;
+        }
+      }
     }
   }
 }
