@@ -206,7 +206,7 @@ $(function () {
     // content-page
     const animateScroll = () => {
         $(document).ready(function(){
-            $(".content-page").on("click", "a", function (e) {
+            $('.content-page').on('click', 'a', function () {
                 // e.preventDefault();
                 let id  = $(this).attr('href'),
                     top = $(id).offset().top;
@@ -218,6 +218,9 @@ $(function () {
     // eof content-page
 
     // order page
-
+    $('#addDog').on('click', function (e) {
+        e.preventDefault();
+        console.log('add child');
+    })
     // eof order page
 });
