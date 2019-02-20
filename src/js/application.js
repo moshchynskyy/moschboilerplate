@@ -205,7 +205,7 @@ $(function () {
     });
 
     // qtip
-    top200 = {
+    const top200 = {
         position: {
             my: 'bottom center', // Position my top left...
             at: 'top center', // at the bottom right of...
@@ -214,7 +214,7 @@ $(function () {
             classes: 'qtip-bootstrap qtip-rounded',
             width: 200, // No set width
         }
-    };
+    },
     top500 = {
         position: {
             my: 'bottom center', // Position my top left...
@@ -224,7 +224,7 @@ $(function () {
             classes: 'qtip-bootstrap qtip-rounded',
             width: 500, // No set width
         }
-    };
+    },
     left_opt = {
         position: {
             my: 'center right', // Position my top left...
@@ -235,7 +235,7 @@ $(function () {
             width: 250, // No set width
         },
         show: false
-    };
+    },
     right_opt = {
         position: {
             my: 'center left', // Position my top left...
@@ -267,7 +267,7 @@ $(function () {
     // content-page
     const animateScroll = () => {
         $(document).ready(function(){
-            $(".content-page").on("click", "a", function (e) {
+            $('.content-page').on('click', 'a', function () {
                 // e.preventDefault();
                 let id  = $(this).attr('href'),
                     top = $(id).offset().top;
@@ -278,4 +278,10 @@ $(function () {
     animateScroll();
     // eof content-page
 
+    // order page
+    $('#addDog').on('click', function (e) {
+        e.preventDefault();
+        console.log('add child');
+    })
+    // eof order page
 });

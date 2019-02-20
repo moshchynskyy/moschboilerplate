@@ -1,0 +1,57 @@
+section.order.section-padding
+    .container
+        .big-box
+            form.order-form#sendRequestToSitter(action="#")
+                .order-wrap
+                    .order-panel
+                        .row
+                            .col-6.col-sm-6.col-md-2.align-self-center
+                                a.order-link-back.transition(href="./")
+                                    i.fas.fa-angle-left
+                                    span назад
+                            .col-12.col-sm-12.col-md-8.align-self-center
+                                h1.order-title.text-center Отправить запрос ситтеру <span>Анастасии Р.</span>
+                            .col-6.col-sm-6.col-md-2.align-self-center
+                                img.order-avatar(src="https://via.placeholder.com/150")
+                    .order-content
+                        .row
+                            .col-12
+                                label.order-label Когда вы хотите оставить собаку?
+                            .col-6
+                                label.order-label-date(for="dateFrom")
+                                    span Отдадите
+                                    input#dateFrom(type="text" name="dateFrom")
+                            .col-6
+                                label.order-label-date(for="dateTo")
+                                    span Заберете
+                                    input#dateTo(type="text" name="dateTo")
+                            .col-12
+                                label(for="orderTel").order-label Ваш номер телефона
+                            .col-6
+                                .order-input-wrap
+                                    input#orderTel.order-input(type="tel" name="orderTel" placeholder="+380(50)XXX-XX-XX")
+                            .col-12
+                                .order-dog-list
+                                    .order-dog
+                                        h4.order-title Собака
+                                        p text
+                                    .order-dog
+                                        h4.order-title Собака
+                                        p text
+                                    .order-dog-add
+                                        a#addDog(href="#").order-dog-add-link Добавить собаку
+                            .col-12
+                                label(for="orderText").order-label Сообщение догситтеру
+                            .col-12
+                                .order-textarea-wrap
+                                    textarea#orderText.order-textarea(name="orderText" placeholder="+380(50)XXX-XX-XX")
+                            .col-12
+                                .order-calc-wrap
+                                    p.order-calc-text.text-center <b>Формула расчета:</b> 1000 ₽ x 1 собака x 0 суток
+                                    p.order-calc-text.text-center Ориентировочная стоимость передержки: <b>0 ₽</b>
+                                    p.order-calc-text.text-center Точную стоимость необходимо согласовать с догситтером. Оплата наличными.
+                            .col-12
+                                p.text-center.order-text среднее время ответа на запрос — <b>38 минут</b>
+                            .col-12
+                                .more-btn.text-center
+                                    input(type="submit" value="Завершить").more.mybtn.mybtn-orange.reg-btn
