@@ -193,6 +193,7 @@ $(function () {
     $('#issue_date').mask('00/00/0000');
     $('#birthday').mask('00/00/0000');
 
+    // messagex textarea autoheight
     $('.js-autoheight').on('keyup',function(){
         let height = this.scrollHeight;
         let elHeight = $('.js-autoheight').height();
@@ -202,6 +203,66 @@ $(function () {
             $(this).height(this.scrollHeight);
         }
     });
+
+    // qtip
+    const top200 = {
+        position: {
+            my: 'bottom center', // Position my top left...
+            at: 'top center', // at the bottom right of...
+        },
+        style: {
+            classes: 'qtip-bootstrap qtip-rounded',
+            width: 200, // No set width
+        }
+    },
+    top500 = {
+        position: {
+            my: 'bottom center', // Position my top left...
+            at: 'top center', // at the bottom right of...
+        },
+        style: {
+            classes: 'qtip-bootstrap qtip-rounded',
+            width: 500, // No set width
+        }
+    },
+    left_opt = {
+        position: {
+            my: 'center right', // Position my top left...
+            at: 'center left', // at the bottom right of..
+        },
+        style: {
+            classes: 'qtip-rounded qtip-bootstrap ',
+            width: 250, // No set width
+        },
+        show: false
+    },
+    right_opt = {
+        position: {
+            my: 'center left', // Position my top left...
+            at: 'center right', // at the bottom right of..
+        },
+        style: {
+            classes: 'qtip-rounded qtip-bootstrap ',
+            width: 250, // No set width
+        },
+    };
+
+    if (window.screen.width > 992) {
+        $('#logo-qtip').qtip($.extend({}, top200, {
+            content: 'Для рассмотрения анкеты необходимо загрузить ваше настоящее фото, где видно ваше лицо'
+        }));
+
+        let adBodyQtipContentLi1 = 'Расскажите о вашем опыте ухода за собаками.';
+        let adBodyQtipContentLi2 = 'Брали ли вы собак на передержку ранее?';
+        let adBodyQtipContentLi3 = 'Почему вы любите собак?';
+        let adBodyQtipContentLi4 = 'Есть ли у вас рядом парки и другие отличные места для прогулок?';
+        let adBodyQtipContentLi5 = 'Сможете ли вы посылать фото и видео собаки, пока хозяин в отъезде?';
+        let adBodyQtipContentLi6 = 'Будет ли кто-то постоянно находиться дома с собакой?';
+
+        $('#ad-body-qtip').qtip($.extend({}, top500, {
+            content: 'Не знаете, что стоит написать? Вот вспомогательные вопросы: <ul><li>'+adBodyQtipContentLi1+'</li><li>'+adBodyQtipContentLi2+'</li><li>'+adBodyQtipContentLi3+'</li><li>'+adBodyQtipContentLi4+'</li><li>'+adBodyQtipContentLi5+'</li><li>'+adBodyQtipContentLi6+'</li></ul>'
+        }));
+    }
 
     // content-page
     const animateScroll = () => {

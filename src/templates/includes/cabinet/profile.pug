@@ -16,4 +16,517 @@ section.section-padding.profile
 			a(href="./").profile__user-header-wrapper
 				p Denys Yatsko
 				img(src="https://via.placeholder.com/28" alt="user" title="user").rounded-circle.ml-3
-		p profile
+		.profile__messages-layout
+			.profile__messages-left-col
+				ul.nav.profile__tabs-nav
+					li
+						a.active(data-toggle="tab" href="#profile-tab-1") Основные данные
+					li
+						a(data-toggle="tab" href="#profile-tab-2") Услуги и стоимость
+					li
+						a(data-toggle="tab" href="#profile-tab-3") Детали объявления и фото
+					li
+						a(data-toggle="tab" href="#profile-tab-4") Ваши собаки
+					li
+						a(data-toggle="tab" href="#profile-tab-5") Специальные навыки
+					li
+						a(data-toggle="tab" href="#profile-tab-6") Аккаунт
+					li
+						a(data-toggle="tab" href="#profile-tab-7") Социальные сети
+					li
+						a(data-toggle="tab" href="#profile-tab-8") Дополнительные контакты
+					li
+						a(data-toggle="tab" href="#profile-tab-9") Настройки оповещений
+			.profile__messages-right-col
+				.tab-content
+					#profile-tab-1.tab-pane.active
+						.profile__tabs-content
+							h3.center.mb-4 Основные данные
+							form(action="#").reg-form
+								.row
+									.col-sm-8
+										.profile__row
+											.col-md-4
+												label.reg-label.h-auto.justify-content-start Имя
+											.col-md-8
+												input.reg-input(type="text" name="name" placeholder="Имя")
+										.profile__row
+											.col-md-4
+												label.reg-label.h-auto.justify-content-start Фамилия
+											.col-md-8
+												input.reg-input(type="text" name="surname" placeholder="Фамилия")
+												p.reg-label-text.pl-10.mt-2 Необходимо указать реальную фамилию. В целях приватности ваша фамилия не будет отображаться на Вашей странице на сайте.
+										.profile__row
+											.col-md-4
+												label.reg-label.justify-content-start.mob-height-35 Мобильный телефон
+											.col-md-8.align-self-end
+												input.reg-input(type="tel" name="phone" placeholder="Мобильный телефон")
+										.profile__row
+											.col-md-4
+												label.reg-label.h-auto.justify-content-start Ваш город
+											.col-md-8
+												input.reg-input(type="text" name="city" placeholder="Ваш город")
+										.profile__row
+											.col-md-4
+												label.reg-label.h-auto.justify-content-start Дата рождения
+											.col-md-8
+												input.reg-input(type="text" name="date" placeholder="Дата рождения" id="birthday")
+									.col-sm-4
+										.d-flex.flex-column.justify-content-center.align-items-center
+											#logo-qtip.profile__logo-priview
+												img(src="https://via.placeholder.com/150" alt="user")
+											button.mybtn.mybtn-orange.reg-btn.send-file-btn-wrapper Загрузить фото
+												input(type="file" accept="image/jpeg,image/png")
+								.text-center
+									input(type="submit" value="Сохранить").mybtn.mybtn-orange.reg-btn
+					#profile-tab-2.tab-pane.fade
+						.profile__tabs-content
+							h3.center.mb-4 Стоимость передержки
+							form(action="#")
+								.d-flex.justify-content-center.mb-3
+									.col-12.col-md-4.d-flex
+										input.reg-input(type="number" name="amount" placeholder="400" min="0")
+										span.d-flex.align-items-center.fsh-0.ml-2 UAH в сутки
+								.col-12
+									p.mb-3 Вы получаете 80% от итоговой суммы заказа, комиссия Догси составляет 20%. Эти деньги идут на улучшение сайта и мобильных приложений, обеспечение работы службы поддержки и на рекламу, чтобы вы получали новые заказы.
+									.profile__pay-wraper
+										p.no-margin Обычно передержка длится около 9 суток, поэтому в среднем за заказ вы будете получать:
+										p.profile__price-bold-text 30000 UAH 
+									h5.mb-1 Что такое передержка?
+									p.mb-3  Вы берете собаку клиента в свой дом на время пока клиент в отъезде, кормите и гуляете с ней, как со своей собакой.
+									h5.mb-1 Не знаете какую цену поставить?
+									p.mb-3 Минимальные цены начинаются от 200 руб в сутки (от 350 руб для Москвы). Однако цены догситтеров индивидуальны и могут быть выше. Клиент принимает решение, сопоставляя вас с другими вариантами в вашем городе.
+									p.mb-3 Привлекательность вашей анкеты складывается из цены, опыта ухода за собаками, условий содержания животных, удобства расположения, доверия и наличия отзывов, и общим впечатлением о вас.
+									p.mb-3 Корм оплачивается отдельно или привозится хозяином.
+									p.mb-3 Вы можете поменять цену в любой момент.
+								.text-center
+									input(type="submit" value="Сохранить").mybtn.mybtn-orange.reg-btn
+					#profile-tab-3.tab-pane.fade
+						.profile__tabs-content
+							h3.center.mb-4 Детали объявления
+							form(action="#").reg-form
+								.row.reg-column
+									.col-12.col-md-5.mb-2.mb-md-0
+										label().reg-label Заголовок
+											span.reg-label-text Например: «Позабочусь о вашем любимце!»
+									.col-12.col-md-7
+										.reg-input-wrap
+											input.reg-input(type="text" name="name" maxlength="75" placeholder="Заголовок до 75 символов")
+								.row.reg-column
+									.col-12.col-md-5.mb-2.mb-md-0
+										label().reg-label.justify-content-start Текст объявления
+											span.reg-label-text Расскажите о себе, вашем опыте и условиях проживания собаки. <b>Минимум один абзац.</b>
+									.col-12.col-md-7
+										.reg-input-wrap
+											textarea#ad-body-qtip.reg-textarea(name="ad_body" placeholder="Текст объявления")
+								.row
+									.col-12
+										.reg-sitter__text
+											h4 Адрес передержки <a href="#" id="setAddress" class="reg-sitter__text-link" data-toggle="modal" data-target="#setAddressModal">(указать адрес)</a>
+											p Ваш точный адрес будет скрыт на сайте. Клиенты увидят только ваш район или случайно смещенную точку на карте, пока вы не согласитесь взять их заказ.
+											h4 Добавьте фотографии – Самый важный раздел!
+											ul
+												li <b>Ваши позитивные фото,</b> фото мест прогулок и фото с животными, если есть. Пример фотографий одного из догситтеров – dogsy.ru/sitter/136
+												li <b>Крайне желательно</b> загрузить хотя бы одну фотографию, где видна ваша квартира, то есть условия проживания. Зачем это?
+												li <b>Минимум 3 фото,</b> по нашей статистике больше заказов получают те, кто имеет от 7 фотографий.
+												li <b>Нет фото под рукой?</b> Можно добавить фото позднее в кабинете, но анкета не может быть одобрена, пока вы не добавите фото.
+											p.small-red-text.m-0 Для появления анкеты на сайте необходимо загрузить минимум 3 фотографии.
+									.col-12
+										button.mybtn.mybtn-orange.reg-btn.send-file-btn-wrapper Добавить фото
+											input(type="file" accept="image/jpeg,image/png")
+									.col-12.my-4
+										label.reg-label.h-auto Тип жилья
+										.reg-checkbox-wrap
+											label(for="homeFlat").reg-checkbox-label
+												input#homeFlat.reg-checkbox(type="radio" name="home" value="flat")
+												span Квартира
+											label(for="homeHouse").reg-checkbox-label
+												input#homeHouse.reg-checkbox(type="radio" name="home" value="house")
+												span Частный дом
+									.col-12.mb-4
+										label.reg-label.h-auto Есть ли в доме дети до 10 лет?
+										.reg-checkbox-wrap
+											label(for="childYes").reg-checkbox-label
+												input#childYes.reg-checkbox(type="radio" name="child" value="yes")
+												span Да
+											label(for="childNo").reg-checkbox-label
+												input#childNo.reg-checkbox(type="radio" name="child" value="no")
+												span Нет
+									.col-12.mb-4
+										label.reg-label.h-auto Будет ли собака находиться под присмотром постоянно?
+										label.h-auto.text-thin Как правило собаки могут оставаться дома одни в рабочее время, но некоторым клиентам важен постоянный присмотр. Отметьте «Да», если вы не отлучаетесь из дома на длительный срок, например, на работу или учебу.
+										.reg-checkbox-wrap
+											label(for="carryYes").reg-checkbox-label
+												input#carryYes.reg-checkbox(type="radio" name="carry" value="flat")
+												span Да
+											label(for="carryNo").reg-checkbox-label
+												input#carryNo.reg-checkbox(type="radio" name="carry" value="house")
+												span Нет
+									.col-12.mb-4
+										label.reg-label.h-auto Есть ли машина на случай экстренной ситуации?
+										label.h-auto.text-thin Если собаке потребуется помощь ветеринара
+										.reg-checkbox-wrap
+											label(for="carYes").reg-checkbox-label
+												input#carYes.reg-checkbox(type="radio" name="car" value="yes")
+												span Да
+											label(for="carNo").reg-checkbox-label
+												input#carNo.reg-checkbox(type="radio" name="car" value="no")
+												span Нет
+									.col-12.mb-4
+										label.reg-label.h-auto Собак какого размера вы берете на передержку?
+										.reg-checkbox-wrap
+											label(for="dogSizeMini").reg-checkbox-label
+												input#dogSizeMini.reg-checkbox(type="checkbox" name="dogSize" value="mini")
+												span Мини (до 5кг)
+											label(for="dogSizeLittle").reg-checkbox-label
+												input#dogSizeLittle.reg-checkbox(type="checkbox" name="dogSize" value="little")
+												span Малый (5-10кг)
+											label(for="dogSizeMiddle").reg-checkbox-label
+												input#dogSizeMiddle.reg-checkbox(type="checkbox" name="dogSize" value="middle")
+												span Средний (10-20кг)
+											label(for="dogSizeBig").reg-checkbox-label
+												input#dogSizeBig.reg-checkbox(type="checkbox" name="dogSize" value="big")
+												span Большой (20-40кг)
+											label(for="dogSizeHuge").reg-checkbox-label
+												input#dogSizeHuge.reg-checkbox(type="checkbox" name="dogSize" value="huge")
+												span Очень большой (более 40кг)
+											label(for="dogSizeAny").reg-checkbox-label
+												input#dogSizeAny.reg-checkbox(type="checkbox" name="dogSize" value="any")
+												span Любой
+									.col-12.mb-4
+										label.reg-label.h-auto Собак какого возраста вы берете на передержку?
+										.reg-checkbox-wrap
+											label(for="dogAgeMini").reg-checkbox-label
+												input#dogAgeMini.reg-checkbox(type="checkbox" name="dogAge" value="mini")
+												span Щенки (до 1 года)
+											label(for="dogAgeAdult").reg-checkbox-label
+												input#dogAgeAdult.reg-checkbox(type="checkbox" name="dogAge" value="adult")
+												span Взрослые (1-7 лет)
+											label(for="dogAgeOld").reg-checkbox-label
+												input#dogAgeOld.reg-checkbox(type="checkbox" name="dogAge" value="old")
+												span Пожилые (от 7 лет)
+											label(for="dogAgeAny").reg-checkbox-label
+												input#dogAgeAny.reg-checkbox(type="checkbox" name="dogAge" value="any")
+												span Любой возраст
+									.col-12.mb-4
+										label.reg-label.h-auto Есть ли какие-нибудь животные у вас в доме кроме собак?
+										.reg-checkbox-wrap
+											label(for="andCats").reg-checkbox-label
+												input#andCats.reg-checkbox(type="checkbox" name="addAnimal" value="andCats")
+												span Кошки
+											label(for="andRats").reg-checkbox-label
+												input#andRats.reg-checkbox(type="checkbox" name="addAnimal" value="andRats")
+												span Кролики / грызуны
+											label(for="andBirds").reg-checkbox-label
+												input#andBirds.reg-checkbox(type="checkbox" name="addAnimal" value="andBirds")
+												span Птицы / Рептилии
+											label(for="otherAnimals").reg-checkbox-label
+												input#otherAnimals.reg-checkbox(type="checkbox" name="addAnimal" value="otherAnimals")
+												span Другие
+											label(for="noAnimals").reg-checkbox-label
+												input#noAnimals.reg-checkbox(type="checkbox" name="addAnimal" value="noAnimals")
+												span Нет
+									.col-12.mb-4
+										label.reg-label.h-auto Можете ли вы брать кошек на передержку?
+										.reg-checkbox-wrap
+											label(for="catsYes").reg-checkbox-label
+												input#catsYes.reg-checkbox(type="radio" name="cats" value="yes")
+												span Да
+											label(for="catsNo").reg-checkbox-label
+												input#catsNo.reg-checkbox(type="radio" name="cats" value="no")
+												span Нет
+									.col-6.col-sm-5.mb-4
+										label(for="dogsType").reg-label.justify-content-start Породы, которые вы не можете брать
+									.col-6.col-sm-7.mb-4
+										.reg-input-wrap
+											input#dogsType.h-auto.reg-input(type="text" name="dogsType")
+											label(for="dogsTypeCheck").reg-label-checkbox
+												input#dogsTypeCheck.reg-input(type="checkbox" name="dogsTypeCheck")
+												span Беру любые породы
+									.col-12
+										.more-btn.text-center
+											input(type="submit" value="Сохранить").more.mybtn.mybtn-orange.reg-btn
+					#profile-tab-4.tab-pane.fade
+						.profile__tabs-content
+							h3.center.mb-4 Ваши собаки
+							p.profile__subtitle.center Расскажите о вашей собаке, чтобы клиенты знали, кто будет другом их любимца на время их отсутствия.
+							form(action="#").reg-form
+								.profile__row
+									.col-12.col-md-5
+										label().reg-label Имя собаки
+									.col-12.col-md-7
+										.reg-input-wrap
+											input.reg-input(type="text" name="dog-name")
+								.row
+									.col-6.col-sm-5.reg-column
+										label.justify-content-start.reg-label Фотографии
+											span.reg-label-text Загрузите фотографии вашей собаки
+									.col-6.col-sm-7.reg-column
+										button.mybtn.mybtn-orange.reg-btn.send-file-btn-wrapper.m-0 Добавить фото
+											input(type="file" accept="image/jpeg,image/png")
+								.profile__row
+									.col-12.col-md-5
+										label().reg-label Возраст
+									.col-12.col-md-7
+										.d-flex
+											.col-6.d-flex.align-items-center.pl-0
+												input.reg-input(type="number" min="0" name="dog-age")
+												label.h-auto.text-thin.mb-0.ml-2 лет
+											.col-6.d-flex.align-items-center.pr-0
+												input.reg-input(type="number" min="1" name="dog-month")
+												label.h-auto.text-thin.mb-0.ml-2 месяцев
+								.profile__row
+									.col-12.col-md-5
+										label().reg-label Порода
+									.col-12.col-md-7
+										.reg-input-wrap
+											input.reg-input(type="text" name="breed-name")
+								.profile__row
+									.col-12.col-md-5
+										label().reg-label Размер
+									.col-12.col-md-7
+										.reg-input-wrap
+											select#dogSize.reg-select(name="type")
+												option(selected) до 5 кг
+												option 5-10 кг
+												option 10-20 кг
+												option 20+ кг
+								.profile__row.flex-wrap
+									.col-12
+										label(for="dogDescription").reg-label Опишите вашу собаку
+									.col-12.col-md-7
+										textarea#dogDescription.reg-textarea(name="dogDescription")
+									.col-12.col-md-5
+										ul.reg-list
+											li.reg-list-item
+												span Особенности характера
+											li.reg-list-item
+												span Не метит ли дома, не грызет ли вещи?
+											li.reg-list-item
+												span Остается ли одна в квартире или необходим круглосуточный присмотр?
+											li.reg-list-item
+												span Сколько выгулов в день необходимо?
+											li.reg-list-item
+												span Чем питается: корм или необходимо готовить еду?
+								.row
+									.col-12.reg-column
+										label.reg-label.reg-label-height Пол
+									.col-12.reg-column
+										.reg-checkbox-wrap
+											label(for="dogMale").reg-checkbox-label
+												input#dogMale.reg-checkbox(type="radio" name="sex" value="male")
+												span Мальчик
+											label(for="dogFemale").reg-checkbox-label
+												input#dogFemale.reg-checkbox(type="radio" name="sex" value="female")
+												span Девочка
+									.col-12.reg-column
+										label.reg-label.reg-label-height Ваша собака стерилизована/кастрирована?
+									.col-12.reg-column
+										.reg-checkbox-wrap
+											label(for="sterYes").reg-checkbox-label
+												input#sterYes.reg-checkbox(type="radio" name="ster" value="yes")
+												span Да
+											label(for="sterNo").reg-checkbox-label
+												input#sterNo.reg-checkbox(type="radio" name="ster" value="no")
+												span Нет
+											label(for="sterMaybe").reg-checkbox-label
+												input#sterMaybe.reg-checkbox(type="radio" name="ster" value="maybe")
+												span Не знаю точно
+									.col-12.reg-column
+										label.reg-label.reg-label-height Ваша собака дружелюбна к другим собакам?
+									.col-12.reg-column
+										.reg-checkbox-wrap
+											label(for="politeYes").reg-checkbox-label
+												input#politeYes.reg-checkbox(type="radio" name="polite" value="yes")
+												span Да
+											label(for="politeNo").reg-checkbox-label
+												input#politeNo.reg-checkbox(type="radio" name="polite" value="no")
+												span Нет
+											label(for="politeMaybe").reg-checkbox-label
+												input#politeMaybe.reg-checkbox(type="radio" name="polite" value="maybe")
+												span Не знаю точно
+									.col-12.reg-column
+										label.reg-label.reg-label-height Ваша собака дружелюбна к кошкам?
+									.col-12.reg-column
+										.reg-checkbox-wrap
+											label(for="politeCatYes").reg-checkbox-label
+												input#politeCatYes.reg-checkbox(type="radio" name="politeCat" value="yes")
+												span Да
+											label(for="politeCatNo").reg-checkbox-label
+												input#politeCatNo.reg-checkbox(type="radio" name="politeCat" value="no")
+												span Нет
+											label(for="politeCatMaybe").reg-checkbox-label
+												input#politeCatMaybe.reg-checkbox(type="radio" name="politeCat" value="maybe")
+												span Не знаю точно
+									.col-12.reg-column
+										label.reg-label.reg-label-height Остается ли собака дома одна?
+									.col-12.reg-column
+										.reg-checkbox-wrap
+											label(for="aloneTot").reg-checkbox-label
+												input#aloneTot.reg-checkbox(type="radio" name="alone" value="male")
+												span Остается одна, пока я на работе
+											label(for="aloneLittle").reg-checkbox-label
+												input#aloneLittle.reg-checkbox(type="radio" name="alone" value="female")
+												span Остается на пару часов
+											label(for="aloneNo").reg-checkbox-label
+												input#aloneNo.reg-checkbox(type="radio" name="alone" value="female")
+												span Почти всегда дома с собакой кто-то есть
+									.col-12.reg-column
+										label.reg-label.reg-label-height Собака имеет все необходимые вакцинации в соответствии с ветеринарными требованиями?
+									.col-12.reg-column
+										.reg-checkbox-wrap
+											label(for="medicineYes").reg-checkbox-label
+												input#medicineYes.reg-checkbox(type="radio" name="medicine" value="yes")
+												span Да
+											label(for="medicineNo").reg-checkbox-label
+												input#medicineNo.reg-checkbox(type="radio" name="medicine" value="no")
+												span Нет
+											label(for="medicineMaybe").reg-checkbox-label
+												input#medicineMaybe.reg-checkbox(type="radio" name="medicine" value="maybe")
+												span Не знаю точно
+									.col-12
+										.more-btn.text-center
+											input(type="submit" value="Сохранить").more.mybtn.mybtn-orange.reg-btn
+					#profile-tab-5.tab-pane.fade
+						.profile__tabs-content
+							h3.center.mb-4 Специальные навыки
+							form(action="#").reg-form
+								.profile__row
+									.col-12.col-md-5.mb-2.mb-md-0
+										label().reg-label Опыт ухода за собакой:
+											span.reg-label-text (лет)
+									.col-12.col-md-7
+										.reg-input-wrap
+											input.reg-input(type="text" name="experience")
+								.row
+									.col-12.reg-column
+										label(for="cynologist").reg-checkbox-label
+											input#cynologist.reg-checkbox(type="checkbox" name="cynologist" value="yes")
+											span Я сертифицированный кинолог
+									.col-12.reg-column
+										label.reg-label.reg-label-height Ветеринарные навыки
+									.col-12.reg-column
+										.reg-checkbox-wrap
+											label(for="addDoctor").reg-checkbox-label
+												input#addDoctor.reg-checkbox(type="checkbox" name="add" value="addDoctor")
+												span Я сертифицированный ветеринар
+											label(for="addDrugs").reg-checkbox-label
+												input#addDrugs.reg-checkbox(type="checkbox" name="add" value="addDrugs")
+												span Умею давать медицинские препараты
+											label(for="addInject").reg-checkbox-label
+												input#addInject.reg-checkbox(type="checkbox" name="add" value="addInject")
+												span Умею делать инъекции
+									.col-12
+										.more-btn.text-center
+											input(type="submit" value="Сохранить").more.mybtn.mybtn-orange.reg-btn
+					#profile-tab-6.tab-pane.fade
+						.profile__tabs-content.border-bottom-orange
+							h3.center.mb-4 Изменить почтовый адрес
+							form(action="#").reg-form
+								.row.d-flex.justify-content-center
+									.col-12.col-md-8
+										p Ваш текущий e-mail: <b>admin@gmail.com</b>
+										.d-flex.mt-3
+											input.reg-input(type="email" name="email" value="admin@gmail.com").mr-2
+											input(type="submit" value="Сохранить").more.mybtn.mybtn-orange.reg-btn.m-0
+						.profile__tabs-content
+							h3.center.mb-4 Изменить пароль
+							form(action="#").reg-form
+								.row.d-flex.justify-content-center
+									.col-8.reg-column
+										input.reg-input(type="password" name="password" value="Введите старый пароль")
+									.col-8.reg-column
+										input.reg-input(type="password" name="password" value="Введите новый пароль")
+									.col-8.reg-column
+										input.reg-input(type="password" name="password" value="Подтвердите новый пароль")
+									.col-12
+										.more-btn.text-center
+											input(type="submit" value="Изменить пароль").more.mybtn.mybtn-orange.reg-btn
+					#profile-tab-7.tab-pane.fade
+						.profile__tabs-content
+							h3.center.mb-4 Социальные сети
+							p.profile__subtitle.text-center Укажите ваши личные страницы в социальных сетях. Это необходимо в качестве дополнительного доказательства, что созданная вами анкета принадлежит вам.
+							p.profile__subtitle.text-center Ссылки на ваши страницы будет видеть только сотрудник Догси. Укажите ВСЕ соцсети, которыми пользуетесь.
+							.row
+								.col-12.reg-column-soc
+									a(href="#" data-toggle="modal" data-target="#setLinkFacebook").mybtn.reg-btn-soclink.reg-btn-soclink--facebook
+										i.fab.fa-facebook-f 
+										span Укажите страницу facebook
+								.col-12.reg-column-soc
+									a(href="#" data-toggle="modal" data-target="#setLinkGoogle").mybtn.reg-btn-soclink.reg-btn-soclink--google
+										i.fab.fa-google-plus-g 
+										span Укажите страницу google
+					#profile-tab-8.tab-pane.fade
+						.profile__tabs-content
+							h3.center.mb-4 Информация на случай экстренных ситуаций
+							p.profile__subtitle.text-center (не отображается на сайте)
+							form(action='#').reg-form
+								.row
+									.col-12.reg-column
+										label Дополнительный контакт, если ваш телефон не отвечает длительное время, а у вас на передержке находится животное клиента. Это может быть родственник или друг:
+										input.reg-input(type="text" name="additional_phone" placeholder="Александр, друг, 8-900-000-00-00")
+									.col-12.reg-column
+										label Адрес фактического содержания животных (с точностью до квартиры):
+										input.reg-input(type="text" name="actual_address" placeholder="Киев, ул. Борщаговская, 146, кв. 37")
+									.col-12
+										.more-btn.text-center
+											input(type="submit" value="Сохранить").more.mybtn.mybtn-orange.reg-btn
+					#profile-tab-9.tab-pane.fade
+						.profile__tabs-content
+							h3.center.mb-4 Настройки оповещений
+							form(action='#').reg-form
+								.row
+									.col-12.reg-column
+										.reg-checkbox-wrap
+											label(for="mailUsefulOffers").reg-checkbox-label
+												input#mailUsefulOffers.reg-checkbox(type="checkbox" name="mail_useful_offers" value="0")
+												span Письма с полезными предложениями
+											label(for="mailTips").reg-checkbox-label
+												input#mailTips.reg-checkbox(type="checkbox" name="add" value="mail_tips")
+												span Письма с советами и статьями про собак
+											label(for="mailTransactional").reg-checkbox-label
+												input#mailTransactional.reg-checkbox(type="checkbox" name="add" value="mail_transactional")
+												span Транзакционные письма (новые сообщения в чате)
+									.col-12
+										.more-btn.text-center
+											input(type="submit" value="Сохранить").more.mybtn.mybtn-orange.reg-btn
+
+div(id='setAddressModal' class="modal fade setAddressModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-body
+			form(action="#").modal-content
+				button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+					span(aria-hidden="true") &times;
+				.modal-title-wrap
+					h3.modal-title.text-center Укажите свой адрес
+					p.modal-text.text-center Необходимо отметить адрес с точностью до номера дома, где будут содержаться собаки. В целях приватности этот адрес будет скрыт на сайте. Клиенты увидят только ваш район или случайно смещенную точку на карте, пока вы не согласитесь взять их заказ.
+					.modal-input-wrap
+						input.modal-input(type="text" name="address" placeholder="Ваш адресс")
+					.more-btn.text-center
+						input(type="submit" value="Сохранить").more.mybtn.mybtn-orange.reg-btn
+div(id='setLinkFacebook' class="modal fade setLinkFacebook" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-body
+			form(action="#").modal-content
+				button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+					span(aria-hidden="true") &times;
+				.modal-title-wrap
+					h3.modal-title.text-center Укажите свой адрес Facebook
+					p.modal-text.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, velit. Lorem ipsum dolor sit amet, consectetur.
+					.modal-input-wrap
+						input.modal-input(type="text" name="address" placeholder="Ваш адресс")
+					.more-btn.text-center
+						input(type="submit" value="Сохранить").more.mybtn.mybtn-orange.reg-btn
+div(id='setLinkGoogle' class="modal fade setLinkGoogle" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-body
+			form(action="#").modal-content
+				button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+					span(aria-hidden="true") &times;
+				.modal-title-wrap
+					h3.modal-title.text-center Укажите свой адрес Google
+					p.modal-text.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, velit. Lorem ipsum dolor sit amet.
+					.modal-input-wrap
+						input.modal-input(type="text" name="address" placeholder="Ваш адресс")
+					.more-btn.text-center
+						input(type="submit" value="Сохранить").more.mybtn.mybtn-orange.reg-btn
