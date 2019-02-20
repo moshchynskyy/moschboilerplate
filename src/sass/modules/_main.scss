@@ -1045,3 +1045,47 @@
   }
 }
 // eof register page
+
+.content-page {
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 15px;
+  }
+  ul {
+    padding-left: 30px;
+    margin-bottom: 15px;
+    li {
+      list-style-type: disc;
+      padding-left: 10px;
+    }
+  }
+  ol {
+    padding-left: 30px;
+    margin-bottom: 15px;
+    li {
+      list-style-type: decimal;
+      padding-left: 10px;
+    }
+  }
+  p {
+    margin-bottom: 15px;
+  }
+  b, strong {
+    font-weight: 700  ;
+  }
+  i {
+    font-style: italic;
+  }
+  u {
+
+  }
+  a {
+    color: $orange;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  img {
+    margin-bottom: 10px;
+  }
+}
