@@ -204,7 +204,6 @@ $(function () {
         }
     });
 
-<<<<<<< HEAD
     // qtip
     top200 = {
         position: {
@@ -265,8 +264,6 @@ $(function () {
         }));
     }
 
-
-=======
     // content-page
     const animateScroll = () => {
         $(document).ready(function(){
@@ -280,5 +277,5 @@ $(function () {
     };
     animateScroll();
     // eof content-page
->>>>>>> c46313e3aab547c036859df0fb14d57138525065
+
 });
