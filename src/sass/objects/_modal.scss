@@ -152,7 +152,9 @@
   }
 }
 // eof common styles
-
+.reg-form .modal-input[type="submit"] {
+  width: 120px;
+}
 // bookAgain pop-up
 .bookAgain  {
   &-icon {
