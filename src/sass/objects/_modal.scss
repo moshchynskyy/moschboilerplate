@@ -15,6 +15,12 @@
         outline: 0;
       }
       .modal {
+        &-label {
+          width: 100%;
+          position: relative;
+          font-size: 12px;
+          margin-bottom: 0;
+        }
         &-link {
           display: flex;
           align-items: center;
@@ -79,7 +85,7 @@
         }
         &-form {
           &-wrap {
-            width: 60%;
+            width: 75%;
             margin: 30px auto 20px;
           }
           &-divider {
@@ -113,7 +119,7 @@
           padding: 5px 10px;
           font-size: 12px;
           &[type="submit"] {
-            width: 120px;
+            min-width: 120px;
             margin-top: 10px;
             text-transform: uppercase;
             font-size: 11px;
@@ -147,12 +153,19 @@
 }
 // eof common styles
 
+// bookAgain pop-up
+.bookAgain  {
+  &-icon {
+    position: absolute;
+    left: 12px;
+    top: 29px;
+    color: $orange;
+  }
+  &DateTo, &DateFrom {
+    cursor: pointer;
+    padding-left: 33px !important;
+  }
+}
+// eof bookAgain pop-up
 
-// enter pop-up
 
-// eof enter pop-up
-
-
-// register pop-up
-
-// eof register pop-up
