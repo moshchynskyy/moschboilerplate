@@ -136,7 +136,7 @@ $(function () {
 
 
         let dateFormat = "mm/dd/yy",
-            from = $( "#dateFrom" )
+            from = $( ".dateFrom" )
                 .datepicker({
                     defaultDate: "+1w",
                     changeMonth: true,
@@ -145,7 +145,7 @@ $(function () {
                 .on( "change", function() {
                     to.datepicker( "option", "minDate", getDate( this ) );
                 }),
-            to = $( "#dateTo" ).datepicker({
+            to = $( ".dateTo" ).datepicker({
                 defaultDate: "+1w",
                 changeMonth: true,
                 numberOfMonths: 1
@@ -172,7 +172,7 @@ $(function () {
 // register page
     $( function() {
         $('.reg-form select').niceSelect();
-        $( ".reg-form input.reg-checkbox").checkboxradio();
+        $( '.reg-form input.reg-checkbox').checkboxradio();
 
         $('#setAddress').on('click', function (e) {
             e.preventDefault();

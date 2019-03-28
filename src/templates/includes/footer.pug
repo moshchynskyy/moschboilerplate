@@ -96,3 +96,31 @@ div(id='callMe' class="modal fade callMe" tabindex="-1" role="dialog" aria-label
                 .modal-text-wrap
                     p.modal-text.text-center Служба подбора догситтеров работает с 9:00 до 22:45 по московскому времени.
                     p.modal-text.text-center Если у вас экстренный вопрос, позвоните на горячую линию — <b>8 800 200-60-57</b> или <b>+7 499 112-44-50</b>
+div(id='bookAgain' class="modal fade bookAgain" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+        .modal-body
+            .modal-content
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") &times;
+                .modal-title-wrap
+                    h2.modal-title.text-center Повторно обратиться к прошлому догситтеру
+                    p.modal-text.text-center Просто оставьте ваш телефон и укажите нужные даты. Менеджер Догси забронирует вашего прошлого догситтера.
+                form(action="#").modal-form-wrap
+                    .row
+                        .col-sm-6.col-12
+                            .modal-input-wrap
+                                label.modal-label(for="bookAgainDateFrom") Отдадите
+                                    i.far.fa-calendar-alt.bookAgain-icon
+                                    input#bookAgainDateFrom.modal-input.bookAgainDateFrom.dateFrom(type="text" name="bookAgainDateFrom")
+                        .col-sm-6.col-12
+                            .modal-input-wrap
+                                label.modal-label(for="bookAgainDateTo") Заберете
+                                    i.far.fa-calendar-alt.bookAgain-icon
+                                    input#bookAgainDateTo.modal-input.bookAgainDateTo.dateTo(type="text" name="bookAgainDateTo")
+                    .modal-input-wrap
+                        label.modal-label Ваш номер телефона
+                        input.modal-input(type="tel" name="callMeTel" value="+38(050)050-50-50")
+                    .modal-input-wrap.text-center
+                        input.modal-input(type="submit" value="Забронировать повторно")
+                .modal-text-wrap
+                    p.modal-text.text-center Также вы можете сами отправить запрос догситтеру со страницы диалога с ним, это можно сделать в разделе <a class="modal-link" href="#">Сообщения.</a>
