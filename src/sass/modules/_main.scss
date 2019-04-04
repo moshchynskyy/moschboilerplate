@@ -726,6 +726,9 @@
   margin-right: auto;
   padding: 45px 30px;
   margin-bottom: 50px;
+  @media #{$max768} {
+    padding: 30px 20px;
+  }
   .modal-content {
     padding: 0;
   }
@@ -1105,6 +1108,9 @@
   }
   &-avatar {
     border-radius: 50%;
+    @media #{$max768} {
+      margin: 20px auto 0;
+    }
   }
   &-link {
     &-back {
@@ -1115,6 +1121,9 @@
       justify-content: space-between;
       border: 1px solid $orange;
       background: $orange;
+      @media #{$max768} {
+        margin-bottom: 15px;
+      }
       &:hover {
         background-color: #fff;
         transition: .25s;
@@ -1152,6 +1161,7 @@
       }
       span {
         display: inline-block;
+        line-height: 1;
       }
       input {
         cursor: pointer;
@@ -1205,11 +1215,27 @@
       margin-bottom: 10px;
     }
   }
+  &-checkbox-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
   &-dog {
     margin-bottom: 55px;
     padding: 20px 20px 10px;
     background-color: rgba(255, 157, 0, 0.7);
     border-radius: 5px;
+    .reg-checkbox-wrap {
+      margin-top: 5px;
+    }
+    .reg-checkbox-label {
+      padding: 5px 9px;
+    }
+    .reg-label {
+      justify-content: flex-start;
+      @media #{$max768} {
+        margin-bottom: 15px;
+      }
+    }
     &-list {
       padding: 35px 0;
     }

@@ -5,52 +5,52 @@ section.order.section-padding
                 .order-wrap
                     .order-panel
                         .row
-                            .col-6.col-sm-6.col-md-2.align-self-center
+                            .col-4.col-sm-4.col-md-2.align-self-center
                                 a.order-link-back.transition(href="./")
                                     i.fas.fa-angle-left
                                     span назад
                             .col-12.col-sm-12.col-md-8.align-self-center
                                 h1.order-title.text-center Отправить запрос ситтеру <span>Анастасии Р.</span>
-                            .col-6.col-sm-6.col-md-2.align-self-center
+                            .col-12.offset-sm-3.col-sm-6.col-md-2.align-self-center
                                 img.order-avatar(src="https://via.placeholder.com/150")
                     .order-content
                         .row
                             .col-12
                                 label.order-label Когда вы хотите оставить собаку?
-                            .col-6
+                            .col-12.col-sm-6
                                 label.order-label-date(for="dateFrom")
                                     span Отдадите
                                     input#dateFrom.dateFrom(type="text" name="dateFrom")
-                            .col-6
+                            .col-12.col-sm-6
                                 label.order-label-date(for="dateTo")
                                     span Заберете
                                     input#dateTo.dateTo(type="text" name="dateTo")
                             .col-12
                                 label(for="orderTel").order-label Ваш номер телефона
-                            .col-6
+                            .col-12.col-sm-6
                                 .order-input-wrap
                                     input#orderTel.order-input(type="tel" name="orderTel" placeholder="+380(50)XXX-XX-XX")
                             .col-12
                                 .order-dog-list
                                     .order-dog
                                         .row
-                                            .col-sm-6.col-12
+                                            .col-md-6.col-sm-12.col-12
                                                 label.order-label-date(for="orderName")
                                                     span Имя собаки
                                                     input#orderName.orderName(type="text" name="orderName")
-                                            .col-sm-6.col-12
+                                            .col-md-6.col-sm-12.col-12
                                                 label.order-label-date(for="orderType")
                                                     span Порода
                                                     input#orderType.orderType(type="text" name="orderType")
-                                            .col-sm-6.col-12
+                                            .col-md-6.col-sm-12.col-12
                                                 label.order-label-date(for="orderYear")
                                                     span Лет
                                                     input#orderYear.orderYear(type="text" name="orderYear")
-                                            .col-sm-6.col-12
+                                            .col-md-6.col-sm-12.col-12
                                                 label.order-label-date(for="orderMonth")
                                                     span Месяцев
                                                     input#orderMonth.orderMonth(type="text" name="orderType")
-                                            .col-sm-6.col-12
+                                            .col-md-6.col-sm-12.col-12
                                                 label.reg-label Пол собаки
                                                     .reg-checkbox-wrap
                                                         label(for="orderGenderMale").reg-checkbox-label
@@ -59,9 +59,9 @@ section.order.section-padding
                                                         label(for="orderGenderFemale").reg-checkbox-label
                                                             input#orderGenderFemale.orderGenderFemale.reg-checkbox(type="radio" name="gender" value="female")
                                                             span Девочка
-                                            .col-sm-6.col-12
+                                            .col-md-6.col-sm-12.col-12
                                                 label.reg-label Размер собаки
-                                                    .reg-checkbox-wrap
+                                                    .reg-checkbox-wrap.order-checkbox-wrap
                                                         label(for="orderMini").reg-checkbox-label
                                                             input#orderMini.orderMini.reg-checkbox(type="radio" name="orderSize" value="orderMini")
                                                             span Мини (до 5кг)
